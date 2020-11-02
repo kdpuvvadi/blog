@@ -4,8 +4,8 @@ date = "2020-11-02T21:25:36+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
+tags = ["Hugo", "Google Forms", "Contact form", "HTML", "CSS", "Static Site" ]
+keywords = ["Dev"]
 description = "Add contact form to Hugo Static site using Google Forms"
 showFullContent = false
 +++
