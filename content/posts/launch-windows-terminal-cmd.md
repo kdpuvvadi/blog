@@ -4,8 +4,8 @@ date = "2020-11-02T16:41:33+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["windows t=Terminal", "Terminal"]
-keywords = ["Tech"]
+tags = ["windows Terminal", "Terminal"]
+keywords = ["Tech","Dev"]
 description = "Use Run command to launch New Windows Terminal"
 showFullContent = false
 +++
