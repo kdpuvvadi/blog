@@ -9,4 +9,4 @@ keywords = ["", ""]
 description = "Day Zero"
 showFullContent = false
 +++
-Day Zero
+*Day Zero*
