@@ -6,7 +6,7 @@ authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["", ""]
 keywords = ["", ""]
-description = ""
+description = "Day Zero"
 showFullContent = false
 +++
 Day Zero
