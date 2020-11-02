@@ -1,6 +1,5 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "KD's Blog"
 theme = "terminal"
 paginate = 5
 
@@ -47,7 +46,7 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "KD's Blog"
     subtitle = "A simple, retro theme for Hugo"
     owner = ""
     keywords = ""
@@ -59,7 +58,7 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "Terminal"
+      logoText = "KD's Blog"
       logoHomeLink = "/"
 
     [languages.en.menu]
