@@ -6,7 +6,7 @@ authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["git", "ssh"]
 keywords = ["Dev","Tech"]
-description = ""
+description = "Fix permission errors while using git with SSH"
 showFullContent = false
 +++
 
