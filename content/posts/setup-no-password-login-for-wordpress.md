@@ -22,6 +22,6 @@ To start, your WordPress site should be already set up and you only need to inst
 
 Go to *Dashboard &gt; Plugins &gt; Add New* and Search for “trusona”
 
-![Trusona](/static/image/trusona.jpg)
+![Trusona](/image/trusona.jpg)
 
 Click on Install and after instation, Activate. I’ve alredy installed the plugin and activated. WordPress side of things are done for now.
