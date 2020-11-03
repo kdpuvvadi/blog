@@ -8,6 +8,7 @@ tags = ["", ""]
 keywords = ["", ""]
 description = ""
 showFullContent = false
+draft = true
 +++
 
 I'm loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following componenets.
@@ -128,4 +129,7 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 ***Note*** :- Replace SSID and psk with your wire access point name, password and static IP to desired one based on your network setup.
 
 Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen. 
+
 ![](/image/hass_preparing.jpg)
+
+The process may take some time, Take a coffe brake. Once the process is completed 
