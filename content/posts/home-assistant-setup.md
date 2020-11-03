@@ -6,7 +6,7 @@ authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["hass", "Home Assistant", "Raspberry Pi", "pi", "Home Automation" ]
 keywords = ["Automation", "Tech"]
-description = "A step by step guide to setup Home Assistant on Raspberry Pi"
+description = "A step by step guide to setup Home Assistant on Raspberry Pi for Home Automation"
 showFullContent = false
 +++
 
@@ -124,6 +124,22 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 
 ***Note*** :- Replace UUID with newly generated uuid, you can generate one for free [here](https://www.uuidgenerator.net/ "uuid generated").
 ***Note*** :- Replace SSID and psk with your wire access point name, password and static IP to desired one based on your network setup.
+
+#### Setup
+
+Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen. 
+
+![](/image/hass_preparing.jpg)
+
+The process may take some time, Take a coffe brake. Once the process is completed, you should see account creation screen.
+
+![](/image/hass_account.png)
+
+Name your Home Assitant setup, setup Home locatation and Select the units of choice in the following screen. 
+
+![](/image/hass_map_units_name.png)
+
+If everything went good so far, you should Home Assitant Dashboard *aka* ***lovelace***. Setup of the Home Assitant on Pi is completed.
 
 #### Conclusion
 
