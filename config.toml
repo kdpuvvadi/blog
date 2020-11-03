@@ -62,11 +62,20 @@ paginate = 5
       logoHomeLink = "/"
 
     [languages.en.menu]
+
       [[languages.en.menu.main]]
-        #identifier = "about"
+        identifier = "home"
+        weight = 1
+        name = "Home"
+        url = "/"
+
+      [[languages.en.menu.main]]
+        identifier = "about"
+        weight = 2
         name = "About"
-        url = "/about"
+        url = "https://kd.puvvadi.me/"
       [[languages.en.menu.main]]
-        #identifier = "contact"
+        identifier = "contact"
+         weight = 3
         name = "Contact"
         url = "/contact"
