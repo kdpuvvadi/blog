@@ -1,5 +1,5 @@
 +++
-title = "Home Assistant Setup on Raspberry Pi and Intigrating ESP8266 (NodeMCU)"
+title = "Home Assistant Setup on Raspberry Pi"
 date = "2020-11-03T20:09:59+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
@@ -18,8 +18,6 @@ I'm loving Home Assistant. If your home has a lot IOT devices or if you want to 
     - Power Supply
     - MicroSD card (Atleast 32GB)
     - SDCard Reader
-    - ESP8266
-    - DHT11 (For Temparature and Humidity Monitoring)
 
 #### Download required Tools
 First Download Pi Home Assistant Image [Here](https://www.home-assistant.io/hassio/installation/ "Download HA images"). I'm using Raspberry Pi 3 B+ & I might want to use GPIO ports, so i've selected 32 bit image. Download balenaEtcher [Here](https://www.balena.io/etcher "Download balenaEtcher") for flashing the image to SDCard. After Downloading the Pi Image, extract the image with any unzip utility. I'm using [7-Zip](https://www.7-zip.org/, "Download 7-Zip"). 
@@ -141,3 +139,9 @@ The process may take some time, Take a coffe brake. Once the process is complete
 Name your Home Assitant setup, setup Home locatation and Select the units of choice in the following screen. 
 
 ![](/image/hass_map_units_name.png)
+
+If everything went good so far, you should Home Assitant Dashboard *aka* ***lovelace***. 
+
+#### ESP8266 Setup
+
+Our goal today is connecting NodeMCU to HomeAssitant. To do that we need to install small addon ESPHome from Addon store on Home Assitant. To install ESPHome Addon, go to * Superviser > Add-on Sore * and search for ESPHome. Click on the Add-on and click install. 
