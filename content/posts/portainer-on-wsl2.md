@@ -36,6 +36,7 @@ $ docker run -d
     -v portainer_data:/data 
     portainer/portainer-ce
 ````
+
 ![](/image/portainer-running.png)
 
 Here, Port *9000* is used for serving UI and API. Port 8000 is for running SSH tunnel between portainer instance and the agent.
