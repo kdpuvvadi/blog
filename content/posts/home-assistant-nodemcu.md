@@ -1,8 +1,8 @@
 +++
-title = "Home Assistant Nodemcu"
+title = "Connecting Nodemcu to Home Assistant"
 date = "2020-11-03T22:12:51+05:30"
-author = ""
-authorTwitter = "" #do not include @
+author = "KD"
+authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["NodeMCU","ESP8266", "ESPHome", "Home Assitant", "Home Automation"]
 keywords = ["Home Assitant", "HASS", "Automation"]
