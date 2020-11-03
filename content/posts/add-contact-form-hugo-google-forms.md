@@ -128,7 +128,7 @@ $ hugo new thankyou.md
 ````
 Add following to contact page html just before *form* tag.
 
-````
+{{< code language="html"  expand="Show" collapse="Hide" >}}
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
 onload="if(submitted) {window.location='/thankyou';}"></iframe>
@@ -136,10 +136,8 @@ onload="if(submitted) {window.location='/thankyou';}"></iframe>
 <form action="https://docs.google.com/forms/d/e/formID/formResponse" 
 method="post" target="hidden_iframe" onsubmit="submitted=true;">
 </form>
-````
-Replace form ID with your google form ID. 
-
-Now it should looks something like this bellow.
+{{< /code >}}
+Replace form ID with your google form ID. Now it should looks something like this bellow.
 
 ![](/image/contact-form.jpg)
 
