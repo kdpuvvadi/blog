@@ -8,7 +8,6 @@ tags = ["", ""]
 keywords = ["", ""]
 description = ""
 showFullContent = false
-draft = true
 +++
 
 I'm loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following componenets.
@@ -126,22 +125,6 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 ***Note*** :- Replace UUID with newly generated uuid, you can generate one for free [here](https://www.uuidgenerator.net/ "uuid generated").
 ***Note*** :- Replace SSID and psk with your wire access point name, password and static IP to desired one based on your network setup.
 
-#### Setup
+#### Conclusion
 
-Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen. 
-
-![](/image/hass_preparing.jpg)
-
-The process may take some time, Take a coffe brake. Once the process is completed, you should see account creation screen.
-
-![](/image/hass_account.png)
-
-Name your Home Assitant setup, setup Home locatation and Select the units of choice in the following screen. 
-
-![](/image/hass_map_units_name.png)
-
-If everything went good so far, you should Home Assitant Dashboard *aka* ***lovelace***. 
-
-#### ESP8266 Setup
-
-Our goal today is connecting NodeMCU to HomeAssitant. To do that we need to install small addon ESPHome from Addon store on Home Assitant. To install ESPHome Addon, go to * Superviser > Add-on Sore * and search for ESPHome. Click on the Add-on and click install. 
+I like to think Home Assistant a Swiff Army Knigh. Possibilities are endless. If properly configured, you can control all your smart home from anywhare in the world with touch of the button securly. In comming days i'll write about intigrating different IOT and goodies to Hass. Keep watching this space. [Au revoir](#conclusion)
