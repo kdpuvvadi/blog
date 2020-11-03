@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wsl on KD&#39;s Blog</title>
+    <link>/tags/wsl/</link>
+    <description>Recent content in wsl on KD&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Nov 2020 19:37:15 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Portainer on Wsl2</title>
+      <link>/posts/portainer-on-wsl2/</link>
+      <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
+      
+      <guid>/posts/portainer-on-wsl2/</guid>
+      <description>I’ve been using WSL2 for developping for both personal and Professional use cases. To manage and quick deploy the containers, i’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
+I’m assuming you’ve already WSL2 installed and docker is up and running.
+First create a volume with following.
+$ docker volume create portainer_data Now, install portainer
+$ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.</description>
+    </item>
+    
+  </channel>
+</rss>

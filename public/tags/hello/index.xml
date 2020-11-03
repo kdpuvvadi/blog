@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hello on KD&#39;s Blog</title>
+    <link>/tags/hello/</link>
+    <description>Recent content in hello on KD&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Nov 2020 16:05:53 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/hello/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome</title>
+      <link>/posts/welcome/</link>
+      <pubDate>Mon, 02 Nov 2020 16:05:53 +0530</pubDate>
+      
+      <guid>/posts/welcome/</guid>
+      <description>Welcome to my blog. If you are reading this you&amp;rsquo;ve plenty of time to spare (or waste). So, buckle up. you are going to learn something (or waste tone of time).</description>
+    </item>
+    
+  </channel>
+</rss>

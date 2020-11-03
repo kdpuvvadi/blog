@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Fix Git SSH Permissions :: KD&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="When you try to git push it throws Permission Denied(publickey) error.
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt; Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doen’t use the key from there." />
+<meta name="keywords" content="Dev, Tech" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/fix-git-ssh/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kdpuvvadi" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fix Git SSH Permissions">
+<meta property="og:description" content="Fix permission errors while using git with SSH" />
+<meta property="og:url" content="/posts/fix-git-ssh/" />
+<meta property="og:site_name" content="KD&#39;s Blog" />
+
+  <meta property="og:image" content="/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-11-02 16:59:49 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    KD&#39;s Blog
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/fix-git-ssh/">Fix Git SSH Permissions</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-11-02 
+      </span>
+    
+    
+    <span class="post-author">:: KD Puvvadi</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/git/">git</a>&nbsp;
+    
+    #<a href="/tags/ssh/">ssh</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <p><img src="/image/gitlab-access-denied-publickey.jpg" alt=""></p>
+<p>When you try to <em>git push</em> it throws Permission Denied(publickey) error.</p>
+<pre><code>&lt;pre class=&quot;wp-block-code&quot;&gt;
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre><p>When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in <em><strong>Pageant</strong></em> which comes with putty but git doen’t use the key from there. To solve this, open <em><strong>git bash</strong></em> as Administator. <em>(Don’t use <a href="https://kd.puvvadi.me/launch-windows-terminal-from-cmd/">windows terminal</a> or default CMD, better use *nix cli)</em></p>
+<ul>
+<li>Type <strong><!-- raw HTML omitted --><em>cd ~/.ssh</em><!-- raw HTML omitted --></strong> It will take you to <em>%userprofile%/.ssh</em> or C:/users/<em>username</em>/.ssh</li>
+<li>Run <em><!-- raw HTML omitted --><strong>ls</strong><!-- raw HTML omitted --></em>, there should be two file <em><strong>id_rsa</strong></em> and <em><strong>id_rsa.pub</strong></em></li>
+<li>If those files are alredy there, then copy the content of <em><strong>id_rsa.pub</strong></em> file and paste it in the key section of git service provider.</li>
+<li>if not continue bellow steps.</li>
+<li>To create SSH key type the following <em><strong><!-- raw HTML omitted -->ssh-keygen -t rsa -C “your_email@example.com”<!-- raw HTML omitted --></strong></em></li>
+<li>replace <em><strong>your_email@example.com</strong></em> with your email address. If you wish set a keyphrase for the key add it when it prompts.</li>
+<li>Now do the<!-- raw HTML omitted --> <em><strong>ls</strong></em><!-- raw HTML omitted -->, both files should be created by now. Open the directory and copy the contents of id_rsa.pub file to the key section of your git provides.</li>
+<li>Now try pushing the git repo with <em><strong>git push</strong></em>, it should work by now.</li>
+</ul>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="/posts/portainer-on-wsl2/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Portainer on Wsl2</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/launch-windows-terminal-cmd/">
+                <span class="button__text">Launch Windows Terminal with single Command</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 <a href="https://twitter.com/kdpuvvadi">KD</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

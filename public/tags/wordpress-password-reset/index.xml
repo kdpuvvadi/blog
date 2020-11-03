@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wordpress password reset on KD&#39;s Blog</title>
+    <link>/tags/wordpress-password-reset/</link>
+    <description>Recent content in wordpress password reset on KD&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Nov 2020 16:12:53 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/wordpress-password-reset/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup No Password Login for Wordpress</title>
+      <link>/posts/setup-no-password-login-for-wordpress/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/posts/setup-no-password-login-for-wordpress/</guid>
+      <description>Passwords can be tricky. They are hard to remember and easy to guess and easy to be stolen. And there is Human element and our stupid brains always wants use same or similar passwords for login on every other website, including social networks, Personal email and Works emails etc.
+When it comes to WordPress, this can be more damaging. If your business website is compromised because of some weak password or any other human elements.</description>
+    </item>
+    
+  </channel>
+</rss>

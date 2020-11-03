@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Portainer on Wsl2 :: KD&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I’ve been using WSL2 for developping for both personal and Professional use cases. To manage and quick deploy the containers, i’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
+I’m assuming you’ve already WSL2 installed and docker is up and running.
+First create a volume with following.
+$ docker volume create portainer_data Now, install portainer
+$ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker." />
+<meta name="keywords" content="Tech, Dev" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/portainer-on-wsl2/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kdpuvvadi" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Portainer on Wsl2">
+<meta property="og:description" content="Use WSL2 with portainer to speedup your Dev time" />
+<meta property="og:url" content="/posts/portainer-on-wsl2/" />
+<meta property="og:site_name" content="KD&#39;s Blog" />
+
+  <meta property="og:image" content="/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-11-02 19:37:15 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    KD&#39;s Blog
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/portainer-on-wsl2/">Portainer on Wsl2</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-11-02 
+      </span>
+    
+    
+    <span class="post-author">:: KD Puvvadi</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/docker/">docker</a>&nbsp;
+    
+    #<a href="/tags/portainer/">portainer</a>&nbsp;
+    
+    #<a href="/tags/wsl/">wsl</a>&nbsp;
+    
+    #<a href="/tags/wsl2/">wsl2</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <p><img src="/image/wsl2-portainer.jpg" alt=""></p>
+<p>I’ve been using WSL2 for developping for both personal and Professional use cases. To manage and quick deploy the containers, i’ve been using <em><a href="https://www.portainer.io/">Portainer</a></em>. As much as i love to use Terminal, i’m mostly lazy.</p>
+<p>I’m assuming you’ve already WSL2 installed and docker is up and running.</p>
+<p>First create a volume with following.</p>
+<pre><code>$ docker volume create portainer_data
+</code></pre><p><img src="/image/portainer-volume.jpg" alt=""></p>
+<p>Now, install portainer</p>
+<pre><code>$ docker run -d 
+    -p 8000:8000 
+    -p 9000:9000 
+    --name=portainer 
+    --restart=always 
+    -v /var/run/docker.sock:/var/run/docker.sock 
+    -v portainer_data:/data 
+    portainer/portainer-ce
+</code></pre><p><img src="/image/portainer-running.png" alt=""></p>
+<p>Here, Port <em>9000</em> is used for serving UI and API. Port 8000 is for running SSH tunnel between portainer instance and the agent.</p>
+<p>Now, set a admin password</p>
+<p><img src="/image/portainer-user.png" alt=""></p>
+<p>Now, Select Docker as Environment and click Connect</p>
+<p><img src="/image/portainer-env.png" alt=""></p>
+<p>Here it is,</p>
+<p><img src="/image/portainer-dashboard.png" alt=""></p>
+<p>To pull images from <em>Dockerhub</em> go to images on left menu, type in the name of the container and tag <em>e.g node:current-alpine3.10</em>. click on Pull the Image.</p>
+<p><img src="/image/docker-images-hub.png" alt=""></p>
+<p>you can import of your own container and spin off the containers.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="/posts/add-contact-form-hugo-google-forms/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Add Contact form to Hugo with Google forms</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/fix-git-ssh/">
+                <span class="button__text">Fix Git SSH Permissions</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 <a href="https://twitter.com/kdpuvvadi">KD</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

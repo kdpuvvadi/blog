@@ -5,6 +5,218 @@
     <link>/tags/</link>
     <description>Recent content in Tags on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Nov 2020 21:25:36 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact form</title>
+      <link>/tags/contact-form/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/contact-form/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>/tags/css/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Forms</title>
+      <link>/tags/google-forms/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/google-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>/tags/html/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static Site</title>
+      <link>/tags/static-site/</link>
+      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
+      
+      <guid>/tags/static-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portainer</title>
+      <link>/tags/portainer/</link>
+      <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
+      
+      <guid>/tags/portainer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wsl</title>
+      <link>/tags/wsl/</link>
+      <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
+      
+      <guid>/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wsl2</title>
+      <link>/tags/wsl2/</link>
+      <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
+      
+      <guid>/tags/wsl2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>/tags/git/</link>
+      <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>/tags/ssh/</link>
+      <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
+      
+      <guid>/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal</title>
+      <link>/tags/terminal/</link>
+      <pubDate>Mon, 02 Nov 2020 16:41:33 +0530</pubDate>
+      
+      <guid>/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows Terminal</title>
+      <link>/tags/windows-terminal/</link>
+      <pubDate>Mon, 02 Nov 2020 16:41:33 +0530</pubDate>
+      
+      <guid>/tags/windows-terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2fa</title>
+      <link>/tags/2fa/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/2fa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>no password wordpress</title>
+      <link>/tags/no-password-wordpress/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/no-password-wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trusona</title>
+      <link>/tags/trusona/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/trusona/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress 2fa</title>
+      <link>/tags/wordpress-2fa/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/wordpress-2fa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress login</title>
+      <link>/tags/wordpress-login/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/wordpress-login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress password disable</title>
+      <link>/tags/wordpress-password-disable/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/wordpress-password-disable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress password reset</title>
+      <link>/tags/wordpress-password-reset/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/wordpress-password-reset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress without password</title>
+      <link>/tags/wordpress-without-password/</link>
+      <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
+      
+      <guid>/tags/wordpress-without-password/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hello</title>
+      <link>/tags/hello/</link>
+      <pubDate>Mon, 02 Nov 2020 16:05:53 +0530</pubDate>
+      
+      <guid>/tags/hello/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
