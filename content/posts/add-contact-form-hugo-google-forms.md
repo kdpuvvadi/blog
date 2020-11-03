@@ -43,7 +43,7 @@ Now add following to your *contact.md* file and replace the form ID and field ID
 
 {{< code language="html"  expand="Show" collapse="Hide" >}}
 
-<form action="https://docs.google.com/forms/d/e/formID/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
+<form action="https://docs.google.com/forms/d/e/<formID/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
         <label>Name*</label>
         <input type="text" placeholder="Name*" class="feedback-input" name="entry.719211028" required>
 
@@ -61,6 +61,7 @@ Now add following to your *contact.md* file and replace the form ID and field ID
 
 {{< /code >}}
 
+*Replace FormID with actual ID from Google form*
 
 Create *form.css* file inside *static > css * directory and add following to it.
 
@@ -133,11 +134,14 @@ Add following to contact page html just before *form* tag.
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
 onload="if(submitted) {window.location='/thankyou';}"></iframe>
 
-<form action="https://docs.google.com/forms/d/e/formID/formResponse" 
+<form action="https://docs.google.com/forms/d/e/<formID>/formResponse" 
 method="post" target="hidden_iframe" onsubmit="submitted=true;">
 </form>
 {{< /code >}}
-Replace form ID with your google form ID. Now it should looks something like this bellow.
+
+*Replace FormID with actual ID from Google form*.
+
+#### Now it should looks something like this bellow.
 
 ![](/image/contact-form.jpg)
 
