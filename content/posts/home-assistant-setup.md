@@ -4,9 +4,9 @@ date = "2020-11-03T20:09:59+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
-description = ""
+tags = ["hass", "Home Assistant", "Raspberry Pi", "pi", "Home Automation" ]
+keywords = ["Automation", "Tech"]
+description = "A step by step guide to setup Home Assistant on Raspberry Pi"
 showFullContent = false
 +++
 
