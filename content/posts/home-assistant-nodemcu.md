@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 tags = ["NodeMCU","ESP8266", "ESPHome", "Home Assitant", "Home Automation"]
 keywords = ["Home Assitant", "HASS", "Automation"]
-description = ""
+description = "Step by Step guide for connecting NodeMCU to the Home Assistant and Monitoring Humidity & Temparature with DHT11 on Raspberry Pi"
 showFullContent = false
 +++
 
