@@ -58,7 +58,7 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "KD's Blog"
+      logoText = ">_ KD's Blog"
       logoHomeLink = "/"
 
     [[menu.main]]
