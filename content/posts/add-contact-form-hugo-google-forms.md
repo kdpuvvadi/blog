@@ -1,7 +1,7 @@
 +++
 title = "Add Contact form to Hugo with Google forms"
 date = "2020-11-02T21:25:36+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["Hugo", "Google Forms", "Contact form", "HTML", "CSS", "Static Site" ]

@@ -1,7 +1,7 @@
 +++
 title = "Setup No Password Login for Wordpress"
 date = "2020-11-02T16:12:53+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["2fa","no password wordpress","trusona","wordpress 2fa","wordpress login","wordpress password disable","wordpress password reset","wordpress without password"]

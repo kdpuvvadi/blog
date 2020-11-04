@@ -1,7 +1,7 @@
 +++
 title = "Launch Windows Terminal with single Command"
 date = "2020-11-02T16:41:33+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["windows Terminal", "Terminal"]

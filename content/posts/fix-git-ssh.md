@@ -1,7 +1,7 @@
 +++
 title = "Fix Git SSH Permissions"
 date = "2020-11-02T16:59:49+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["git", "ssh"]

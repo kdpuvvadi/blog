@@ -1,7 +1,7 @@
 +++
 title = "Welcome"
 date = "2020-11-02T16:05:53+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["hello"]

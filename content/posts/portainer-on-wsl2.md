@@ -1,7 +1,7 @@
 +++
 title = "Portainer on Wsl2"
 date = "2020-11-02T19:37:15+05:30"
-author = "KD Puvvadi"
+author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
 tags = ["docker", "portainer","wsl", "wsl2"]
