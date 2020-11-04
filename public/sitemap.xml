@@ -3,6 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/home-assistant-nodemcu/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/esp8266/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/esphome/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/home-assitant/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/home-automation/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/nodemcu/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-11-03T22:12:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hass/</loc>
+    <lastmod>2020-11-03T20:09:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/home-assistant/</loc>
+    <lastmod>2020-11-03T20:09:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/home-assistant-setup/</loc>
+    <lastmod>2020-11-03T20:09:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/pi/</loc>
+    <lastmod>2020-11-03T20:09:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/raspberry-pi/</loc>
+    <lastmod>2020-11-03T20:09:59+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/add-contact-form-hugo-google-forms/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url>
@@ -33,22 +103,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-11-02T21:25:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-11-02T21:25:36+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/static-site/</loc>
-    <lastmod>2020-11-02T21:25:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url>
   

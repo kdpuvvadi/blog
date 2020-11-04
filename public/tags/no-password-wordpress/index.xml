@@ -6,11 +6,7 @@
     <description>Recent content in no password wordpress on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2020 16:12:53 +0530</lastBuildDate>
-    
-	<atom:link href="/tags/no-password-wordpress/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Nov 2020 16:12:53 +0530</lastBuildDate><atom:link href="/tags/no-password-wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup No Password Login for Wordpress</title>
       <link>/posts/setup-no-password-login-for-wordpress/</link>

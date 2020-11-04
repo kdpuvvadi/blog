@@ -6,11 +6,7 @@
     <description>Recent content in git on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2020 16:59:49 +0530</lastBuildDate>
-    
-	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Nov 2020 16:59:49 +0530</lastBuildDate><atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix Git SSH Permissions</title>
       <link>/posts/fix-git-ssh/</link>
@@ -18,7 +14,7 @@
       
       <guid>/posts/fix-git-ssh/</guid>
       <description>When you try to git push it throws Permission Denied(publickey) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt; Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doen’t use the key from there.</description>
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doen’t use the key from there.</description>
     </item>
     
   </channel>

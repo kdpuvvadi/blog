@@ -31,7 +31,7 @@ First open Google form and create a form with Name, Email, Subject and Message."
 <meta name="twitter:card" content="summary" />
 
   
-    <meta name="twitter:site" content="" />
+    <meta name="twitter:site" content="kdpuvvadi" />
   
     <meta name="twitter:creator" content="kdpuvvadi" />
 
@@ -62,7 +62,6 @@ First open Google form and create a form with Name, Email, Subject and Message."
 
 
 
-
 </head>
 <body class="orange">
 
@@ -74,7 +73,7 @@ First open Google form and create a form with Name, Email, Subject and Message."
     <div class="header__logo">
       <a href="/">
   <div class="logo">
-    KD&#39;s Blog
+    &gt;_ KD&#39;s Blog
   </div>
 </a>
 
@@ -87,7 +86,11 @@ First open Google form and create a form with Name, Email, Subject and Message."
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/">Home</a></li>
+        
+      
+        
+          <li><a href="https://kd.puvvadi.me/">About</a></li>
         
       
         
@@ -103,7 +106,11 @@ First open Google form and create a form with Name, Email, Subject and Message."
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/">Home</a></li>
+      
+    
+      
+        <li><a href="https://kd.puvvadi.me/">About</a></li>
       
     
       
@@ -176,15 +183,15 @@ To add <em>rawhtml</em> layout create rawhtml.html file in your theme directory 
 
 
   <div class="collapsable-code">
-    <input id="695817432" type="checkbox"  />
-    <label for="695817432">
+    <input id="436719258" type="checkbox"  />
+    <label for="436719258">
       <span class="collapsable-code__language">html</span>
       
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
     <pre class="language-html" ><code>
 
-&lt;form action=&#34;https://docs.google.com/forms/d/e/formID/formResponse&#34; method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=true&#34;&gt;
+&lt;form action=&#34;https://docs.google.com/forms/d/e/&lt;formID/formResponse&#34; method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=true&#34;&gt;
         &lt;label&gt;Name*&lt;/label&gt;
         &lt;input type=&#34;text&#34; placeholder=&#34;Name*&#34; class=&#34;feedback-input&#34; name=&#34;entry.719211028&#34; required&gt;
 
@@ -204,13 +211,14 @@ To add <em>rawhtml</em> layout create rawhtml.html file in your theme directory 
   </div>
 
 
+<p><em>Replace FormID with actual ID from Google form</em></p>
 <p>Create <em>form.css</em> file inside *static &gt; css * directory and add following to it.</p>
 
 
 
   <div class="collapsable-code">
-    <input id="493267581" type="checkbox"  />
-    <label for="493267581">
+    <input id="418693572" type="checkbox"  />
+    <label for="418693572">
       <span class="collapsable-code__language">css</span>
       
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
@@ -272,15 +280,30 @@ font-weight:700;
 </code></pre><p>Now try filling and submitting the form. You may&rsquo;ve obsrved that after submition, page is redirecting to default Google form resnponse page. To fix it first create a new page with following</p>
 <pre><code>$ hugo new thankyou.md
 </code></pre><p>Add following to contact page html just before <em>form</em> tag.</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;var submitted=false;&lt;/script&gt;
-&lt;iframe name=&quot;hidden_iframe&quot; id=&quot;hidden_iframe&quot; style=&quot;display:none;&quot; 
-onload=&quot;if(submitted) {window.location='/thankyou';}&quot;&gt;&lt;/iframe&gt;
 
-&lt;form action=&quot;https://docs.google.com/forms/d/e/formID/formResponse&quot; 
-method=&quot;post&quot; target=&quot;hidden_iframe&quot; onsubmit=&quot;submitted=true;&quot;&gt;
+
+
+  <div class="collapsable-code">
+    <input id="237945681" type="checkbox"  />
+    <label for="237945681">
+      <span class="collapsable-code__language">html</span>
+      
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-html" ><code>
+&lt;script type=&#34;text/javascript&#34;&gt;var submitted=false;&lt;/script&gt;
+&lt;iframe name=&#34;hidden_iframe&#34; id=&#34;hidden_iframe&#34; style=&#34;display:none;&#34; 
+onload=&#34;if(submitted) {window.location=&#39;/thankyou&#39;;}&#34;&gt;&lt;/iframe&gt;
+
+&lt;form action=&#34;https://docs.google.com/forms/d/e/&lt;formID&gt;/formResponse&#34; 
+method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=true;&#34;&gt;
 &lt;/form&gt;
-</code></pre><p>Replace form ID with your google form ID.</p>
-<p>Now it should looks something like this bellow.</p>
+</code></pre>
+  </div>
+
+
+<p><em>Replace FormID with actual ID from Google form</em>.</p>
+<h4 id="now-it-should-looks-something-like-this-bellow">Now it should looks something like this bellow.<a href="#now-it-should-looks-something-like-this-bellow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p><img src="/image/contact-form.jpg" alt=""></p>
 <p>After submitting the form, it should redirect to <em>/thankyou/</em> page.</p>
 <p><img src="/image/contact-res.png" alt=""></p>
@@ -300,6 +323,13 @@ method=&quot;post&quot; target=&quot;hidden_iframe&quot; onsubmit=&quot;submitte
         <hr />
     </div>
     <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="/posts/home-assistant-setup/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Home Assistant Setup on Raspberry Pi</span>
+            </a>
+        </span>
         
         
         <span class="button next">
