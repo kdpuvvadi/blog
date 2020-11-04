@@ -12,7 +12,7 @@ paginate = 5
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 3
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = false
@@ -40,8 +40,8 @@ paginate = 5
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
-  creator = ""
-  site = ""
+  creator = "kdpuvvadi"
+  site = "kdpuvvadi"
 
 [languages]
   [languages.en]
