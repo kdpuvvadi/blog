@@ -2,7 +2,7 @@
 title = "Access Home Assistant from anywhere securely with DuckDNS, Let's Encrypt and NGINX"
 date = "2020-11-04T22:09:57+05:30"
 author = "KD"
-authorTwitter = "kdpuvvadi" #do not include @
+authorTwitter = "https://twitter.com/kdpuvvadi" #do not include @
 cover = ""
 tags = ["HASS", "DuckDNS", "Nginx", "Home Assistant" ]
 keywords = ["Automation", "tech"]
@@ -10,7 +10,7 @@ description = "Step by step guide for setting up Secure SSL connection to Home A
 showFullContent = false
 +++
 
-we've setup [`Home Assitant`](home-assistant-setup.md) previously. Without statis IP, it's hard to access Home Assistant instance out of the home without `hassio cloud`.But it's a subscription service. One of the reason one might choose Home Assistant is to avoid subscription services from a lot of providers. 
+we've setup [`Home Assitant`](home-assistant-setup.md) previously. Without static IP, it's hard to access Home Assistant instance out of the home without `hassio cloud`.But it's a subscription service. One of the reason one might choose Home Assistant is to avoid subscription services from a lot of providers. 
 
 #### DuckDNS Intro
 
@@ -18,7 +18,7 @@ Problem without static IP is, ISP's assigns different IP from their pool every t
 
 #### DuckDNS Signup
 
-Visit [`DuckDNS`](https://www.duckdns.org/) and singup with with Google, Twitter, GitHub, Reddit or persona. After sing in, enter the desired subdomain name *e.g. myhome.duckdns.org*. DuckDNS grabs current public IP and assigns it to the subdomain. You should note down token number provided here.
+Visit [`DuckDNS`](https://www.duckdns.org/) and sing up with with Google, Twitter, GitHub, Reddit or persona. After sing in, enter the desired subdomain name *e.g. myhome.duckdns.org*. DuckDNS grabs current public IP and assigns it to the subdomain. You should note down token number provided here.
 
 #### DuckDNS Add-on
 
