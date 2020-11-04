@@ -30,9 +30,10 @@ googleAnalytics = "UA-164525361-1"
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  enableGitInfo = true
+  showLastUpdated = true
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  # updatedDatePrefix = "Updated"
+  updatedDatePrefix = "Updated"
 
   # set all headings to their default size (depending on browser settings)
   # it's set to `true` by default
