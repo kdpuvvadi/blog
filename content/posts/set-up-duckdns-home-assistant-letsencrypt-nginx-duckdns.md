@@ -1,14 +1,13 @@
 +++
-title = "Access Home Assitant from anywhere with DuckDNS and NGINX"
+title = "Access Home Assistant from anywhere securely with DuckDNS, Let's Encrypt and NGINX"
 date = "2020-11-04T22:09:57+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["HASS", "DuckDNS", "Nginx", "Home Assitant" ]
+tags = ["HASS", "DuckDNS", "Nginx", "Home Assistant" ]
 keywords = ["Automation", "tech"]
-description = ""
+description = "Step by step guide for setting up Secure SSL connection to Home Assistant with DuckDNS, Let's Encrypt, NGINX"
 showFullContent = false
-draft = true
 +++
 
 we've setup [`Home Assitant`](home-assistant-setup.md) previously. Without statis IP, it's hard to access Home Assistant instance out of the home without `hassio cloud`.But it's a subscription service. One of the reason one might choose Home Assistant is to avoid subscription services from a lot of providers. 
