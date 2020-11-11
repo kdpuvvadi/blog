@@ -28,7 +28,7 @@ googleAnalytics = "UA-164525361-1"
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
 
-disqusShortname = "blog-puvvadi-me.disqus.com"
+disqusShortname = "blog-puvvadi-me"
 
 
   # set post to show the last updated
