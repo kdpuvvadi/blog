@@ -6,8 +6,6 @@ paginate = 5
 googleAnalytics = "UA-164525361-1"
 
 [params]
-  # dir name of your main content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
@@ -16,7 +14,6 @@ googleAnalytics = "UA-164525361-1"
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 5
 
-  # show selector to switch language
   showLanguageSelector = false
 
   # set theme to full screen width
@@ -28,24 +25,15 @@ googleAnalytics = "UA-164525361-1"
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
 
-disqusShortname = "blog-puvvadi-me"
+  disqusShortname = "blog-puvvadi-me"
 
 
-  # set post to show the last updated
-  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   enableGitInfo = true
   showLastUpdated = true
-  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   updatedDatePrefix = "Updated"
 
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
 
 [params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
   creator = "kdpuvvadi"
   site = "kdpuvvadi"
 
