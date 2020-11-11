@@ -4,7 +4,7 @@ date = "2020-11-02T16:59:49+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["git", "ssh"]
+tags = ["git", "SSH"]
 keywords = ["Dev","Tech"]
 description = "Fix permission errors while using git with SSH"
 showFullContent = false
@@ -12,7 +12,7 @@ showFullContent = false
 
 ![](/image/gitlab-access-denied-publickey.jpg)
 
-When you try to *git push* it throws Permission Denied(publickey) error.
+When you try to *git push* it throws Permission Denied(public key) error.
 
 ```
 <pre class="wp-block-code">
@@ -23,13 +23,13 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in `Pageant` which comes with putty but git doen’t use the key from there. To solve this, open `git bash` as Administrator. *(Don’t use [windows terminal](https://kd.puvvadi.me/launch-windows-terminal-from-cmd/) or default CMD, better use \*nix cli)*
+When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in `Pageant` which comes with putty but git doesn’t use the key from there. To solve this, open `git bash` as Administrator. Don’t use [windows terminal](/posts/launch-windows-terminal-cmd/) or default CMD, better use \*nix cli
 
-- Type **<span style="text-decoration: underline;">*cd ~/.ssh*</span>** It will take you to *%userprofile%/.ssh* or C:/users/*username*/.ssh
-- Run *<span style="text-decoration: underline;">**ls**</span>*, there should be two file ***id\_rsa*** and ***id\_rsa.pub***
-- If those files are already there, then copy the content of ***id\_rsa.pub*** file and paste it in the key section of git service provider.
+- Type `cd ~/.ssh` It will take you to `%userprofile%/.ssh` or `C:/users/%username%/.ssh`
+- Run `ls`, there should be two file `id_rsa` and `id_rsa.pub`
+- If those files are already there, then copy the content of `id_rsa.pub` file and paste it in the key section of git service provider.
 - if not continue bellow steps.
-- To create SSH key type the following ***<span style="text-decoration: underline;">ssh-keygen -t rsa -C “your\_email@example.com”</span>***
-- replace `your\_email@example.com` with your email address. If you wish set a key phrase for the key add it when it prompts.
-- Now do the<span style="text-decoration: underline;"> `ls`</span>, both files should be created by now. Open the directory and copy the contents of id\_rsa.pub file to the key section of your git provides.
+- To create SSH key type the following `ssh-keygen -t rsa -C “your_email@example.com”`
+- replace `your_email@example.com` with your email address. If you wish set a key phrase for the key add it when it prompts.
+- Now do the `ls`, both files should be created by now. Open the directory and copy the contents of id_rsa.pub file to the key section of your git provides.
 - Now try pushing the git repo with `git push`, it should work by now.
