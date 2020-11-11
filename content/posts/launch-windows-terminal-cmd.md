@@ -15,7 +15,7 @@ Microsoft recently launched Windows terminal in the Microsoft Store as the previ
 
 
 
-To open Windows Terminal from run Press **Win+R** and type
+To open Windows Terminal from run Press `Win+R` and type
 
 ```html
   > wt
