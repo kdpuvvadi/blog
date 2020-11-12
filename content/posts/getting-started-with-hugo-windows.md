@@ -105,3 +105,5 @@ And added the following Environment Variable
 HUGO_VERSION 0.77.0
 ````
 To added Env variables, go to ***Site settings > Build & Deploy > Environment***. Set the Key *HUGO_VERSION* and it's value to *0.77.0*
+
+You can visit published site [HERE](https://my-new-hugo-site.netlify.app)
