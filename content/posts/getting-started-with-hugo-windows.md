@@ -1,5 +1,5 @@
 +++
-title = "Getting Started With Hugo in Windows"
+title = "Getting Started With Hugo in Windows and Free Hosting with Netlify"
 date = "2020-11-12T15:13:07+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
