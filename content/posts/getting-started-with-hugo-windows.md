@@ -3,9 +3,9 @@ title = "Getting Started With Hugo in Windows and Free Hosting with Netlify"
 date = "2020-11-12T15:13:07+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = ""
-tags = ["", ""]
-keywords = ["", ""]
+cover = "/image/free-website-hugo-netlify-github.jpg"
+tags = ["Hugo", "free website", "GitHub", "Netlify", "static website"]
+keywords = ["Tech", "Dev"]
 description = "Step by step guide to setup Hugo blog in windows and host with Netlify for Free"
 showFullContent = false
 +++
@@ -24,7 +24,7 @@ it should output something like this,
 > hugo version
 Hugo Static Site Generator v0.78.1/extended windows/amd64 BuildDate: unknown
 ````
-if you are planning to use Sass for CSS, `hugo-extended` is needed. To install hugo-extended
+if you are planning to use Sass for CSS, `hugo-extended` is needed. To install `hugo-extended`
 ````shell
 choco install hugo-extended
 ````
@@ -62,7 +62,7 @@ Essentially, Hugo site is ready. To generate static site
 hugo serve -D
 ```` 
 `D` flag is for viewing draft posts. 
-To add blog posts to hugo
+To add blog posts to Hugo
 ````shell
 hugo new posts/hello-world.md
 ````
@@ -96,7 +96,7 @@ Now, connect GitHub and Select your Repo and keep the remaining default.
 
 ![](/image/deploy-netlify-settings.jpg)
 
-Click on `Deploy Site`. Now, Netlify grabs the repo's Master branch and builds the Site. Keep an Eye on build log. If the build fail, check what's went wrong. For me i've to change the build command to following 
+Click on `Deploy Site`. Now, Netlify grabs the repo's Master branch and builds the Site. Keep an Eye on build log. If the build fail, check what's went wrong. For me I've to change the build command to following 
 ````shell
 hugo --gc --minify
 ````
