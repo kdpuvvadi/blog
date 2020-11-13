@@ -28,3 +28,6 @@ HUGO_VERSION = "0.77.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[plugins]]
+package = "./plugins/netlify-purge-cloudflare-on-deploy"
