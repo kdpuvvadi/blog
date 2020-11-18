@@ -14,7 +14,7 @@ title: "Contact"
   method="post" target="hidden_iframe" onsubmit="submitted=true;">
   </form>
 
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdBit8IwBmMxXARhjnvMkn4M4fPFpTQSjDaZEo6CAAh8FoltQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdBit8IwBmMxXARhjnvMkn4M4fPFpTQSjDaZEo6CAAh8FoltQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true" netlify >
     <label>Name*</label>
       <input type="text" placeholder="Name*" class="form-input" name="entry.149128287" required>
     <label>Email*</label>
