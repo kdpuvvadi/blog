@@ -6,7 +6,89 @@
     <description>Recent content in Tags on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2020 22:12:51 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KD Puvvadi</copyright>
+    <lastBuildDate>Thu, 12 Nov 2020 15:13:07 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>free website</title>
+      <link>/tags/free-website/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/tags/free-website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>/tags/github/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Netlify</title>
+      <link>/tags/netlify/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/tags/netlify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static website</title>
+      <link>/tags/static-website/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/tags/static-website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DuckDNS</title>
+      <link>/tags/duckdns/</link>
+      <pubDate>Wed, 04 Nov 2020 22:09:57 +0530</pubDate>
+      
+      <guid>/tags/duckdns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hass</title>
+      <link>/tags/hass/</link>
+      <pubDate>Wed, 04 Nov 2020 22:09:57 +0530</pubDate>
+      
+      <guid>/tags/hass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>/tags/home-assistant/</link>
+      <pubDate>Wed, 04 Nov 2020 22:09:57 +0530</pubDate>
+      
+      <guid>/tags/home-assistant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Wed, 04 Nov 2020 22:09:57 +0530</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ESP8266</title>
       <link>/tags/esp8266/</link>
@@ -26,15 +108,6 @@
     </item>
     
     <item>
-      <title>Home Assitant</title>
-      <link>/tags/home-assitant/</link>
-      <pubDate>Tue, 03 Nov 2020 22:12:51 +0530</pubDate>
-      
-      <guid>/tags/home-assitant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Home Automation</title>
       <link>/tags/home-automation/</link>
       <pubDate>Tue, 03 Nov 2020 22:12:51 +0530</pubDate>
@@ -49,24 +122,6 @@
       <pubDate>Tue, 03 Nov 2020 22:12:51 +0530</pubDate>
       
       <guid>/tags/nodemcu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hass</title>
-      <link>/tags/hass/</link>
-      <pubDate>Tue, 03 Nov 2020 20:09:59 +0530</pubDate>
-      
-      <guid>/tags/hass/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Home Assistant</title>
-      <link>/tags/home-assistant/</link>
-      <pubDate>Tue, 03 Nov 2020 20:09:59 +0530</pubDate>
-      
-      <guid>/tags/home-assistant/</guid>
       <description></description>
     </item>
     
@@ -125,15 +180,6 @@
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>/tags/hugo/</link>
-      <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
-      
-      <guid>/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Static Site</title>
       <link>/tags/static-site/</link>
       <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
@@ -152,7 +198,7 @@
     </item>
     
     <item>
-      <title>portainer</title>
+      <title>Portainer</title>
       <link>/tags/portainer/</link>
       <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
       
@@ -188,7 +234,7 @@
     </item>
     
     <item>
-      <title>ssh</title>
+      <title>SSH</title>
       <link>/tags/ssh/</link>
       <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
       
@@ -224,7 +270,7 @@
     </item>
     
     <item>
-      <title>no password wordpress</title>
+      <title>no password WordPress</title>
       <link>/tags/no-password-wordpress/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -233,7 +279,7 @@
     </item>
     
     <item>
-      <title>trusona</title>
+      <title>Trusona</title>
       <link>/tags/trusona/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -242,7 +288,7 @@
     </item>
     
     <item>
-      <title>wordpress 2fa</title>
+      <title>WordPress 2fa</title>
       <link>/tags/wordpress-2fa/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -251,7 +297,7 @@
     </item>
     
     <item>
-      <title>wordpress login</title>
+      <title>WordPress login</title>
       <link>/tags/wordpress-login/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -260,7 +306,7 @@
     </item>
     
     <item>
-      <title>wordpress password disable</title>
+      <title>WordPress password disable</title>
       <link>/tags/wordpress-password-disable/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -269,7 +315,7 @@
     </item>
     
     <item>
-      <title>wordpress password reset</title>
+      <title>WordPress password reset</title>
       <link>/tags/wordpress-password-reset/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -278,7 +324,7 @@
     </item>
     
     <item>
-      <title>wordpress without password</title>
+      <title>WordPress without password</title>
       <link>/tags/wordpress-without-password/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
@@ -287,7 +333,16 @@
     </item>
     
     <item>
-      <title>hello</title>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Mon, 02 Nov 2020 16:05:53 +0530</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
       <link>/tags/hello/</link>
       <pubDate>Mon, 02 Nov 2020 16:05:53 +0530</pubDate>
       

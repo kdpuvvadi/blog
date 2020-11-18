@@ -6,6 +6,7 @@
     <description>Recent content in windows Terminal on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>KD Puvvadi</copyright>
     <lastBuildDate>Mon, 02 Nov 2020 16:41:33 +0530</lastBuildDate><atom:link href="/tags/windows-terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Launch Windows Terminal with single Command</title>

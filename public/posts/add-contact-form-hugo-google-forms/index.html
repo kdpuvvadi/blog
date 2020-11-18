@@ -6,12 +6,25 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hugo is great for a static site. No need for complecated setups, no database or data tobe hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complecated to setup. I&amp;rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
+<meta name="description" content="Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I&amp;rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
 First open Google form and create a form with Name, Email, Subject and Message." />
 <meta name="keywords" content="Dev" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/add-contact-form-hugo-google-forms/" />
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-164525361-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
 
 
@@ -69,6 +82,20 @@ First open Google form and create a form with Name, Email, Subject and Message."
 <div class="container center headings--one-size">
 
   <header class="header">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-164525361-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
   <div class="header__inner">
     <div class="header__logo">
       <a href="/">
@@ -133,11 +160,11 @@ First open Google form and create a form with Name, Email, Subject and Message."
   <div class="post-meta">
     
       <span class="post-date">
-        2020-11-02 
+        2020-11-02 [Updated: 2020-11-02]
       </span>
     
     
-    <span class="post-author">:: KD Puvvadi</span>
+    <span class="post-author">:: KD</span>
     
   </div>
 
@@ -164,154 +191,108 @@ First open Google form and create a form with Name, Email, Subject and Message."
   
 
   <div class="post-content"><div>
-        <p>Hugo is great for a static site. No need for complecated setups, no database or data tobe hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complecated to setup. I&rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.</p>
+        <p>Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I&rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.</p>
 <p><img src="/image/google-forms.jpg" alt="Google Forms"></p>
 <p>First open <a href="https://www.google.com/forms/about/">Google form</a> and create a form with <em>Name, Email, Subject and Message</em>.</p>
 <p><img src="/image/contact-form-google-form-fields.png" alt=""></p>
 <p>Now create new page with following</p>
 <pre><code>$ hugo new contact.md
-</code></pre><p>To fill the google form from our site you need <em>form id</em> and <em>field ids</em>. Now open the form in incongnito mode to get the field ids and make a note of them.</p>
+</code></pre><p>To fill the google form from our site you need <em>form id</em> and <em>field ids</em>. Now open the form in incognito mode to get the field ids and make a note of them.</p>
 <p><img src="/image/google-form-fields.png" alt=""></p>
-<p>if you don&rsquo;t have <em>Raw HTML</em> layout for your site, HTML content may not render properly. If you&rsquo;ve <em>rawhtml</em> layout, you can skip this step.
-To add <em>rawhtml</em> layout create rawhtml.html file in your theme directory <em>layouts &gt; shortcodes &gt; rawhtml.html</em>. Add fowlling code to the file, save and exit.</p>
+<p>if you don&rsquo;t have <code>Raw HTML</code> layout for your site, HTML content may not render properly. If you&rsquo;ve <em>rawhtml</em> layout, you can skip this step.
+To add <em>rawhtml</em> layout create rawhtml.html file in your theme directory <em>layouts &gt; shortcodes &gt; rawhtml.html</em>. Add fallowing code to the file, save and exit.</p>
 <pre><code>&lt;!-- raw html --&gt;
 {{.Inner}}
 </code></pre><p>Add rawhtml tag in <em>contact.md</em></p>
 <p><img src="/image/rawhtml.jpg" alt=""></p>
 <p>Now add following to your <em>contact.md</em> file and replace the form ID and field IDs from previous.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.google.com/forms/d/e/&lt;formID/formResponse&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden_iframe&#34;</span> <span style="color:#a6e22e">onsubmit</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitted=true&#34;</span>&gt;
+  &lt;<span style="color:#f92672">label</span>&gt;Name*&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Name*&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-input&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.719211028&#34;</span> <span style="color:#a6e22e">required</span>&gt;
 
+  &lt;<span style="color:#f92672">label</span>&gt;Email*&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Email address*&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-input&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.1119409224&#34;</span> <span style="color:#a6e22e">required</span>&gt;
 
+   &lt;<span style="color:#f92672">label</span>&gt;Subject*&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Subject*&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-input&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.1043109960&#34;</span> <span style="color:#a6e22e">required</span>&gt;
 
-  <div class="collapsable-code">
-    <input id="436719258" type="checkbox"  />
-    <label for="436719258">
-      <span class="collapsable-code__language">html</span>
-      
-      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
-    </label>
-    <pre class="language-html" ><code>
+   &lt;<span style="color:#f92672">label</span>&gt;Message&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Message&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-input&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.1348223678&#34;</span> &gt;&lt;/<span style="color:#f92672">textarea</span>&gt;
 
-&lt;form action=&#34;https://docs.google.com/forms/d/e/&lt;formID/formResponse&#34; method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=true&#34;&gt;
-        &lt;label&gt;Name*&lt;/label&gt;
-        &lt;input type=&#34;text&#34; placeholder=&#34;Name*&#34; class=&#34;feedback-input&#34; name=&#34;entry.719211028&#34; required&gt;
+   &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;Send&lt;/<span style="color:#f92672">button</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
 
-        &lt;label&gt;Email*&lt;/label&gt;
-        &lt;input type=&#34;email&#34; placeholder=&#34;Email address*&#34; class=&#34;feedback-input&#34; name=&#34;entry.1119409224&#34; required&gt;
+</code></pre></div><p><em>Replace FormID with actual ID from Google form</em></p>
+<p>Create <em>form.css</em> file inside *static &gt; CSS * directory and add following to it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">https</span><span style="color:#f92672">://</span><span style="color:#f92672">fonts</span>.<span style="color:#a6e22e">googleapis</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#f92672">css</span><span style="color:#f92672">?</span><span style="color:#f92672">family</span><span style="color:#f92672">=</span><span style="color:#f92672">Montserrat</span>:<span style="color:#a6e22e">400</span><span style="color:#f92672">,</span><span style="color:#f92672">700</span><span style="color:#f92672">)</span>;
 
-        &lt;label&gt;Subject*&lt;/label&gt;
-        &lt;input type=&#34;text&#34; placeholder=&#34;Subject*&#34; class=&#34;feedback-input&#34; name=&#34;entry.1043109960&#34; required&gt;
-    
-        &lt;label&gt;Message&lt;/label&gt;
-        &lt;textarea rows=&#34;5&#34; placeholder=&#34;Message&#34; class=&#34;feedback-input&#34; name=&#34;entry.1348223678&#34; &gt;&lt;/textarea&gt;
-    
-        &lt;button type=&#34;submit&#34;&gt;Send&lt;/button&gt;
-&lt;/form&gt;
+<span style="color:#f92672">form</span> { <span style="color:#66d9ef">max-width</span>:<span style="color:#ae81ff">420</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>; }
 
-</code></pre>
-  </div>
-
-
-<p><em>Replace FormID with actual ID from Google form</em></p>
-<p>Create <em>form.css</em> file inside *static &gt; css * directory and add following to it.</p>
-
-
-
-  <div class="collapsable-code">
-    <input id="418693572" type="checkbox"  />
-    <label for="418693572">
-      <span class="collapsable-code__language">css</span>
-      
-      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
-    </label>
-    <pre class="language-css" ><code>
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-form { max-width:420px; margin:50px auto; }
-
-.feedback-input {
-color:white;
-font-family: Helvetica, Arial, sans-serif;
-font-weight:500;
-font-size: 18px;
-border-radius: 5px;
-line-height: 22px;
-background-color: transparent;
-border:2px solid #CC6666;
-transition: all 0.3s;
-padding: 13px;
-margin-bottom: 15px;
-width:100%;
-box-sizing: border-box;
-outline:0;
+.<span style="color:#a6e22e">form-input</span> {
+<span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">white</span>;
+<span style="color:#66d9ef">font-family</span>: Helvetica, Arial, <span style="color:#66d9ef">sans-serif</span>;
+<span style="color:#66d9ef">font-weight</span>:<span style="color:#ae81ff">500</span>;
+<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">18</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">22</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">transparent</span>;
+<span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#CC6666</span>;
+<span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.3</span><span style="color:#66d9ef">s</span>;
+<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+<span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+<span style="color:#66d9ef">outline</span>:<span style="color:#ae81ff">0</span>;
 }
 
-.feedback-input:focus { border:2px solid #CC4949; }
+.<span style="color:#a6e22e">form-input</span>:<span style="color:#a6e22e">focus</span> { <span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#CC4949</span>; }
 
-textarea {
-height: 150px;
-line-height: 150%;
-resize:vertical;
+<span style="color:#f92672">textarea</span> {
+<span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">150</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">150</span><span style="color:#66d9ef">%</span>;
+<span style="color:#66d9ef">resize</span>:<span style="color:#66d9ef">vertical</span>;
 }
 
-[type=&#34;submit&#34;] {
-font-family: &#39;Montserrat&#39;, Arial, Helvetica, sans-serif;
-width: 100%;
-background:#CC6666;
-border-radius:5px;
-border:0;
-cursor:pointer;
-color:white;
-font-size:24px;
-padding-top:10px;
-padding-bottom:10px;
-transition: all 0.3s;
-margin-top:-4px;
-font-weight:700;
+<span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span><span style="color:#f92672">]</span> {
+<span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Montserrat&#39;</span>, Arial, Helvetica, <span style="color:#66d9ef">sans-serif</span>;
+<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+<span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#CC6666</span>;
+<span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">cursor</span>:<span style="color:#66d9ef">pointer</span>;
+<span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">white</span>;
+<span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">padding-top</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">padding-bottom</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.3</span><span style="color:#66d9ef">s</span>;
+<span style="color:#66d9ef">margin-top</span>:<span style="color:#ae81ff">-4</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">font-weight</span>:<span style="color:#ae81ff">700</span>;
 }
-[type=&#34;submit&#34;]:hover { background:#CC4949; }
+<span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">hover</span> { <span style="color:#66d9ef">background</span>:<span style="color:#ae81ff">#CC4949</span>; }
 
-</code></pre>
-  </div>
+</code></pre></div><p>Now add following line to link the CSS to the form.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&lt;</span><span style="color:#f92672">link</span> <span style="color:#f92672">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#f92672">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/form.css&#34;</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Now try filling and submitting the form. You may&rsquo;ve observed that after submission, page is redirecting to default Google form response page. To fix it first create a new page with following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">thankyou</span>.<span style="color:#a6e22e">md</span>
+</code></pre></div><p>Add following to contact page html just before <em>form</em> tag.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">submitted</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>;<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">iframe</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden_iframe&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden_iframe&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display:none;&#34;</span> 
+<span style="color:#a6e22e">onload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;if(submitted) {window.location=&#39;/thankyou&#39;;}&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/iframe&gt;</span>
 
-
-<p>Now add following line to link the CSS to the form.</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/form.css&quot;&gt;
-</code></pre><p>Now try filling and submitting the form. You may&rsquo;ve obsrved that after submition, page is redirecting to default Google form resnponse page. To fix it first create a new page with following</p>
-<pre><code>$ hugo new thankyou.md
-</code></pre><p>Add following to contact page html just before <em>form</em> tag.</p>
-
-
-
-  <div class="collapsable-code">
-    <input id="237945681" type="checkbox"  />
-    <label for="237945681">
-      <span class="collapsable-code__language">html</span>
-      
-      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
-    </label>
-    <pre class="language-html" ><code>
-&lt;script type=&#34;text/javascript&#34;&gt;var submitted=false;&lt;/script&gt;
-&lt;iframe name=&#34;hidden_iframe&#34; id=&#34;hidden_iframe&#34; style=&#34;display:none;&#34; 
-onload=&#34;if(submitted) {window.location=&#39;/thankyou&#39;;}&#34;&gt;&lt;/iframe&gt;
-
-&lt;form action=&#34;https://docs.google.com/forms/d/e/&lt;formID&gt;/formResponse&#34; 
-method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=true;&#34;&gt;
-&lt;/form&gt;
-</code></pre>
-  </div>
-
-
-<p><em>Replace FormID with actual ID from Google form</em>.</p>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.google.com/forms/d/e/&lt;formID&gt;/formResponse&#34;</span> 
+<span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden_iframe&#34;</span> <span style="color:#a6e22e">onsubmit</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitted=true;&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/form&gt;</span>
+</code></pre></div><p><em>Replace FormID with actual ID from Google form</em>.</p>
 <h4 id="now-it-should-looks-something-like-this-bellow">Now it should looks something like this bellow.<a href="#now-it-should-looks-something-like-this-bellow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p><img src="/image/contact-form.jpg" alt=""></p>
 <p>After submitting the form, it should redirect to <em>/thankyou/</em> page.</p>
 <p><img src="/image/contact-res.png" alt=""></p>
-<p>Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails everytime someone fillsout the form, go to rensponses on Google Form and Check <em>get email notifications for new rensponses</em>.</p>
+<p>Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails every time someone fills out the form, go to responses on Google Form and Check <em>get email notifications for new responses</em>.</p>
 <p><img src="/image/google-form-res-email.jpg" alt=""></p>
 <p>You can also export all the response to <em>csv</em> format or directly Google spreadsheets.</p>
 <h3 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Without going with costly hosting and all that, you can host your Static sites with Netlify, Cloudflare Apps etc for free. All you&rsquo;ve do is invest little time. Push the code to Github and site will be auto build and deployed. Now, Contact forms can be intigrated with single line for certain price from certain service providers but Google form is free and can simply be added to static sites.</p>
+<p>Without going with costly hosting and all that, you can host your Static sites with Netlify, Cloudflare Apps etc for free. All you&rsquo;ve do is invest little time. Push the code to GitHub and site will be auto build and deployed. Now, Contact forms can be integrated with single line for certain price from certain service providers but Google form is free and can simply be added to static sites.</p>
 
       </div></div>
 
@@ -346,6 +327,26 @@ method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=tru
 
   
 
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-puvvadi-me" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 
   </div>
@@ -354,17 +355,17 @@ method=&#34;post&#34; target=&#34;hidden_iframe&#34; onsubmit=&#34;submitted=tru
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright">
-        <span>© 2020 <a href="https://twitter.com/kdpuvvadi">KD</a></span>
+      <div class="copyright copyright--user">
+        <span>KD Puvvadi</span>
     
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+        <span>::<a href="https://twitter.com/kdpuvvadi">Twitter</a></span>
+        <span>:: Design Credits <a href="https://twitter.com/panr">panr</a></span>
       </div>
   </div>
 </footer>
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
-
 
 
 

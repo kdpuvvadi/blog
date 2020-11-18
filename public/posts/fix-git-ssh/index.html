@@ -6,12 +6,25 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="When you try to git push it throws Permission Denied(publickey) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doen’t use the key from there." />
+<meta name="description" content="When you try to git push it throws Permission Denied(public key) error.
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there." />
 <meta name="keywords" content="Dev, Tech" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/fix-git-ssh/" />
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-164525361-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
 
 
@@ -69,6 +82,20 @@
 <div class="container center headings--one-size">
 
   <header class="header">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-164525361-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
   <div class="header__inner">
     <div class="header__logo">
       <a href="/">
@@ -133,11 +160,11 @@
   <div class="post-meta">
     
       <span class="post-date">
-        2020-11-02 
+        2020-11-02 [Updated: 2020-11-02]
       </span>
     
     
-    <span class="post-author">:: KD Puvvadi</span>
+    <span class="post-author">:: KD</span>
     
   </div>
 
@@ -146,7 +173,7 @@
     
     #<a href="/tags/git/">git</a>&nbsp;
     
-    #<a href="/tags/ssh/">ssh</a>&nbsp;
+    #<a href="/tags/ssh/">SSH</a>&nbsp;
     
   </span>
   
@@ -157,23 +184,23 @@
 
   <div class="post-content"><div>
         <p><img src="/image/gitlab-access-denied-publickey.jpg" alt=""></p>
-<p>When you try to <em>git push</em> it throws Permission Denied(publickey) error.</p>
+<p>When you try to <em>git push</em> it throws Permission Denied(public key) error.</p>
 <pre><code>&lt;pre class=&quot;wp-block-code&quot;&gt;
 Permission denied (publickey).
 fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
-</code></pre><p>When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in <em><strong>Pageant</strong></em> which comes with putty but git doen’t use the key from there. To solve this, open <em><strong>git bash</strong></em> as Administator. <em>(Don’t use <a href="https://kd.puvvadi.me/launch-windows-terminal-from-cmd/">windows terminal</a> or default CMD, better use *nix cli)</em></p>
+</code></pre><p>When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in <code>Pageant</code> which comes with putty but git doesn’t use the key from there. To solve this, open <code>git bash</code> as Administrator. Don’t use <a href="/posts/launch-windows-terminal-cmd/">windows terminal</a> or default CMD, better use *nix cli</p>
 <ul>
-<li>Type <strong><!-- raw HTML omitted --><em>cd ~/.ssh</em><!-- raw HTML omitted --></strong> It will take you to <em>%userprofile%/.ssh</em> or C:/users/<em>username</em>/.ssh</li>
-<li>Run <em><!-- raw HTML omitted --><strong>ls</strong><!-- raw HTML omitted --></em>, there should be two file <em><strong>id_rsa</strong></em> and <em><strong>id_rsa.pub</strong></em></li>
-<li>If those files are alredy there, then copy the content of <em><strong>id_rsa.pub</strong></em> file and paste it in the key section of git service provider.</li>
+<li>Type <code>cd ~/.ssh</code> It will take you to <code>%userprofile%/.ssh</code> or <code>C:/users/%username%/.ssh</code></li>
+<li>Run <code>ls</code>, there should be two file <code>id_rsa</code> and <code>id_rsa.pub</code></li>
+<li>If those files are already there, then copy the content of <code>id_rsa.pub</code> file and paste it in the key section of git service provider.</li>
 <li>if not continue bellow steps.</li>
-<li>To create SSH key type the following <em><strong><!-- raw HTML omitted -->ssh-keygen -t rsa -C “your_email@example.com”<!-- raw HTML omitted --></strong></em></li>
-<li>replace <em><strong>your_email@example.com</strong></em> with your email address. If you wish set a keyphrase for the key add it when it prompts.</li>
-<li>Now do the<!-- raw HTML omitted --> <em><strong>ls</strong></em><!-- raw HTML omitted -->, both files should be created by now. Open the directory and copy the contents of id_rsa.pub file to the key section of your git provides.</li>
-<li>Now try pushing the git repo with <em><strong>git push</strong></em>, it should work by now.</li>
+<li>To create SSH key type the following <code>ssh-keygen -t rsa -C “your_email@example.com”</code></li>
+<li>replace <code>your_email@example.com</code> with your email address. If you wish set a key phrase for the key add it when it prompts.</li>
+<li>Now do the <code>ls</code>, both files should be created by now. Open the directory and copy the contents of id_rsa.pub file to the key section of your git provides.</li>
+<li>Now try pushing the git repo with <code>git push</code>, it should work by now.</li>
 </ul>
 
       </div></div>
@@ -209,6 +236,26 @@ and the repository exists.
 
   
 
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-puvvadi-me" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 
   </div>
@@ -217,17 +264,17 @@ and the repository exists.
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright">
-        <span>© 2020 <a href="https://twitter.com/kdpuvvadi">KD</a></span>
+      <div class="copyright copyright--user">
+        <span>KD Puvvadi</span>
     
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+        <span>::<a href="https://twitter.com/kdpuvvadi">Twitter</a></span>
+        <span>:: Design Credits <a href="https://twitter.com/panr">panr</a></span>
       </div>
   </div>
 </footer>
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
-
 
 
 

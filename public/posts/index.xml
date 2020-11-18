@@ -6,15 +6,38 @@
     <description>Recent content in Posts on KD&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2020 22:12:51 +0530</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KD Puvvadi</copyright>
+    <lastBuildDate>Thu, 12 Nov 2020 15:13:07 +0530</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started With Hugo in Windows and Free Hosting with Netlify</title>
+      <link>/posts/getting-started-with-hugo-windows/</link>
+      <pubDate>Thu, 12 Nov 2020 15:13:07 +0530</pubDate>
+      
+      <guid>/posts/getting-started-with-hugo-windows/</guid>
+      <description>This is a guide for windows. There are multiple ways to install Hugo in a Windows PC. I prefer Chocolatey. To install, Open PowerShell or Command prompt with elevated privileges. Copy the following and paste in the
+choco install hugo To check whether the installation is successful,
+hugo version it should output something like this,
+&amp;gt; hugo version Hugo Static Site Generator v0.78.1/extended windows/amd64 BuildDate: unknown if you are planning to use Sass for CSS, hugo-extended is needed.</description>
+    </item>
+    
+    <item>
+      <title>Access Home Assistant from anywhere securely with DuckDNS, Let&#39;s Encrypt and NGINX</title>
+      <link>/posts/set-up-duckdns-home-assistant-letsencrypt-nginx-duckdns/</link>
+      <pubDate>Wed, 04 Nov 2020 22:09:57 +0530</pubDate>
+      
+      <guid>/posts/set-up-duckdns-home-assistant-letsencrypt-nginx-duckdns/</guid>
+      <description>we&amp;rsquo;ve setup Home Assitant previously. Without static IP, it&amp;rsquo;s hard to access Home Assistant instance out of the home without hassio cloud.But it&amp;rsquo;s a subscription service. One of the reason one might choose Home Assistant is to avoid subscription services from a lot of providers.
+DuckDNS Intro Problem without static IP is, ISP&amp;rsquo;s assigns different IP from their pool every time home router restarts or after certain time. assigning DNS to constantly changing IP becomes hassle.</description>
+    </item>
+    
     <item>
       <title>Connecting Nodemcu to Home Assistant</title>
       <link>/posts/home-assistant-nodemcu/</link>
       <pubDate>Tue, 03 Nov 2020 22:12:51 +0530</pubDate>
       
       <guid>/posts/home-assistant-nodemcu/</guid>
-      <description>In the Previous post, we had setup Home Assitant on Raspberry pi. For the first intigration, we are going to use ESP8266 aka NodeMCU. Required items as follows
-Requirments - ESP8266- Powersupply- DHT11 Sensor ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssitant and reading temparature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assitant.</description>
+      <description>In the Previous post, we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 aka NodeMCU. Required items as follows
+Requirements - ESP8266- Power Supply- DHT11 Sensor ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant.</description>
     </item>
     
     <item>
@@ -33,7 +56,7 @@ Required Hardware - Raspberry Pi- Power Supply- MicroSD card (Atleast 32GB)- 
       <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
       
       <guid>/posts/add-contact-form-hugo-google-forms/</guid>
-      <description>Hugo is great for a static site. No need for complecated setups, no database or data tobe hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complecated to setup. I&amp;rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
+      <description>Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I&amp;rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
 First open Google form and create a form with Name, Email, Subject and Message.</description>
     </item>
     
@@ -43,7 +66,7 @@ First open Google form and create a form with Name, Email, Subject and Message.<
       <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
       
       <guid>/posts/portainer-on-wsl2/</guid>
-      <description>I’ve been using WSL2 for developping for both personal and Professional use cases. To manage and quick deploy the containers, i’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
+      <description>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
 I’m assuming you’ve already WSL2 installed and docker is up and running.
 First create a volume with following.
 $ docker volume create portainer_dataNow, install portainer
@@ -56,8 +79,8 @@ $ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /
       <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
       
       <guid>/posts/fix-git-ssh/</guid>
-      <description>When you try to git push it throws Permission Denied(publickey) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doen’t use the key from there.</description>
+      <description>When you try to git push it throws Permission Denied(public key) error.
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
     </item>
     
     <item>
@@ -72,7 +95,7 @@ To open Windows Terminal from run Press Win+R and type
     </item>
     
     <item>
-      <title>Setup No Password Login for Wordpress</title>
+      <title>Setup No Password Login for WordPress</title>
       <link>/posts/setup-no-password-login-for-wordpress/</link>
       <pubDate>Mon, 02 Nov 2020 16:12:53 +0530</pubDate>
       
