@@ -37,7 +37,7 @@ DuckDNS Intro Problem without static IP is, ISP&amp;rsquo;s assigns different IP
       
       <guid>/posts/home-assistant-nodemcu/</guid>
       <description>In the Previous post, we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 aka NodeMCU. Required items as follows
-Requirements - ESP8266- Power Supply- DHT11 Sensor ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant.</description>
+Requirements - ESP8266 - Power Supply - DHT11 Sensor  ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ Requirements - ESP8266- Power Supply- DHT11 Sensor ESP8266 Setup Our goal tod
       
       <guid>/posts/home-assistant-setup/</guid>
       <description>I&amp;rsquo;m loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following componenets.
-Required Hardware - Raspberry Pi- Power Supply- MicroSD card (Atleast 32GB)- SDCard Reader Download required Tools First Download Pi Home Assistant Image Here.</description>
+Required Hardware - Raspberry Pi - Power Supply - MicroSD card (Atleast 32GB) - SDCard Reader  Download required Tools First Download Pi Home Assistant Image Here.</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@ First open Google form and create a form with Name, Email, Subject and Message.<
       <description>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
 I’m assuming you’ve already WSL2 installed and docker is up and running.
 First create a volume with following.
-$ docker volume create portainer_dataNow, install portainer
+$ docker volume create portainer_data Now, install portainer
 $ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.</description>
     </item>
     
@@ -80,7 +80,7 @@ $ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /
       
       <guid>/posts/fix-git-ssh/</guid>
       <description>When you try to git push it throws Permission Denied(public key) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt; Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
     </item>
     
     <item>
