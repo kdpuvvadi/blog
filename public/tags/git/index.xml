@@ -15,7 +15,7 @@
       
       <guid>/posts/fix-git-ssh/</guid>
       <description>When you try to git push it throws Permission Denied(public key) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt; Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
+&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
     </item>
     
   </channel>
