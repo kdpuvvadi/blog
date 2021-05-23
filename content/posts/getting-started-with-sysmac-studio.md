@@ -12,7 +12,8 @@ draft = true
 +++
 
 # Sysmac Studio
-Omron's Process Automation Intigrated Development evironment. I've known omron my whole career and been using their products for various use cases. Prviously CX-One was their IDE for all their products and they lagged behind industry competers. Then, they released NJ/NX Series Motion Controllers, 1S Servo Drive, FH vision systems etc. Sysmac Studio is actively under development and getting continues updates. Anyone who would like to try IDE before going in to the ecosystem, they should first Download the trial, try the plotform and get to know the ecosystem. 
+
+Omron's Process Automation Intigrated Development evironment. I've known omron my whole career and been using their products for various use cases. Prviously CX-One was their IDE for all their products and they lagged behind industry competers. Then, they released NJ/NX Series Motion Controllers, 1S Servo Drive, FH vision systems etc. Sysmac Studio is actively under development and getting continues updates. Anyone who would like to try IDE before going in to the ecosystem, they should first Download the trial, try the platform and get to know the ecosystem.
 
 # Download Sysmac Studio
 
