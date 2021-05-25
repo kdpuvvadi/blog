@@ -10,34 +10,47 @@ description = "A step by step guide to setup Home Assistant on Raspberry Pi for 
 showFullContent = false
 +++
 
-I'm loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following componenets.
+{{< rawhtml >}}
+
+<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="puvvadi-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category ="Electronics"; amzn_assoc_default_search_key ="";amzn_assoc_theme ="dark"; amzn_assoc_bg_color ="000000"; </script><script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
+
+{{< /rawhtml >}}
+
+I'm loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following components.
 
 #### Required Hardware
+
     - Raspberry Pi
     - Power Supply
     - MicroSD card (Atleast 32GB)
     - SDCard Reader
 
 #### Download required Tools
-First Download Pi Home Assistant Image [Here](https://www.home-assistant.io/hassio/installation/ "Download HA images"). I'm using Raspberry Pi 3 B+ & I might want to use GPIO ports, so i've selected 32 bit image. Download balenaEtcher [Here](https://www.balena.io/etcher "Download balenaEtcher") for flashing the image to SDCard. After Downloading the Pi Image, extract the image with any unzip utility. I'm using [7-Zip](https://www.7-zip.org/, "Download 7-Zip"). 
+
+First Download Pi Home Assistant Image [Here](https://www.home-assistant.io/hassio/installation/ "Download HA images"). I'm using Raspberry Pi 3 B+ & I might want to use GPIO ports, so I've selected 32 bit image. Download balenaEtcher [Here](https://www.balena.io/etcher "Download balenaEtcher") for flashing the image to SDCard. After Downloading the Pi Image, extract the image with any unzip utility. I'm using [7-Zip](https://www.7-zip.org/, "Download 7-Zip").
 
 #### Flashing the image
+
 Now, install and open the **balenaEtcher**, Select Extracted image, select the SDCard you've connected to the PC and click on **Flash**. If asked for elevated permissions, click ***YES***
 
 ![](/image/balenoEtcher_Flashing.jpg)
 
 ##### Flashing
+
 ![](/image/balanaetcher_flashing.png)
 
 ##### Flashing Done
+
 ![](/image/balenaEtcher_done.png)
 
 Once it's completed flashing the image, Eject the SDCard and insert it to Raspberry Pi 3. Now, we need a way to connect our pi to network. 
 
 #### Network Configaration
+
 First Create a Directory **CONFIG** and then **netowrk**. Now, create a file name **my-network** without any extension.Based the network type you prefere copy the following content and add that to the file you just created.
 
 ##### Wired Ethernet connection with DHCP Enable
+
 {{< code language="markdown" title="Wired DHCP" id="1" expand="Show" collapse="Hide" >}}
 
     [connection]
@@ -71,6 +84,7 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 {{< /code >}}
 
 ##### Wi-Fi with DHCP
+
 {{< code language="markdown" title="Wireless DHCP" id="3" expand="Show" collapse="Hide" >}}
     [connection]
     id=my-network
@@ -99,6 +113,7 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 
 
 ##### Wi-Fi with Static IP
+
 {{< code language="markdown" title="Wireless with static IP" id="4" expand="Show" collapse="Hide" >}}
     [connection]
     id=my-network
@@ -127,20 +142,20 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 
 #### Setup
 
-Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen. 
+Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen.
 
 ![](/image/hass_preparing.jpg)
 
-The process may take some time, Take a coffe brake. Once the process is completed, you should see account creation screen.
+The process may take some time, Take a coffee brake. Once the process is completed, you should see account creation screen.
 
 ![](/image/hass_account.png)
 
-Name your Home Assitant setup, setup Home locatation and Select the units of choice in the following screen. 
+Name your Home Assitant setup, setup Home location and Select the units of choice in the following screen. 
 
 ![](/image/hass_map_units_name.png)
 
-If everything went good so far, you should Home Assitant Dashboard *aka* ***lovelace***. Setup of the Home Assitant on Pi is completed.
+If everything went good so far, you should Home Assistant Dashboard *aka* ***Lovelace***. Setup of the Home Assistant on Pi is completed.
 
 #### Conclusion
 
-I like to think Home Assistant a Swiff Army Knigh. Possibilities are endless. If properly configured, you can control all your smart home from anywhare in the world with touch of the button securly. In comming days i'll write about intigrating different IOT and goodies to Hass. Keep watching this space. [Au revoir](#conclusion)
+I like to think Home Assistant a Swiss Army Knife. Possibilities are endless. If properly configured, you can control all your smart home from anywhere in the world with touch of the button securely. In coming days I'll write about integrating different IOT and goodies to Hass. Keep watching this space. [Au revoir](#conclusion)
