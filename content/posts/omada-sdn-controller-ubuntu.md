@@ -1,11 +1,11 @@
 +++
 title = "Install Omada Controller on Ubuntu 20.04"
 date = "2021-05-30T20:51:13+05:30"
-author = ""
-authorTwitter = "" #do not include @
+author = "KD Puvvadi"
+authorTwitter = "kdpuvvadi" #do not include @
 cover = "/image/omada-controller-ubuntu-20.04.jpg"
-tags = ["", ""]
-keywords = ["", ""]
+tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networking", "firewall", "gateway", "vpn" ]
+keywords = ["Networking", "Omada Controller", "Firewall"]
 description = ""
 showFullContent = false
 +++
