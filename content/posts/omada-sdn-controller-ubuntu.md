@@ -4,15 +4,15 @@ date = "2021-05-30T20:51:13+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = "/image/omada-controller-ubuntu-20.04.jpg"
-tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networking", "firewall", "gateway", "vpn" ]
+tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networking", "firewall", "gateway", "vpn", "proxmox" ]
 keywords = ["Networking", "Omada Controller", "Firewall"]
-description = ""
+description = "Let get on with Omada Controller on Ubuntu 20.04 running on virtualized Intel NUC with Proxmox "
 showFullContent = false
 +++
 
 ### Little Back Story
 
-TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/featured). After reading ton manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN. 
+TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/). After reading ton manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN. 
 
 ### Hardware 
 
