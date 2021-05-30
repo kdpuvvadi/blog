@@ -119,4 +119,6 @@ sudo dpkg -i Omada_SDN_Controller_v4.3.5_linux_x64.deb
 
 It might take 2 to 5 min depending upon your system configuration. Once the installation completed, visit https://ip:8088
 
+### Conclusion
 
+Installation is simple and straight forward. lets setup the controller and add router, APs and configure the network next weeks. Any help need hit me on twitter or comment below. [Au revoir](#conclusion)
