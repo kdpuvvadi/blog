@@ -2377,7 +2377,7 @@ cssnano-preset-default@^4.0.7:
     postcss-normalize-string "^4.0.2"
     postcss-normalize-timing-functions "^4.0.2"
     postcss-normalize-unicode "^4.0.1"
-    postcss-normalize-url "^4.0.1"
+    postcss-normalize-url "^4.5.1"
     postcss-normalize-whitespace "^4.0.2"
     postcss-ordered-values "^4.1.2"
     postcss-reduce-initial "^4.0.3"
@@ -4396,7 +4396,7 @@ mini-css-extract-plugin@^0.11.0:
   integrity sha512-dVWGuWJlQw2lZxsxBI3hOsoxg1k3DruLR0foHQLSkQMfk+qLJbv9dUk8fjmjWQKN9ef2n54ehA2FjClAsQhrWQ==
   dependencies:
     loader-utils "^1.1.0"
-    normalize-url "1.9.1"
+    normalize-url "4.5.1"
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
@@ -4576,8 +4576,8 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
-normalize-url@1.9.1:
-  version "1.9.1"
+normalize-url@5.5.1, normalize-url@1.9.1:
+  version "4.5.1"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-1.9.1.tgz#2cc0d66b31ea23036458436e3620d85954c66c3c"
   integrity sha1-LMDWazHqIwNkWENuNiDYWVTGbDw=
   dependencies:
@@ -4586,8 +4586,8 @@ normalize-url@1.9.1:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize-url@^3.0.0:
-  version "3.3.0"
+normalize-url@4.5.1, normalize-url@^3.0.0:
+  version "4.5.1"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
@@ -5436,7 +5436,7 @@ postcss-normalize-url@^4.0.1:
   integrity sha512-p5oVaF4+IHwu7VpMan/SSpmpYxcJMtkGppYf0VbdH5B6hN8YNmVyJLuY9FmLQTzY3fag5ESUUHDqM+heid0UVA==
   dependencies:
     is-absolute-url "^2.0.0"
-    normalize-url "^3.0.0"
+    normalize-url "^4.5.1"
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
