@@ -22,29 +22,31 @@ Hugo is great for a static site. No need for complicated setups, no database or 
 
 First open [Google form](https://www.google.com/forms/about/) and create a form with *Name, Email, Subject and Message*.
 
-![](/image/contact-form-google-form-fields.png)
+![Google Form Fields](/image/contact-form-google-form-fields.png)
 
 Now create new page with following
 
+````bash
+hugo new contact.md
 ````
-$ hugo new contact.md
-````
+
 To fill the google form from our site you need *form id* and *field ids*. Now open the form in incognito mode to get the field ids and make a note of them.
 
-![](/image/google-form-fields.png)
+![Form Field IDs](/image/google-form-fields.png)
 
 if you don't have `Raw HTML` layout for your site, HTML content may not render properly. If you've *rawhtml* layout, you can skip this step.
-To add *rawhtml* layout create rawhtml.html file in your theme directory *layouts > shortcodes > rawhtml.html*. Add fallowing code to the file, save and exit. 
+To add *rawhtml* layout create rawhtml.html file in your theme directory *layouts > shortcodes > rawhtml.html*. Add fallowing code to the file, save and exit.
 
-````
+````html
 <!-- raw html -->
 {{.Inner}}
 ````
+
 Add rawhtml tag in *contact.md*
 
-![](/image/rawhtml.jpg)
+![raw html](/image/rawhtml.jpg)
 
-Now add following to your *contact.md* file and replace the form ID and field IDs from previous. 
+Now add following to your *contact.md* file and replace the form ID and field IDs from previous.
 
 ````html
 
@@ -66,9 +68,9 @@ Now add following to your *contact.md* file and replace the form ID and field ID
 
 ````
 
-*Replace FormID with actual ID from Google form*
+* Replace FormID with actual ID from Google form *
 
-Create *form.css* file inside *static > CSS * directory and add following to it.
+Create *form.css* file inside *static > CSS* directory and add following to it.
 
 ````css
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -119,7 +121,7 @@ font-weight:700;
 
 ````
 
-Now add following line to link the CSS to the form. 
+Now add following line to link the CSS to the form.
 
 ````css
 <link rel="stylesheet" href="/css/form.css">
@@ -128,8 +130,9 @@ Now add following line to link the CSS to the form.
 Now try filling and submitting the form. You may've observed that after submission, page is redirecting to default Google form response page. To fix it first create a new page with following
 
 ````js
-$ hugo new thankyou.md
+hugo new thankyou.md
 ````
+
 Add following to contact page html just before *form* tag.
 
 ````js
@@ -146,20 +149,18 @@ method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
 #### Now it should looks something like this bellow.
 
-![](/image/contact-form.jpg)
+![Contact Form](/image/contact-form.jpg)
 
 After submitting the form, it should redirect to */thankyou/* page.
 
-![](/image/contact-res.png)
+![Contact Submit Response](/image/contact-res.png)
 
-Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails every time someone fills out the form, go to responses on Google Form and Check *get email notifications for new responses*. 
+Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails every time someone fills out the form, go to responses on Google Form and Check *get email notifications for new responses*.
 
-![](/image/google-form-res-email.jpg)
+![Form Response email](/image/google-form-res-email.jpg)
 
-You can also export all the response to *csv* format or directly Google spreadsheets. 
+You can also export all the response to *csv* format or directly Google spreadsheets.
 
 ### Conclusion
 
-Without going with costly hosting and all that, you can host your Static sites with Netlify, Cloudflare Apps etc for free. All you've do is invest little time. Push the code to GitHub and site will be auto build and deployed. Now, Contact forms can be integrated with single line for certain price from certain service providers but Google form is free and can simply be added to static sites. 
-
-
+Without going with costly hosting and all that, you can host your Static sites with Netlify, Cloudflare Apps etc for free. All you've do is invest little time. Push the code to GitHub and site will be auto build and deployed. Now, Contact forms can be integrated with single line for certain price from certain service providers but Google form is free and can simply be added to static sites.
