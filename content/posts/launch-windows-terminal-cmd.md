@@ -8,6 +8,7 @@ tags = ["windows Terminal", "Terminal"]
 keywords = ["Tech","Dev"]
 description = "Use Run command to launch New Windows Terminal"
 showFullContent = false
+draft= true
 +++
 
 

@@ -8,6 +8,7 @@ tags = ["git", "SSH"]
 keywords = ["Dev","Tech"]
 description = "Fix permission errors while using git with SSH"
 showFullContent = false
+draft= true
 +++
 
 ![](/image/gitlab-access-denied-publickey.jpg)
