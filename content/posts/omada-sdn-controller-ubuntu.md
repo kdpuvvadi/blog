@@ -3,7 +3,7 @@ title = "Install Omada Controller on Ubuntu 20.04"
 date = "2021-05-30T20:51:13+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "/image/omada-controller-ubuntu-20.04.jpg"
+cover = "https://cdn.puvvadi.me/img/omada-controller-ubuntu-20.04.webp"
 tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networking", "firewall", "gateway", "vpn", "proxmox" ]
 keywords = ["Networking", "Omada Controller", "Firewall"]
 description = "Let get on with Omada Controller on Ubuntu 20.04 running on virtualized Intel NUC with Proxmox "
@@ -45,11 +45,13 @@ Omada Controller is return in Java & we are using opensource Java 8 binary OpenJ
 ````shell
 sudo apt install openjdk-8-jre-headless -y
 ````
+
 it should be fine but if you've Java already installed, you may need to set the version 8 to default. 
 
 ````shell
 sudo update-alternatives --config java
 ````
+
 And select OpenJDK-8 option.
 
 #### Install MongoDB
@@ -59,6 +61,7 @@ We've to careful here. If you have fresh install of Ubuntu 20.04 and try to inst
 ````shell
 sudo apt install mongodb -y
 ````
+
 After installation completed, check the status of the service by running the following
 
 ````shell
@@ -109,7 +112,7 @@ Download the deb package from TP Link
 
 ```shell 
 wget https://static.tp-link.com/2021/202105/20210507/Omada_SDN_Controller_v4.3.5_linux_x64.deb
-```` 
+````
 
 install with the following
 

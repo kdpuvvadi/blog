@@ -14,8 +14,6 @@ draft= true
 
 Microsoft recently launched Windows terminal in the Microsoft Store as the preview. I'm already loving it. With continuous updates and it's already my default terminal app. It allows you to run PowerShell, PowerShell Core and even WAL (Windows Subsystem for Linux).
 
-
-
 To open Windows Terminal from run Press `Win+R` and type
 
 ```html
