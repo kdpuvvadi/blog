@@ -7,7 +7,97 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>KD Puvvadi</copyright>
-    <lastBuildDate>Thu, 12 Nov 2020 15:13:07 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 20:51:13 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>firewall</title>
+      <link>/tags/firewall/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/firewall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gateway</title>
+      <link>/tags/gateway/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/gateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>/tags/mongodb/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>/tags/networking/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Omada Controller</title>
+      <link>/tags/omada-controller/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/omada-controller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxmox</title>
+      <link>/tags/proxmox/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/proxmox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SDN</title>
+      <link>/tags/sdn/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/sdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TP Link</title>
+      <link>/tags/tp-link/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/tp-link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu 20.04</title>
+      <link>/tags/ubuntu-20.04/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/ubuntu-20.04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>/tags/vpn/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>free website</title>
       <link>/tags/free-website/</link>
@@ -144,11 +234,11 @@
     </item>
     
     <item>
-      <title>Contact form</title>
-      <link>/tags/contact-form/</link>
+      <title>Contactform</title>
+      <link>/tags/contactform/</link>
       <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
       
-      <guid>/tags/contact-form/</guid>
+      <guid>/tags/contactform/</guid>
       <description></description>
     </item>
     
@@ -162,11 +252,11 @@
     </item>
     
     <item>
-      <title>Google Forms</title>
-      <link>/tags/google-forms/</link>
+      <title>GoogleForms</title>
+      <link>/tags/googleforms/</link>
       <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
       
-      <guid>/tags/google-forms/</guid>
+      <guid>/tags/googleforms/</guid>
       <description></description>
     </item>
     
@@ -180,11 +270,11 @@
     </item>
     
     <item>
-      <title>Static Site</title>
-      <link>/tags/static-site/</link>
+      <title>StaticSite</title>
+      <link>/tags/staticsite/</link>
       <pubDate>Mon, 02 Nov 2020 21:25:36 +0530</pubDate>
       
-      <guid>/tags/static-site/</guid>
+      <guid>/tags/staticsite/</guid>
       <description></description>
     </item>
     
@@ -221,42 +311,6 @@
       <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
       
       <guid>/tags/wsl2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>/tags/git/</link>
-      <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
-      
-      <guid>/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SSH</title>
-      <link>/tags/ssh/</link>
-      <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
-      
-      <guid>/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terminal</title>
-      <link>/tags/terminal/</link>
-      <pubDate>Mon, 02 Nov 2020 16:41:33 +0530</pubDate>
-      
-      <guid>/tags/terminal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>windows Terminal</title>
-      <link>/tags/windows-terminal/</link>
-      <pubDate>Mon, 02 Nov 2020 16:41:33 +0530</pubDate>
-      
-      <guid>/tags/windows-terminal/</guid>
       <description></description>
     </item>
     

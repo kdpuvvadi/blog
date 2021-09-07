@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/firewall/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/gateway/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/posts/omada-sdn-controller-ubuntu/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/mongodb/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/networking/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/omada-controller/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/proxmox/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/sdn/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/tp-link/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/ubuntu-20.04/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
+    <loc>/tags/vpn/</loc>
+    <lastmod>2021-05-30T20:51:13+05:30</lastmod>
+  </url><url>
     <loc>/tags/free-website/</loc>
     <lastmod>2020-11-12T15:13:07+05:30</lastmod>
   </url><url>
@@ -14,19 +56,10 @@
     <loc>/tags/hugo/</loc>
     <lastmod>2020-11-12T15:13:07+05:30</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2020-11-12T15:13:07+05:30</lastmod>
-  </url><url>
     <loc>/tags/netlify/</loc>
     <lastmod>2020-11-12T15:13:07+05:30</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2020-11-12T15:13:07+05:30</lastmod>
-  </url><url>
     <loc>/tags/static-website/</loc>
-    <lastmod>2020-11-12T15:13:07+05:30</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2020-11-12T15:13:07+05:30</lastmod>
   </url><url>
     <loc>/posts/set-up-duckdns-home-assistant-letsencrypt-nginx-duckdns/</loc>
@@ -71,19 +104,19 @@
     <loc>/posts/add-contact-form-hugo-google-forms/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
-    <loc>/tags/contact-form/</loc>
+    <loc>/tags/contactform/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
     <loc>/tags/css/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
-    <loc>/tags/google-forms/</loc>
+    <loc>/tags/googleforms/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
     <loc>/tags/html/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
-    <loc>/tags/static-site/</loc>
+    <loc>/tags/staticsite/</loc>
     <lastmod>2020-11-02T21:25:36+05:30</lastmod>
   </url><url>
     <loc>/tags/docker/</loc>
@@ -100,24 +133,6 @@
   </url><url>
     <loc>/tags/wsl2/</loc>
     <lastmod>2020-11-02T19:37:15+05:30</lastmod>
-  </url><url>
-    <loc>/posts/fix-git-ssh/</loc>
-    <lastmod>2020-11-02T16:59:49+05:30</lastmod>
-  </url><url>
-    <loc>/tags/git/</loc>
-    <lastmod>2020-11-02T16:59:49+05:30</lastmod>
-  </url><url>
-    <loc>/tags/ssh/</loc>
-    <lastmod>2020-11-02T16:59:49+05:30</lastmod>
-  </url><url>
-    <loc>/posts/launch-windows-terminal-cmd/</loc>
-    <lastmod>2020-11-02T16:41:33+05:30</lastmod>
-  </url><url>
-    <loc>/tags/terminal/</loc>
-    <lastmod>2020-11-02T16:41:33+05:30</lastmod>
-  </url><url>
-    <loc>/tags/windows-terminal/</loc>
-    <lastmod>2020-11-02T16:41:33+05:30</lastmod>
   </url><url>
     <loc>/tags/2fa/</loc>
     <lastmod>2020-11-02T16:12:53+05:30</lastmod>

@@ -6,10 +6,10 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
+<meta name="description" content="I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as I love to use Terminal, i’m mostly lazy.
 I’m assuming you’ve already WSL2 installed and docker is up and running.
 First create a volume with following.
-$ docker volume create portainer_dataNow, install portainer
+$ docker volume create portainer_data Now, install Portainer
 $ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker." />
 <meta name="keywords" content="Tech, Dev" />
 <meta name="robots" content="noodp" />
@@ -59,7 +59,7 @@ if (!doNotTrack) {
 <meta property="og:url" content="/posts/portainer-on-wsl2/" />
 <meta property="og:site_name" content="KD&#39;s Blog" />
 
-  <meta property="og:image" content="/">
+  <meta property="og:image" content="/image/wsl2-portainer.jpg">
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -184,17 +184,18 @@ if (!doNotTrack) {
   
 
   
+    <img src="/image/wsl2-portainer.jpg" class="post-cover" alt="Portainer on Wsl2" />
+  
 
   
 
   <div class="post-content"><div>
-        <p><img src="/image/wsl2-portainer.jpg" alt=""></p>
-<p>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using <em><a href="https://www.portainer.io/">Portainer</a></em>. As much as i love to use Terminal, i’m mostly lazy.</p>
+        <p>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using <em><a href="https://www.portainer.io/">Portainer</a></em>. As much as I love to use Terminal, i’m mostly lazy.</p>
 <p>I’m assuming you’ve already WSL2 installed and docker is up and running.</p>
 <p>First create a volume with following.</p>
 <pre><code>$ docker volume create portainer_data
 </code></pre><p><img src="/image/portainer-volume.jpg" alt=""></p>
-<p>Now, install portainer</p>
+<p>Now, install Portainer</p>
 <pre><code>$ docker run -d 
     -p 8000:8000 
     -p 9000:9000 
@@ -235,8 +236,8 @@ if (!doNotTrack) {
         
         
         <span class="button next">
-            <a href="/posts/fix-git-ssh/">
-                <span class="button__text">Fix Git SSH Permissions</span>
+            <a href="/posts/setup-no-password-login-for-wordpress/">
+                <span class="button__text">Setup No Password Login for WordPress</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

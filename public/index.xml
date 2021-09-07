@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>KD Puvvadi</copyright>
-    <lastBuildDate>Thu, 12 Nov 2020 15:13:07 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 20:51:13 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Omada Controller on Ubuntu 20.04</title>
+      <link>/posts/omada-sdn-controller-ubuntu/</link>
+      <pubDate>Sun, 30 May 2021 20:51:13 +0530</pubDate>
+      
+      <guid>/posts/omada-sdn-controller-ubuntu/</guid>
+      <description>Little Back Story TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it&amp;rsquo;s good learning experience, he wanted something like Unifi but cheaper, in his budget.</description>
+    </item>
+    
     <item>
       <title>Getting Started With Hugo in Windows and Free Hosting with Netlify</title>
       <link>/posts/getting-started-with-hugo-windows/</link>
@@ -37,7 +46,7 @@ DuckDNS Intro Problem without static IP is, ISP&amp;rsquo;s assigns different IP
       
       <guid>/posts/home-assistant-nodemcu/</guid>
       <description>In the Previous post, we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 aka NodeMCU. Required items as follows
-Requirements - ESP8266- Power Supply- DHT11 Sensor ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant.</description>
+Requirements - ESP8266 - Power Supply - DHT11 Sensor  ESP8266 Setup Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant.</description>
     </item>
     
     <item>
@@ -46,8 +55,7 @@ Requirements - ESP8266- Power Supply- DHT11 Sensor ESP8266 Setup Our goal tod
       <pubDate>Tue, 03 Nov 2020 20:09:59 +0530</pubDate>
       
       <guid>/posts/home-assistant-setup/</guid>
-      <description>I&amp;rsquo;m loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following componenets.
-Required Hardware - Raspberry Pi- Power Supply- MicroSD card (Atleast 32GB)- SDCard Reader Download required Tools First Download Pi Home Assistant Image Here.</description>
+      <description>amzn_assoc_ad_type =&#34;responsive_search_widget&#34;; amzn_assoc_tracking_id =&#34;puvvadi-21&#34;; amzn_assoc_marketplace =&#34;amazon&#34;; amzn_assoc_region =&#34;IN&#34;; amzn_assoc_placement =&#34;&#34;; amzn_assoc_search_type = &#34;search_widget&#34;;amzn_assoc_width =&#34;auto&#34;; amzn_assoc_height =&#34;auto&#34;; amzn_assoc_default_search_category =&#34;Electronics&#34;; amzn_assoc_default_search_key =&#34;&#34;;amzn_assoc_theme =&#34;dark&#34;; amzn_assoc_bg_color =&#34;000000&#34;;  I&amp;rsquo;m loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following components.</description>
     </item>
     
     <item>
@@ -57,7 +65,7 @@ Required Hardware - Raspberry Pi- Power Supply- MicroSD card (Atleast 32GB)- 
       
       <guid>/posts/add-contact-form-hugo-google-forms/</guid>
       <description>Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I&amp;rsquo;m gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
-First open Google form and create a form with Name, Email, Subject and Message.</description>
+amzn_assoc_ad_type =&#34;responsive_search_widget&#34;; amzn_assoc_tracking_id =&#34;puvvadi-21&#34;; amzn_assoc_marketplace =&#34;amazon&#34;; amzn_assoc_region =&#34;IN&#34;; amzn_assoc_placement =&#34;</description>
     </item>
     
     <item>
@@ -66,32 +74,11 @@ First open Google form and create a form with Name, Email, Subject and Message.<
       <pubDate>Mon, 02 Nov 2020 19:37:15 +0530</pubDate>
       
       <guid>/posts/portainer-on-wsl2/</guid>
-      <description>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as i love to use Terminal, i’m mostly lazy.
+      <description>I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using Portainer. As much as I love to use Terminal, i’m mostly lazy.
 I’m assuming you’ve already WSL2 installed and docker is up and running.
 First create a volume with following.
-$ docker volume create portainer_dataNow, install portainer
+$ docker volume create portainer_data Now, install Portainer
 $ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.</description>
-    </item>
-    
-    <item>
-      <title>Fix Git SSH Permissions</title>
-      <link>/posts/fix-git-ssh/</link>
-      <pubDate>Mon, 02 Nov 2020 16:59:49 +0530</pubDate>
-      
-      <guid>/posts/fix-git-ssh/</guid>
-      <description>When you try to git push it throws Permission Denied(public key) error.
-&amp;lt;pre class=&amp;quot;wp-block-code&amp;quot;&amp;gt;Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.When this keeps happening and you think you’ve already added the public key in the GitLab or BitBucket or any other. You might’ve added key in Pageant which comes with putty but git doesn’t use the key from there.</description>
-    </item>
-    
-    <item>
-      <title>Launch Windows Terminal with single Command</title>
-      <link>/posts/launch-windows-terminal-cmd/</link>
-      <pubDate>Mon, 02 Nov 2020 16:41:33 +0530</pubDate>
-      
-      <guid>/posts/launch-windows-terminal-cmd/</guid>
-      <description>Microsoft recently launched Windows terminal in the Microsoft Store as the preview. I&amp;rsquo;m already loving it. With continuous updates and it&amp;rsquo;s already my default terminal app. It allows you to run PowerShell, PowerShell Core and even WAL (Windows Subsystem for Linux).
-To open Windows Terminal from run Press Win+R and type
-&amp;gt; wt </description>
     </item>
     
     <item>
@@ -137,7 +124,7 @@ When it comes to WordPress, this can be more damaging. If your business website 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>var submitted=false;Name*Email*Subject*MessageSend</description>
+      <description>var submitted=false;   Name* Email* Subject* Message  Send  </description>
     </item>
     
     <item>
