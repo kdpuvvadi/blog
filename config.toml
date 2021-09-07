@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://blog.puvvadi.me"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
