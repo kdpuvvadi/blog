@@ -26,7 +26,7 @@ Now, go to `ESPHome` on the Left side menu. Click on the + to add a Node.
 
 If everything went very well, you should see Living Room Node on ESPHome. Click on Edit to check the config. It should look something like bellow. 
 
-![](/image/esphome_node_setup.gif)
+![](https://cdn.puvvadi.me/vid/esphome_node_setup.webm)
 
 ````yaml
     esphome:
