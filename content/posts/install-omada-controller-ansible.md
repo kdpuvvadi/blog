@@ -3,12 +3,11 @@ title = "Install Omada Controller Ansible"
 date = "2021-09-07T10:09:18+05:30"
 author = "kdpuvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = ""
-tags = ["omada", "ansible"]
-keywords = ["", ""]
-description = "Install Omada controller on linux with ansible."
+cover = "/image/ansible-omada-controller.jpg"
+tags = ["omada", "ansible", "" ]
+keywords = ["omada controller", "ansible", "playboo", "tp-link" ]
+description = "Install Omada controller on Debian and CentOS linux distribution with ansible playbook."
 showFullContent = false
-draft= true
 +++
 
 
