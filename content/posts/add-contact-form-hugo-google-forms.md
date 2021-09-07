@@ -18,11 +18,11 @@ Hugo is great for a static site. No need for complicated setups, no database or 
 
 {{< /rawhtml >}}
 
-![Google Forms](/image/google-forms.jpg)
+![Google Forms](https://cdn.puvvadi.me/img/google-forms.webp)
 
 First open [Google form](https://www.google.com/forms/about/) and create a form with *Name, Email, Subject and Message*.
 
-![Google Form Fields](/image/contact-form-google-form-fields.png)
+![Google Form Fields](https://cdn.puvvadi.me/img/contact-form-google-form-fields.webp)
 
 Now create new page with following
 
@@ -32,7 +32,7 @@ hugo new contact.md
 
 To fill the google form from our site you need *form id* and *field ids*. Now open the form in incognito mode to get the field ids and make a note of them.
 
-![Form Field IDs](/image/google-form-fields.png)
+![Form Field IDs](https://cdn.puvvadi.me/img/google-form-fields.webp)
 
 if you don't have `Raw HTML` layout for your site, HTML content may not render properly. If you've *rawhtml* layout, you can skip this step.
 To add *rawhtml* layout create rawhtml.html file in your theme directory *layouts > shortcodes > rawhtml.html*. Add fallowing code to the file, save and exit.
@@ -44,7 +44,7 @@ To add *rawhtml* layout create rawhtml.html file in your theme directory *layout
 
 Add rawhtml tag in *contact.md*
 
-![raw html](/image/rawhtml.jpg)
+![raw html](https://cdn.puvvadi.me/img/rawhtml.webp)
 
 Now add following to your *contact.md* file and replace the form ID and field IDs from previous.
 
@@ -149,15 +149,15 @@ method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
 #### Now it should looks something like this bellow.
 
-![Contact Form](/image/contact-form.jpg)
+![Contact Form](https://cdn.puvvadi.me/img/contact-form.webp)
 
 After submitting the form, it should redirect to */thankyou/* page.
 
-![Contact Submit Response](/image/contact-res.png)
+![Contact Submit Response](https://cdn.puvvadi.me/img/contact-res.webp)
 
 Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails every time someone fills out the form, go to responses on Google Form and Check *get email notifications for new responses*.
 
-![Form Response email](/image/google-form-res-email.jpg)
+![Form Response email](https://cdn.puvvadi.me/img/google-form-res-email.webp)
 
 You can also export all the response to *csv* format or directly Google spreadsheets.
 
