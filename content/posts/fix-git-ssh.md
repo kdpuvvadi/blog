@@ -11,7 +11,7 @@ showFullContent = false
 draft= true
 +++
 
-![](/image/gitlab-access-denied-publickey.jpg)
+![](https://cdn.puvvadi.me/img/gitlab-access-denied-publickey.webp)
 
 When you try to *git push* it throws Permission Denied(public key) error.
 
