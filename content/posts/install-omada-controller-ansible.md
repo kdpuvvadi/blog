@@ -1,5 +1,5 @@
 +++
-title = "Install Omada Controller Ansible"
+title = "Install Omada Controller with Ansible playbook"
 date = "2021-09-07T10:09:18+05:30"
 author = "kdpuvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
