@@ -3,15 +3,14 @@ title = "Install Omada Controller with Ansible playbook"
 date = "2021-09-07T10:09:18+05:30"
 author = "kdpuvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "/image/ansible-omada-controller.jpg"
+cover = "https://cdn.puvvadi.me/img/ansible-omada-controller.webp"
 tags = ["omada", "ansible", "network" ]
 keywords = ["omada controller", "ansible", "playboo", "tp-link" ]
 description = "Install Omada controller on Debian and CentOS linux distribution with ansible playbook."
 showFullContent = false
 +++
 
-
-# Introduction
+## Introduction
 
 In previous post on How to [Install Omada controller on ubuntu](/posts/omada-sdn-controller-ubuntu/), we deployed the controller with all the manual method. To deploy on multiple machines and multiple locations, it's cumbersome and time consuming.
 
@@ -24,6 +23,7 @@ Playbook can be found on [repo](https://github.com/kdpuvvadi/Omada-Ansible), clo
 ````shell
 git clone https://github.com/kdpuvvadi/Omada-Ansible.git omada-ansible
 ````
+
 and `cd` into the directory
 
 ````shell
@@ -38,7 +38,7 @@ Tested the playbook on the follwoing repos
 * CentOS 6, 7
 * Ubuntu 18.04, 20.04
 
-*CentOS 8 is not supported yet*
+Note: *CentOS 8 is not supported yet*
 
 ## Ansible Setup
 
@@ -86,6 +86,7 @@ ansible-playbook main.yml -K
     * 29813
 
 ## Manage Omada Service
+
 * `sudo tpeap status` -- show the status of Controller;
 * `sudo tpeap start` -- start the Omada Controller;
 * `sudo tpeap stop` --stop running the Omada Controller.
