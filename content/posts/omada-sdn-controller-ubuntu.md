@@ -12,13 +12,13 @@ showFullContent = false
 
 ### Little Back Story
 
-TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/). After reading ton manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN. 
+TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/). After reading ton manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN.
 
-### Hardware 
+### Hardware
 
 First we decided to go with OC200 Hardware Controller but pivoted to Software Solution. My friend already had 6th gen i7 NUC lying and gathering dust. TP Link recommended at least 2 cores, 4 threads for the self hosted controller. It perfect the job and more. So, decided to install Proxmox and hit a snag. After half a day of troubleshooting, was finally able to install and later provisioned couple of VMs with 1 core and 2 Gb memory for Docker testing & 2 core 6 Gb memory for Omada Controller. Decided to leave one core and 2 gigs memory for Proxmox's smooth operation. 
 
-#### Here's are the Hardware chooses 
+#### Here's are the Hardware chooses
 
     1. Server - Intel NUC NUC6i7KYK with i7 6770HQ 4 core 8 threads
     2. Firewall - TL-R605, 1 WAN, 3 WAN/LAN, 1 LAN (all gigabit)
@@ -26,11 +26,11 @@ First we decided to go with OC200 Hardware Controller but pivoted to Software So
     4. Access Point indoor - 2 x EAP265 HD 
     5. Access Point Outdoor - 1 x EAP225-Ourdoor
 
-### Prerequisites 
+### Prerequisites
 
 For Debian systems, Omada need Java 8, MongoDB 3.0.15 to 3.6.18, JSVC, curl. 
 
-First run 
+First run
 
 ````shell
 sudo apt update 
