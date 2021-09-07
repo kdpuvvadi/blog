@@ -3,14 +3,14 @@ title = "Connecting Nodemcu to Home Assistant"
 date = "2020-11-03T22:12:51+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "/image/esp8266-hassio.jpg"
+cover = "https://cdn.puvvadi.me/img/esp8266-hassio.webp"
 tags = ["NodeMCU","ESP8266", "ESPHome", "Home Assistant", "Home Automation"]
 keywords = ["Home Assistant", "HASS", "Automation"]
 description = "Step by Step guide for connecting NodeMCU to the Home Assistant and Monitoring Humidity & Temperature with DHT11 on Raspberry Pi"
 showFullContent = false
 +++
 
-In the Previous [post](home-assistant-setup.md "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows
+In the Previous [post](/home-assistant-setup "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows
 
 #### Requirements
 
@@ -60,11 +60,11 @@ If everything went very well, you should see Living Room Node on ESPHome. Click 
 
 Now, Click on Menu and compile. After the compilation completed click on Download to save the binary. To flash the binary to the NodeMCU, Download [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). Open NodeMCU Flasher. Select COM port and binary file to flash in Config tab. 
 
-![](/image/nodemcu_flasher_flash.png)
+![](https://cdn.puvvadi.me/img/nodemcu_flasher_flash.webp)
 
 Click on *Flash*
 
-![](/image/nodemcu_flash_done.png)
+![](https://cdn.puvvadi.me/img/nodemcu_flash_done.webp)
 
 After completion of Flashing, disconnect the NodeMCU from the PC and Connect it to the Power source. Before connecting the Power source, connect DHT11 sensor to NodeMCU using following config
 
@@ -76,7 +76,7 @@ After completion of Flashing, disconnect the NodeMCU from the PC and Connect it 
 | GND   | GND     |
 | DATA  | D6      |
 
-LED indicator of Sensor should be illuminated after connecting the power source. 
+LED indicator of Sensor should be illuminated after connecting the power source.
 
 #### Sensor Config
 
@@ -126,17 +126,17 @@ sensor:
 Click on Save. Upload to upload the binary via OTA Update. After validation, compilation and Uploading, ESP8266 will reboot itself and transmitting data to Home Assistant securely over APIs.
 Click on Log to see the data beeing sent from ESP8266 to the Home Assistant. 
 
-![](/image/esp8266_temp_humid_log.png)
+![](https://cdn.puvvadi.me/img/esp8266_temp_humid_log.webp)
 
 #### Adding Data to Lovelace
 
-Go to * Configuration > Integration *, *ESPHome:living_room* should present there. Click on `CONFIGURE` and *Do you want to add the ESPHome node living_room to Home Assistant?* prompts, click on *submit*. it prompts for password, set in the config. Enter the password and Select the Room *e.g Living Room* 
+Go to *Configuration > Integration*, *ESPHome:living_room* should present there. Click on `CONFIGURE` and *Do you want to add the ESPHome node living_room to Home Assistant?* prompts, click on *submit*. it prompts for password, set in the config. Enter the password and Select the Room *e.g Living Room*
 
 Now, go to *Configuration > Entities > select  Temperature (sensor.Temperature ESPHome) and Select Humidity (sensor.humidity ESPHome) > ENABLE SELECTED* and *yes* on the prompt *This will make them available in Home Assistant again if they are now disabled.*
 
-If everything went well, Temperature and Humidity should be available in Lovelace. 
+If everything went well, Temperature and Humidity should be available in Lovelace.
 
-![](/image/esphome_temp_humid_out.png)
+![](https://cdn.puvvadi.me/img/esphome_temp_humid_out.webp)
 
 #### Conclusion
 
