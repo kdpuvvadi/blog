@@ -3,7 +3,7 @@ title = "Home Assistant Setup on Raspberry Pi"
 date = "2020-11-03T20:09:59+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "/image/hass-pi.jpg"
+cover = "https://cdn.puvvadi.me/img/hass-pi.webp"
 tags = ["hass", "Home Assistant", "Raspberry Pi", "pi", "Home Automation" ]
 keywords = ["Automation", "Tech"]
 description = "A step by step guide to setup Home Assistant on Raspberry Pi for Home Automation"
@@ -33,17 +33,17 @@ First Download Pi Home Assistant Image [Here](https://www.home-assistant.io/hass
 
 Now, install and open the **balenaEtcher**, Select Extracted image, select the SDCard you've connected to the PC and click on **Flash**. If asked for elevated permissions, click ***YES***
 
-![](/image/balenoEtcher_Flashing.jpg)
+![](https://cdn.puvvadi.me/img/balenoEtcher_Flashing.webp)
 
 ##### Flashing
 
-![](/image/balanaetcher_flashing.png)
+![](https://cdn.puvvadi.me/img/balanaetcher_flashing.webp)
 
 ##### Flashing Done
 
-![](/image/balenaEtcher_done.png)
+![](https://cdn.puvvadi.me/img/balenaEtcher_done.webp)
 
-Once it's completed flashing the image, Eject the SDCard and insert it to Raspberry Pi 3. Now, we need a way to connect our pi to network. 
+Once it's completed flashing the image, Eject the SDCard and insert it to Raspberry Pi 3. Now, we need a way to connect our pi to network.
 
 #### Network Configaration
 
@@ -111,7 +111,6 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 
 {{< /code >}}
 
-
 ##### Wi-Fi with Static IP
 
 {{< code language="markdown" title="Wireless with static IP" id="4" expand="Show" collapse="Hide" >}}
@@ -144,15 +143,15 @@ First Create a Directory **CONFIG** and then **netowrk**. Now, create a file nam
 
 Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen.
 
-![](/image/hass_preparing.jpg)
+![](https://cdn.puvvadi.me/img/hass_preparing.webp)
 
 The process may take some time, Take a coffee brake. Once the process is completed, you should see account creation screen.
 
-![](/image/hass_account.png)
+![](https://cdn.puvvadi.me/img/hass_account.webp)
 
 Name your Home Assitant setup, setup Home location and Select the units of choice in the following screen. 
 
-![](/image/hass_map_units_name.png)
+![](https://cdn.puvvadi.me/img/hass_map_units_name.webp)
 
 If everything went good so far, you should Home Assistant Dashboard *aka* ***Lovelace***. Setup of the Home Assistant on Pi is completed.
 
