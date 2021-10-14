@@ -79,7 +79,7 @@ Hugo uses markdown to generate posts. All you've to do is start typing.
 
 ![Hugo site with Ananke theme](https://cdn.puvvadi.me/img/hugo-ananke-new-site.webp)
 
-Hugo can be hosted with [Nelify](https://netlify.com) for free. To proceed with that create a repo on GitHub or BitBucket. 
+Hugo can be hosted with [Netlify](https://netlify.com) for free. To proceed with that create a repo on GitHub or BitBucket. 
 ````shell 
 git init
 git remote add origin git@github.com:kdpuvvadi/new-hugo-site.git
@@ -88,7 +88,7 @@ git add .
 git commit -m "my first commit"
 git push -u origin master
 ````
-Repo is ready. Now open [Nelify](https://netlify.com) and create an account. After completion of signup, connect your GitHub account to Netlify. 
+Repo is ready. Now open [Netlify](https://netlify.com) and create an account. After completion of signup, connect your GitHub account to Netlify. 
 
 ![](https://cdn.puvvadi.me/img/netlify-new-site.webp)
 
