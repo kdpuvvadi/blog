@@ -4,8 +4,8 @@ date = "2021-10-14T10:34:37+05:30"
 author = ""
 authorTwitter = "kdpuvvadi" #do not include @
 cover = "/image/winget-msstore.jpg"
-tags = ["", ""]
-keywords = ["", ""]
+tags = ["winget", "packagemanager", "cli" ]
+keywords = ["winget", "Microsoft", "Microsoft store"]
 description = ""
 showFullContent = false
 +++
