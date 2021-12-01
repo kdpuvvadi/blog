@@ -88,23 +88,31 @@ TP link provides 2 type installers. Debian package and tar.gz archive. Both are 
 
 ### Install from tar.gz
 
-Download the tar.gz. 4.3.5 is latest version as of writing this. Replace the URL  with latest one.
+Download the tar.gz. 4.3.5 is latest version as of writing this. Replace the URL  with latest one.(Currently 4.4.6 is latest version)
 
 ````shell
-wget https://static.tp-link.com/2021/202105/20210507/Omada_SDN_Controller_v4.3.5_linux_x64.tar.gz
+wget https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz
 ````
 
 Extract the archive & Navigate to the directory
 
 ````shell
-tar -xvzf Omada_SDN_Controller_v4.3.5_linux_x64.tar.gz
-cd Omada_SDN_Controller_v4.3.5_linux_x64
+mkdir Omada_SDN_Controller_v4.4.6_Linux_x64
+tar -xvzf Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz -C Omada_SDN_Controller_v4.4.6_Linux_x64
+cd Omada_SDN_Controller_v4.4.6_Linux_x64
 ````
-install the controller with the following
+Install the controller with the following
 
 ````shell
 sudo ./install.sh
 ````
+
+To uninstall Omada Controller 
+
+```bash
+sudo ./uninstall.sh
+```
+
 
 #### Install from .deb
 
