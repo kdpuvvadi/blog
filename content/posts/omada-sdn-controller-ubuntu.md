@@ -119,14 +119,21 @@ sudo ./uninstall.sh
 Download the deb package from TP Link
 
 ```shell 
-wget https://static.tp-link.com/2021/202105/20210507/Omada_SDN_Controller_v4.3.5_linux_x64.deb
+wget https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.deb
 ````
 
-install with the following
+Install with the following
 
 ````shell
 sudo dpkg -i Omada_SDN_Controller_v4.3.5_linux_x64.deb
 ````
+
+To uninstall
+
+```bash
+sudo apt remove omadac
+```
+
 
 It might take 2 to 5 min depending upon your system configuration. Once the installation completed, visit https://ip:8088
 
