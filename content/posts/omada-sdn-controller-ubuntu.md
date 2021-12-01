@@ -79,7 +79,7 @@ mongod --version
 curl should be already install and Omada need jsvc. To install both run the following
 
 ````shell
-sudo apt install curl jvsc
+sudo apt install curl jsvc
 ````
 
 ### Install Omada Controller
