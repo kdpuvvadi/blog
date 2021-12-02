@@ -11,11 +11,11 @@ showFullContent = false
 +++
 
 
-We use DigitalOcean as our main infrastructre and in our development cycle as disposable machines. We deploy the vm, install the stack with ansible and do the things and dispose that. I suggested to our upper management that we need to build simple automation tool that can do all of this with digitalocean `API` but they though building that might divert the resources current project but allowed to work on that few hours a week. 
+We use DigitalOcean as our main infrastructure and in our development cycle as disposable machines. We deploy the vm, install the stack with ansible and do the things and dispose that. I suggested to our upper management that we need to build simple automation tool that can do all of this with digitalocean `API` but they though building that might divert the resources current project but allowed to work on that few hours a week. 
 
-So, i decided to write a small and simple shell script to deploy droplets with interactive prompts while we work on the plotform. It has to be simple, quick and dirty. 
+So, decided to write a small and simple shell script to deploy droplets with interactive prompts while we work on the platform. It has to be simple, quick and dirty. 
 
-## Requirments 
+## Requirements 
 
 - It has to be simple
 - I've to work on my free time. 
@@ -24,13 +24,13 @@ So, i decided to write a small and simple shell script to deploy droplets with i
 
 ## Selection
 
-We decided to use public key at `~/.ssh/id_rsa.pub` for key based authetication. As most of the devs already added their key to DO's teams account.
+We decided to use public key at `~/.ssh/id_rsa.pub` for key based authentication. As most of the devs already added their key to DO's teams account.
 
 We use Ubuntu 20.04, 21.04 and CentOS 7, 8. We've production env at SFO 2 & 3, BLR1, SGP1 and NYC 1 & 2.
 
 ## Building
 
-Instead using root user then setup user account with ansible We decided to go with cloud-init for user setup on the vm as it's simple to implement and DigitalOcean already supports that in their cli plotform. 
+Instead using root user then setup user account with ansible We decided to go with cloud-init for user setup on the vm as it's simple to implement and DigitalOcean already supports that in their cli platform. 
 
 ```yaml
 #cloud-config
@@ -47,7 +47,7 @@ runcmd:
   - restart ssh
 ```
 
-`username` and `pubkey` feilds will be populated with the main script using `sed`. Also, root login being disbaled with `cloud-init`
+`username` and `pubkey` fields will be populated with the main script using `sed`. Also, root login being disabled with `cloud-init`
 
 When we first wrote the script, we would check `doctl` is installed or not then throw error with `please install doctl` and exit. 
 
@@ -61,7 +61,7 @@ if [ "$?" != 0 ]; then
 fi
 ```
 
-But later devs just wanted to install doctl with same script. As soon as the installation completed, prompting for auth token for authetication. 
+But later devs just wanted to install doctl with same script. As soon as the installation completed, prompting for AUTH token for authentication. 
 
 ```shell 
 doctl >/dev/null 2>/dev/null
@@ -202,9 +202,9 @@ do
 done
 ```
 
-Once the user selection completed, simply deploying droplet with `doctl compute droplet create` and to make sure it's provisioned using `--wait` flag to return only if the privisioning completed. After that simply listing the droplets with `doctl compute droplet list`
+Once the user selection completed, simply deploying droplet with `doctl compute droplet create` and to make sure it's provisioned using `--wait` flag to return only if the provisioning completed. After that simply listing the droplets with `doctl compute droplet list`
 
-## Github
+## GitHub
 
 Complete repo is on [Github](https://github.com/kdpuvvadi/doctl-deploy). Clone the repo and try this for yourself
 
@@ -220,8 +220,8 @@ chmod u+x deploy.sh
 ./deploy.sh
 ```
 
-## Roadmap & Concusion
+## Roadmap & Conclusion
 
-Our plotform using DigitalOcean's API is still under development as there aren't any dedicated resources allocated to it. In the meantime planing on porting this to `powershell` for the devs who's on windows platform. They can use this on windows with `WSL2` though. 
+Our platform using DigitalOcean's API is still under development as there aren't any dedicated resources allocated to it. In the meantime planning on porting this to `powershell` for the devs who's on windows platform. They can use this on windows with `WSL2` though. 
 
 See you soon *Au revoir*
