@@ -1,8 +1,6 @@
-const Webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const path = require("path");
 
@@ -14,7 +12,8 @@ module.exports = (env, { mode }) => ({
     modules: ["assets", "node_modules"],
   },
   entry: {
-    main: [join("assets", "js", "menu.js"), join("assets", "js", "languageSelector.js")],
+    main: join("assets", "js", "menu.js"),
+    languageSelector: join("assets", "js", "languageSelector.js"),
     prism: join("assets", "js", "prism.js"),
     style: join("assets", "css", "style.css"),
     red: join("assets", "css", "color", "red.css"),
@@ -67,14 +66,7 @@ module.exports = (env, { mode }) => ({
               importLoaders: 1,
             },
           },
-          {
-            loader: "postcss-loader",
-            options: {
-              config: {
-                path: "postcss.config.js",
-              },
-            },
-          },
+          "postcss-loader",
         ],
       },
     ],
@@ -84,9 +76,11 @@ module.exports = (env, { mode }) => ({
       name: "vendor",
       minChunks: 2,
     },
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        sourceMap: true,
+      new TerserPlugin({
+        parallel: true,
+        extractComments: false,
       }),
     ],
   },

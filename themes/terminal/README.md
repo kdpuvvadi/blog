@@ -72,7 +72,7 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 ```
 ````
 
-**Supported languages**: bash/shell, css, clike, javascript, apacheconf, actionscript, applescript, c, csharp, cpp, coffeescript, ruby, csp, css-extras, diff, django, docker, elixir, elm, markup-templating, erlang, fsharp, flow, git, go, graphql, less, handlebars, haskell, http, java, json, kotlin, latex, markdown, makefile, objectivec, ocaml, perl, php, php-extras, r, sql, processing, scss, python, jsx, typescript, toml, reason, textile, rust, sass, stylus, scheme, pug, swift, yaml, haml, twig, tsx, vim, visual-basic, wasm.
+**Supported languages**: actionscript, apacheconf, applescript, bash, c, clike, cmake, coffeescript, cpp, csharp, csp, css, css-extras, diff, django, docker, elixir, elm, erlang, flow, fsharp, git, go, graphql, haml, handlebars, haskell, http, java, javascript, json, jsx, kotlin, latex, less, llvm, makefile, markdown, markup, markup-templating, nasm, objectivec, ocaml, perl, php, php-extras, powershell, processing, pug, python, r, reason, ruby, rust, sass, scala, scheme, scss, sql, stylus, swift, textile, toml, tsx, twig, typescript, vim, visual-basic, wasm, yaml.
 
 ## How to start
 
@@ -81,13 +81,13 @@ You can download the theme manually by going to [https://github.com/panr/hugo-th
 You can also clone it directly to your Hugo folder:
 
 ```
-$ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
 
 ```
-$ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 ⚠️ **The theme needs at least Hugo version 0.74.x**.
@@ -97,7 +97,7 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 If you installed all needed `npm` dependencies, then you can run:
 
 ```
-$ hugo server -t terminal
+hugo server -t terminal
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -132,18 +132,25 @@ paginate = 5
   # center theme with default width
   centerTheme = false
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = true
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
   # set all headings to their default size (depending on browser settings)
   # it's set to `true` by default
   # oneHeadingSize = false
+
 
 [params.twitter]
   # set Twitter handles for Twitter cards
@@ -163,6 +170,8 @@ paginate = 5
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
     missingContentMessage = "Page not found..."
     missingBackButtonLabel = "Back to home page"
 
@@ -187,7 +196,7 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 ## Post archetype
 
-See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
+See the default `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
 
 ## Add-ons
 
@@ -204,27 +213,27 @@ To change something directly in the theme, you have to go to `themes/terminal` a
 First, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
 ```bash
- $ cd themes/terminal
+ cd themes/terminal
 ```
 
  then run:
 
  ```bash
- $ npm install
- $ npm i yarn
- $ yarn
+ npm install
+ npm i yarn
+ yarn
  ```
 
 After you modified the files you can run webpack in watch mode:
 
 ```bash
-$ yarn dev
+yarn dev
 ```
 
 or rebuild theme
 
 ```bash
-$ yarn build
+yarn build
 ```
 
 To see the changes (remember to restart `hugo server`).

@@ -5,7 +5,7 @@
     </div>
   {{ end }}
   <div class="posts">
-    {{ range .Pages }}
+    {{ range .Paginator.Pages }}
       <div class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -29,18 +29,17 @@
           </span>
         {{ end }}
 
-        {{ if .Params.Cover }}
-          <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
-        {{ end }}
+        {{ partial "cover.html" . }}
 
+      
         <div class="post-content">
           {{ if .Params.showFullContent }}
-          {{ .Content | markdownify }}
+          {{ .Content }}
           {{ else if .Description }}
           {{ .Description | markdownify }}
           {{ else }}
           {{ if .Truncated }}
-          {{ .Summary | markdownify }}
+          {{ .Summary }}
           {{ end }}
           {{ end }}
         </div>
