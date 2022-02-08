@@ -6,7 +6,7 @@ authorTwitter = "kdpuvvadi" #do not include @
 cover = "/image/winget-msstore.jpg"
 tags = ["winget", "packagemanager", "cli" ]
 keywords = ["winget", "Microsoft", "Microsoft store"]
-description = ""
+description = "Remove Microsoft Store from Winget as a source"
 showFullContent = false
 +++
 
