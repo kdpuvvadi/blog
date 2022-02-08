@@ -26,7 +26,8 @@ googleAnalytics = "UA-164525361-1"
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
 
-
+  # whether to show a page's estimated reading time
+  readingTime = true # default
 
   enableGitInfo = true
   showLastUpdated = true
@@ -43,7 +44,7 @@ googleAnalytics = "UA-164525361-1"
     title = "KD's Blog"
     subtitle = "Simply Tech"
     owner = "KD"
-    keywords = "Tech, blog, dev, netlify, hugo, home assistant, Automation, kd puvvadi, apple M1, google forms, free hosting, docker, portainer, docker swarn, kubctl"
+    keywords = "Tech, Omada, contact form, blog, dev, netlify, hugo, home assistant, Automation, kd puvvadi, apple M1, google forms, free hosting, docker, portainer, docker swarn, kubctl"
     copyright = "KD Puvvadi"
     menuMore = "Show more"
     readMore = "Read more"
