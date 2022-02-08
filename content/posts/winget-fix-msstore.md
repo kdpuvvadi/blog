@@ -10,7 +10,7 @@ description = ""
 showFullContent = false
 +++
 
-Back when Microsoft launched (Winget)[https://github.com/microsoft/winget-cli], a new package manager for windows 10, only source was it's own (winget-pkgs)[https://github.com/microsoft/winget-pkgs]. Recently Microsoft added support for Microsoft Store apps. It caused a lot problems and it's impossible to upgrade some apps even with exact argument. 
+Back when Microsoft launched [Winget](https://github.com/microsoft/winget-cli), a new package manager for windows 10, only source was it's own [winget-pkgs](https://github.com/microsoft/winget-pkgs). Recently Microsoft added support for Microsoft Store apps. It caused a lot problems and it's impossible to upgrade some apps even with exact argument. 
 
 Let's see. You have python 3.9.x installed on you pc and want to upgrade to python 3.10.x. You would try following usually to upgrade the package. 
 
