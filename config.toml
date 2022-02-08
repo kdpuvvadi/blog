@@ -26,7 +26,8 @@ googleAnalytics = "UA-164525361-1"
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
 
-
+  # whether to show a page's estimated reading time
+  readingTime = true # default
 
   enableGitInfo = true
   showLastUpdated = true
