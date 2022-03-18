@@ -11,7 +11,7 @@ showFullContent = false
 readingTime = false
 +++
 
-Infrastructure as Code is a god send for system admins and devops teams around the world. With [Terraform](https://www.terraform.io/) it cake walk.
+Infrastructure as Code is a god send for system admins and devops teams around the world. With [Terraform](https://www.terraform.io/) it's a walk in the park.
 
 ## Installing Terraform
 
@@ -46,7 +46,9 @@ brew install hashicorp/tap/terraform
 
 open terminal and test it with
 
-`terraform version`.
+```bash
+terraform version
+```
 
 you should see something like this.
 
@@ -61,7 +63,9 @@ To run on azure, terraform use default Azure login stored in `.azure` direcotry 
 
 To login, run
 
-`az login`
+```bash
+az login
+```
 
 It should show something similor to this
 
@@ -175,7 +179,9 @@ resource "azurerm_resource_group" "south1" {
 
 To Initialize the terraform and install the azure plugin, you should run
 
-`terraform init`
+```bash
+terraform init
+```
 
 output should be something similor
 
@@ -209,13 +215,17 @@ commands will detect it and remind you to do so if necessary.
 
 To format all the config properly run
 
-`terraform fmt`
+```bash
+terraform fmt
+```
 
 ### Validation
 
 Before running the config, you should validate it to check everything is sound.
 
-`terraform validate`
+```bash
+terraform validate
+```
 
 Output should looks like this
 
@@ -228,7 +238,9 @@ Success! The configuration is valid.
 
 To check modification and what's actully change on live infrastructure, run
 
-`terraform plan`
+```bash
+terraform plan
+```
 
 ```bash
 $ terraform.exe plan
@@ -257,7 +269,9 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 To make changes run
 
-`terraform apply`
+```bash
+terraform apply
+```
 
 And terraform will prompt from confirmation and only accepts `yes` to apply changes.
 
@@ -282,7 +296,9 @@ To check wether the changes made here are working or not, login to azure dashboa
 
 To delete the resource created, run
 
-`terraform destroy`
+```bash
+terraform destroy
+```
 
 Enter `yes` to approve the changes.
 
