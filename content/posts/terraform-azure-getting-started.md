@@ -115,7 +115,7 @@ Create a direcotry where you want to store the terraform configaration files. Cr
 
 First add azure plugin details in the `main.tf`
 
-```tf
+```json
 terraform {
   required_providers {
     azurerm = {
@@ -133,7 +133,7 @@ provider "azurerm" {
 
 To create a resource group to add any resources on azure,
 
-```tf
+```json
 resource "azurerm_resource_group" "south1" {
   name     = "region-southindia"
   location = "southindia"
@@ -150,7 +150,7 @@ Tags can be used to with `"key" = "Value"` as many as you want.
 
 You should see some thing like this in `main.tf`
 
-```tf
+```json
 terraform {
   required_providers {
     azurerm = {
@@ -304,4 +304,4 @@ Enter `yes` to approve the changes.
 
 ## Conslusion
 
-With Terraform, sky is the limit for managing infrastructure. To check the azure documentation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs). Feel free to comment here or drop an [email](/contact). Au Revoir.
+With Terraform, sky is the limit for managing infrastructure. Check the azure documentation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs). Feel free to comment here or drop an [email](/contact). Au Revoir.
