@@ -12,12 +12,6 @@ showFullContent = false
 
 Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I'm gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
 
-{{< rawhtml >}}
-
-<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="puvvadi-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category ="Electronics"; amzn_assoc_default_search_key ="";amzn_assoc_theme ="dark"; amzn_assoc_bg_color ="000000"; </script><script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
-
-{{< /rawhtml >}}
-
 ![Google Forms](https://cdn.puvvadi.me/img/google-forms.webp)
 
 First open [Google form](https://www.google.com/forms/about/) and create a form with *Name, Email, Subject and Message*.
