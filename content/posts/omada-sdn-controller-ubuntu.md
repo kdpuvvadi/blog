@@ -28,7 +28,7 @@ First we decided to go with OC200 Hardware Controller but pivoted to Software So
 
 ### Prerequisites
 
-For Debian systems, Omada need Java 8, MongoDB 3.0.15 to 3.6.18, JSVC, curl. 
+For Debian systems, Omada need Java 8, MongoDB 3.0.15 to 4.0, JSVC, curl. 
 
 First run
 
@@ -84,22 +84,22 @@ sudo apt install curl jsvc
 
 ### Install Omada Controller
 
-TP link provides 2 type installers. Debian package and tar.gz archive. Both are pretty much straight forward. Go to TP Link website [Omada Controller Download Page](https://www.tp-link.com/in/support/download/omada-software-controller/#Controller_Software)
+TP link provides 2 type installers. Debian package and tar.gz archive. Both are pretty much straight forward. Go to TP Link website [Omada Controller Download Page](https://www.tp-link.com/en/support/download/omada-software-controller/).
 
 ### Install from tar.gz
 
-Download the tar.gz. 4.3.5 is latest version as of writing this. Replace the URL  with latest one.(Currently 4.4.6 is latest version)
+Download the tar.gz. 5.3.1 is latest version as of writing this. Replace the URL with latest one.
 
 ````shell
-wget https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz
+wget https://static.tp-link.com/upload/software/2022/202205/20220507/Omada_SDN_Controller_v5.3.1_Linux_x64.tar.gz
 ````
 
 Extract the archive & Navigate to the directory
 
 ````shell
-mkdir Omada_SDN_Controller_v4.4.6_Linux_x64
-tar -xvzf Omada_SDN_Controller_v4.4.6_Linux_x64.tar.gz -C Omada_SDN_Controller_v4.4.6_Linux_x64
-cd Omada_SDN_Controller_v4.4.6_Linux_x64
+mkdir omada
+tar -xvzf Omada_SDN_Controller_v5.3.1_Linux_x64.tar.gz -C omada
+cd omada
 ````
 Install the controller with the following
 
@@ -119,13 +119,13 @@ sudo ./uninstall.sh
 Download the deb package from TP Link
 
 ```shell 
-wget https://static.tp-link.com/upload/software/2021/202110/20211011/Omada_SDN_Controller_v4.4.6_Linux_x64.deb
+wget https://static.tp-link.com/upload/software/2022/202205/20220507/Omada_SDN_Controller_v5.3.1_Linux_x64.deb
 ````
 
 Install with the following
 
 ````shell
-sudo dpkg -i Omada_SDN_Controller_v4.3.5_linux_x64.deb
+sudo dpkg -i Omada_SDN_Controller_v5.3.1_Linux_x64.deb
 ````
 
 To uninstall
@@ -133,7 +133,6 @@ To uninstall
 ```bash
 sudo apt remove omadac
 ```
-
 
 It might take 2 to 5 min depending upon your system configuration. Once the installation completed, visit https://ip:8088
 
