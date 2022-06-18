@@ -8,7 +8,9 @@ Live URL: https://blog.puvvadi.me
 
 ## Testing
 
-- Hugo Server
+```shell
+hugo server
+```
 
 check the output at `http://localhost:1313`
 
@@ -27,5 +29,3 @@ Build comments on pull requests: Enabled
  `HUGO_VERSION` : `0.88.1`
 
 > Running this is `0.88.1`, you can change it to latest Hugo Build. 
-
-
