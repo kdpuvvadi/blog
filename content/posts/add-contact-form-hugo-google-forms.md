@@ -141,7 +141,7 @@ method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
 *Replace FormID with actual ID from Google form*.
 
-#### Now it should looks something like this bellow.
+> Now it should looks something like this bellow
 
 ![Contact Form](https://cdn.puvvadi.me/img/contact-form.webp)
 

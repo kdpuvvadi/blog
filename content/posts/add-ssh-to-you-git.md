@@ -44,7 +44,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-### Display the public key with 
+### Display the public key with
 
 ```bash
 cat ~/.ssh/id_rsa.pub
@@ -52,18 +52,17 @@ cat ~/.ssh/id_rsa.pub
 
 Copy all the contents
 
-
 ### Add SSH key to your GitHub account
 
 To add the key to GitHub, go to `github.com > Settings > SSH and GPG keys`
 
-Select `New SSH key`, Paste the copied public key contents  in the `key` section. 
+Select `New SSH key`, Paste the copied public key contents  in the `key` section.
 Provide a title and click on `Add SSH key`
 
 To add repository, go to `GitHub repo > Click on Code > select SSH`. Copy the link.
 Usually link would looks like this `git@github.com:username/repo_name.git`
 
-### Add repo to your project 
+### Add repo to your project
 
 ```bash
 git remote add origin git@github.com:username/repo_name.git

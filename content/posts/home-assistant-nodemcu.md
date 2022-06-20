@@ -12,63 +12,63 @@ showFullContent = false
 
 In the Previous [post](/home-assistant-setup "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows
 
-#### Requirements
+### Requirements
 
     - ESP8266
     - Power Supply
     - DHT11 Sensor
 
-#### ESP8266 Setup
+### ESP8266 Setup
 
-Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant. To install ESPHome Addon, go to * Supervisor > Add-on Sore * and search for ESPHome. Click on the Add-on and click install. Once the installation is completed, Turning on *Show in sidebar* and *watchdog* for quick access and recover the add-on in case of crash is recommended.
+Our goal today is connecting NodeMCU to HomeAssistant and reading Temperature and humidity data from the DHT11 sensor. To do that we need to install small addon ESPHome from Addon store on Home Assistant. To install ESPHome Addon, go to `Supervisor > Add-on Sore` and search for ESPHome. Click on the Add-on and click install. Once the installation is completed, Turning on *Show in sidebar* and *watchdog* for quick access and recover the add-on in case of crash is recommended.
 
-Now, go to `ESPHome` on the Left side menu. Click on the + to add a Node. 
+Now, go to `ESPHome` on the Left side menu. Click on the + to add a Node.
 
-If everything went very well, you should see Living Room Node on ESPHome. Click on Edit to check the config. It should look something like bellow. 
+If everything went very well, you should see Living Room Node on ESPHome. Click on Edit to check the config. It should look something like bellow.
 
-![](https://cdn.puvvadi.me/vid/esphome_node_setup.webm)
+![esphome setup](https://cdn.puvvadi.me/vid/esphome_node_setup.webm)
 
-````yaml
-    esphome:
-    name: living_room
-    platform: ESP8266
-    board: nodemcuv2
+```yaml
+esphome:
+  name: living_room
+  platform: ESP8266
+  board: nodemcuv2
 
-    wifi:
-    ssid: "Wirelessname"
+wifi:
+  ssid: "Wirelessname"
+  password: "password"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Living Room Fallback Hotspot"
     password: "password"
 
-    # Enable fallback hotspot (captive portal) in case wifi connection fails
-    ap:
-        ssid: "Living Room Fallback Hotspot"
-        password: "password"
+captive_portal:
 
-    captive_portal:
+# Enable logging
+logger:
 
-    # Enable logging
-    logger:
+# Enable Home Assistant API
+api:
+  password: "password"
 
-    # Enable Home Assistant API
-    api:
-    password: "password"
+ota:
+  password: "password"
+```
 
-    ota:
-    password: "password"
-````
+### Flashing
 
-#### Flashing
+Now, Click on Menu and compile. After the compilation completed click on Download to save the binary. To flash the binary to the NodeMCU, Download [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). Open NodeMCU Flasher. Select COM port and binary file to flash in Config tab.
 
-Now, Click on Menu and compile. After the compilation completed click on Download to save the binary. To flash the binary to the NodeMCU, Download [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). Open NodeMCU Flasher. Select COM port and binary file to flash in Config tab. 
-
-![](https://cdn.puvvadi.me/img/nodemcu_flasher_flash.webp)
+![flash](https://cdn.puvvadi.me/img/nodemcu_flasher_flash.webp)
 
 Click on *Flash*
 
-![](https://cdn.puvvadi.me/img/nodemcu_flash_done.webp)
+![flash done](https://cdn.puvvadi.me/img/nodemcu_flash_done.webp)
 
 After completion of Flashing, disconnect the NodeMCU from the PC and Connect it to the Power source. Before connecting the Power source, connect DHT11 sensor to NodeMCU using following config
 
-#### Wiring Sensor
+### Wiring Sensor
 
 | DHT11 | NodeMCU |
 |-------|---------|
@@ -78,11 +78,11 @@ After completion of Flashing, disconnect the NodeMCU from the PC and Connect it 
 
 LED indicator of Sensor should be illuminated after connecting the power source.
 
-#### Sensor Config
+### Sensor Config
 
 To Display the Temperature and Humidity, first sensor should be configured in ESPHome. Copy the following Config and add it to the `living room.yaml` file. (only sensor config should be added. Previous config should be changed.)
 
-````yaml
+```yaml
 esphome:
   name: living_room
   platform: ESP8266
@@ -106,6 +106,7 @@ logger:
 # Enable Home Assistant API
 api:
   password: "API Password"
+
 # OTA Updates with password protection
 ota:
   password: "OTA Password"
@@ -117,18 +118,16 @@ sensor:
       name: "Temperature"
     humidity:
       name: "Humidity"
-    # Update interval in Seconds
-    update_interval: 30s
+    update_interval: 30s  # Update interval in Seconds
     model: DHT11
-
-````
+```
 
 Click on Save. Upload to upload the binary via OTA Update. After validation, compilation and Uploading, ESP8266 will reboot itself and transmitting data to Home Assistant securely over APIs.
-Click on Log to see the data beeing sent from ESP8266 to the Home Assistant. 
+Click on Log to see the data beeing sent from ESP8266 to the Home Assistant.
 
-![](https://cdn.puvvadi.me/img/esp8266_temp_humid_log.webp)
+![Temparature and Humidity log](https://cdn.puvvadi.me/img/esp8266_temp_humid_log.webp)
 
-#### Adding Data to Lovelace
+### Adding Data to Lovelace
 
 Go to *Configuration > Integration*, *ESPHome:living_room* should present there. Click on `CONFIGURE` and *Do you want to add the ESPHome node living_room to Home Assistant?* prompts, click on *submit*. it prompts for password, set in the config. Enter the password and Select the Room *e.g Living Room*
 
@@ -136,8 +135,8 @@ Now, go to *Configuration > Entities > select  Temperature (sensor.Temperature E
 
 If everything went well, Temperature and Humidity should be available in Lovelace.
 
-![](https://cdn.puvvadi.me/img/esphome_temp_humid_out.webp)
+![Temparature and Humidity out](https://cdn.puvvadi.me/img/esphome_temp_humid_out.webp)
 
-#### Conclusion
+### Conclusion
 
-ESP8266 can be configured to work with Home Assistant is few steps and in 5 min. possibilities are limit less. Multiple Nodes can be configured. Multiple sensors can be integrated. Automation with NodeMCU can be done with simple steps. In my setup Home Assistant is controlling Air Conditioner with NodeMCU, DHT11 sensor and [Broadlink](https://www.ibroadlink.com/) [RM mini 3](https://www.amazon.in/BroadLink-Universal-Control-RM-MINI3/dp/B01G1PZUK2). If the Temperature in the room reaches bellow 20, cooling will turn off and if the Temperature reaches 30 Cooling will be back on. if the Humidity is too high or too low, Humidity control will be selected as the AC function. Possibilities are limit less. [Au revoir](#conclusion)
+ESP8266 can be configured to work with Home Assistant is few steps and in 5 min. possibilities are limit less. Multiple Nodes can be configured. Multiple sensors can be integrated. Automation with NodeMCU can be done with simple steps. In my setup Home Assistant is controlling Air Conditioner with NodeMCU, DHT11 sensor and [Broadlink](https://www.ibroadlink.com/) [RM mini 3](https://www.amazon.in/BroadLink-Universal-Control-RM-MINI3/dp/B01G1PZUK2). If the Temperature in the room reaches bellow 20, cooling will turn off and if the Temperature reaches 30 Cooling will be back on. if the Humidity is too high or too low, Humidity control will be selected as the AC function. Possibilities are limit less. [Au revoir](#conclusion).

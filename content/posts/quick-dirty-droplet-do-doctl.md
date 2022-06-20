@@ -11,16 +11,16 @@ showFullContent = false
 +++
 
 
-We use DigitalOcean as our main infrastructure and in our development cycle as disposable machines. We deploy the vm, install the stack with ansible and do the things and dispose that. I suggested to our upper management that we need to build simple automation tool that can do all of this with digitalocean `API` but they though building that might divert the resources current project but allowed to work on that few hours a week. 
+We use DigitalOcean as our main infrastructure and in our development cycle as disposable machines. We deploy the vm, install the stack with ansible and do the things and dispose that. I suggested to our upper management that we need to build simple automation tool that can do all of this with digitalocean `API` but they though building that might divert the resources current project but allowed to work on that few hours a week.
 
-So, decided to write a small and simple shell script to deploy droplets with interactive prompts while we work on the platform. It has to be simple, quick and dirty. 
+So, decided to write a small and simple shell script to deploy droplets with interactive prompts while we work on the platform. It has to be simple, quick and dirty.
 
-## Requirements 
+## Requirements
 
 - It has to be simple
-- I've to work on my free time. 
+- I've to work on my free time.
 - So, it has to quick. Hence doctl & cli
-- All the regions,sizes and distors that we use should be available. 
+- All the regions,sizes and distors that we use should be available.
 
 ## Selection
 
@@ -30,7 +30,7 @@ We use Ubuntu 20.04, 21.04 and CentOS 7, 8. We've production env at SFO 2 & 3, B
 
 ## Building
 
-Instead using root user then setup user account with ansible We decided to go with cloud-init for user setup on the vm as it's simple to implement and DigitalOcean already supports that in their cli platform. 
+Instead using root user then setup user account with ansible We decided to go with cloud-init for user setup on the vm as it's simple to implement and DigitalOcean already supports that in their cli platform.
 
 ```yaml
 #cloud-config
@@ -49,7 +49,7 @@ runcmd:
 
 `username` and `pubkey` fields will be populated with the main script using `sed`. Also, root login being disabled with `cloud-init`
 
-When we first wrote the script, we would check `doctl` is installed or not then throw error with `please install doctl` and exit. 
+When we first wrote the script, we would check `doctl` is installed or not then throw error with `please install doctl` and exit.
 
 ```shell
 doctl >/dev/null 2>/dev/null
@@ -61,9 +61,9 @@ if [ "$?" != 0 ]; then
 fi
 ```
 
-But later devs just wanted to install doctl with same script. As soon as the installation completed, prompting for AUTH token for authentication. 
+But later devs just wanted to install doctl with same script. As soon as the installation completed, prompting for AUTH token for authentication.
 
-```shell 
+```shell
 doctl >/dev/null 2>/dev/null
 
 if [ "$?" != 0 ]; 
@@ -114,7 +114,7 @@ then
 fi
 ```
 
-If the user wants to install it manually, all they have to do is select anything other than y for the prompt. 
+If the user wants to install it manually, all they have to do is select anything other than y for the prompt.
 
 To check and import user pub key to their account
 
@@ -130,7 +130,7 @@ Get ssh keys from users account
 doctlkeys=$(doctl compute ssh-key list | awk '{print $3}' | sed '/FingerPrint/d')
 ```
 
-Check key is present in the user account, if not import it. 
+Check key is present in the user account, if not import it.
 
 ```shell
 if [[ "$doctlkeys" != *"$ssh_key"* ]]; then
@@ -142,7 +142,7 @@ if [[ "$doctlkeys" != *"$ssh_key"* ]]; then
 fi
 ```
 
-With all that, key logic should look something like this. 
+With all that, key logic should look something like this.
 
 ```shell
 ssh_key=$(ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | cut -b 10-56)
@@ -160,7 +160,7 @@ if [[ "$doctlkeys" != *"$ssh_key"* ]]; then
 fi
 ```
 
-changing the username and pubkey with user prompt and ssh key. 
+changing the username and pubkey with user prompt and ssh key.
 
 ```shell
 echo -n 'Enter username of droplet:' && read -r User_Name
@@ -206,22 +206,21 @@ Once the user selection completed, simply deploying droplet with `doctl compute 
 
 ## GitHub
 
-Complete repo is on [Github](https://github.com/kdpuvvadi/doctl-deploy). Clone the repo and try this for yourself
-
-### Clone
+## Clone
 
 ```shell
 git clone https://github.com/kdpuvvadi/doctl-deploy.git && cd doctl-deploy
 ```
-### deploy 
 
-```shell 
+## deploy
+
+```shell
 chmod u+x deploy.sh
 ./deploy.sh
 ```
 
 ## Roadmap & Conclusion
 
-Our platform using DigitalOcean's API is still under development as there aren't any dedicated resources allocated to it. In the meantime planning on porting this to `powershell` for the devs who's on windows platform. They can use this on windows with `WSL2` though. 
+Our platform using DigitalOcean's API is still under development as there aren't any dedicated resources allocated to it. In the meantime planning on porting this to `powershell` for the devs who's on windows platform. They can use this on windows with `WSL2` though.
 
 See you soon *Au revoir*

@@ -28,19 +28,19 @@ Click on Install and after installation, Activate. I’ve already installed the 
 
 To actually use it, install the app on your mobile device **Android** or **iOS**. After installing the app, Open the application and touch on hamburger menu and click on Email. Add an email used for WordPress user and Click enter and Confirm the Prompt.
 
-![](https://cdn.puvvadi.me/img/trusona-email.webp)
+![email trusona](https://cdn.puvvadi.me/img/trusona-email.webp)
 
 You will receive a confirmation email. Confirm the email and you’ll be asked to use Fingerprint on Android or FaceID/TouchID on iOS to make sure you are authenticating.
 
 Pretty much setup is completed. To test the login, logout of WordPress and you will see change in the login screen.
 
-![](https://cdn.puvvadi.me/img/trusona-login-WordPress.webp)
+![wordpress trusona login](https://cdn.puvvadi.me/img/trusona-login-WordPress.webp)
 
 Click on Login with Trusona, You’ll be navigated to Trusona website and will prompted with QR Code. Open the Trusona Application, Scan the code and Confirm with Fingerprint.FaceID/TouchID. You’ll be logged into your WordPress.
 
 To Actully disable the Password login, Go to *Dashboard > Settings > Trusona* and Make sure you’ve checked Trusona ONLY Mode.
 
-![](https://cdn.puvvadi.me/img/trusona-options.webp)
+![trusona options](https://cdn.puvvadi.me/img/trusona-options.webp)
 
 **Trusona Only Mode**: Disable the password and Only use Trusona for Added security
 

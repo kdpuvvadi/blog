@@ -20,4 +20,4 @@ To open Windows Terminal from run Press `Win+R` and type
   > wt
 ```
 
-![](https://cdn.puvvadi.me/vid/windows-terminal.webm)
+![windows terminal](https://cdn.puvvadi.me/vid/windows-terminal.webm)
