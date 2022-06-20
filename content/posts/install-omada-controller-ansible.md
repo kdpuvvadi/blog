@@ -12,16 +12,16 @@ showFullContent = false
 
 ## Introduction
 
-In previous post on How to [Install Omada controller on ubuntu](/posts/omada-sdn-controller-ubuntu/), we deployed the controller with all the manual method. To deploy on multiple machines and multiple locations, it's cumbersome and time consuming.
+In the previous post on "How to [Install Omada controller on ubuntu](/posts/omada-sdn-controller-ubuntu/)", we deployed the controller with all the manual method. To deploy on multiple machines and multiple locations, it's cumbersome and time consuming.
 
 So, it is efficient to use automation to deploy the controller.
 
 ## Ansible Playbook
 
-Playbook can be found on [repo](https://github.com/kdpuvvadi/Omada-Ansible), clone the repo with the following
+Playbook can be found at [repo](https://github.com/kdpuvvadi/omada-ansible), clone the repo with the following
 
 ````shell
-git clone https://github.com/kdpuvvadi/Omada-Ansible.git omada-ansible
+git clone https://github.com/kdpuvvadi/omada-ansible.git omada-ansible
 ````
 
 and `cd` into the directory
@@ -34,39 +34,39 @@ cd omada-ansible
 
 Tested the playbook on the follwoing repos
 
-* Debian 8, 9 & 10
-* CentOS 6, 7
+* Debian 10, 11
+* CentOS 8, Rocky Linux 8
 * Ubuntu 18.04, 20.04
-
-Note: *CentOS 8 is not supported yet*
 
 ## Ansible Setup
 
 * install pip `sudo apt install python3-pip -y`
 * install ansible with pip `python3 -m pip install ansible`
-* install requirements `ansible-galaxy collection install -r requirements.yml`
 
 ## Varibles & Inventory
 
-* Copy inventory sample file `cp example.inventory.ini inventory.ini`
+* Copy inventory sample file `cp inventory.ini.j2 inventory.ini`
 * Change the ip address with actual IP address of the host server.
-* Copy varible file with `cp example.vars.ini vars.ini`
+* Copy varible file with `cp vars.ini.j2 vars.ini`
+* install requirements `ansible-galaxy collection install -r requirements.yml`
 
-## Run the Playbook
+## Run
 
-* To test the connection with host run the following and it should return success message.
+### Test Connection
+
+To test the connection with host run the following and it should return success message.
 
 ````shell
-ansible all -k ping
+ansible all -m ping
 ````
 
-* To run the playbook
+### run the playbook
 
 ````shell
 ansible-playbook main.yml
 ````
 
-* If you need password for the sudo append `-K` and enter the password when prompted
+> If you need password for the sudo append `-K` and enter the password when prompted
 
 ````shell
 ansible-playbook main.yml -K
@@ -74,16 +74,16 @@ ansible-playbook main.yml -K
 
 ## Post Installation
 
-* Omada controller will be avaiable on https://HOST-IP:8088/ or https://HOST-IP:8043/.
+* Omada controller will be avaiable on <https://HOST-IP:8088/> or <https://HOST-IP:8043/>.
 * Following ports should be open on host for the controller to work properly.
-    * 8088
-    * 8043
-    * 27001
-    * 27002
-    * 29810
-    * 29811
-    * 29812
-    * 29813
+  * 8088
+  * 8043
+  * 27001
+  * 27002
+  * 29810
+  * 29811
+  * 29812
+  * 29813
 
 ## Manage Omada Service
 
@@ -91,4 +91,4 @@ ansible-playbook main.yml -K
 * `sudo tpeap start` -- start the Omada Controller;
 * `sudo tpeap stop` --stop running the Omada Controller.
 
-**Au revoir**
+**Au revoir*
