@@ -8,7 +8,6 @@ tags = ["terraform", "iac", "digitalocean", "cloud"]
 keywords = ["terraform", "digitalocean"]
 description = "Getting Started with Terraform & Digitalocean"
 showFullContent = false
-readingTime = false
 readingTime = true
 +++
 

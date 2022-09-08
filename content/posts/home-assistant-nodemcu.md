@@ -124,9 +124,9 @@ sensor:
 ```
 
 Click on Save. Upload to upload the binary via OTA Update. After validation, compilation and Uploading, ESP8266 will reboot itself and transmitting data to Home Assistant securely over APIs.
-Click on Log to see the data beeing sent from ESP8266 to the Home Assistant.
+Click on Log to see the data being sent from ESP8266 to the Home Assistant.
 
-![Temparature and Humidity log](https://cdn.puvvadi.me/img/esp8266_temp_humid_log.webp)
+![Temperature and Humidity log](https://cdn.puvvadi.me/img/esp8266_temp_humid_log.webp)
 
 ### Adding Data to Lovelace
 

@@ -34,9 +34,9 @@ For Debian systems, Omada need Java 8, MongoDB 3.0.15 to 4.0, JSVC, curl.
 First run
 
 ```shell
-sudo apt update 
-sudo apt upgrade -y 
-sudo apt autoremove -y 
+sudo apt update
+sudo apt upgrade -y
+sudo apt autoremove -y
 ```
 
 ## Install OpenJDK 8
