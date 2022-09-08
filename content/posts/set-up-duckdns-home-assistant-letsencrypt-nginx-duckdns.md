@@ -8,6 +8,7 @@ tags = ["HASS", "DuckDNS", "Nginx", "Home Assistant" ]
 keywords = ["Automation", "tech"]
 description = "Step by step guide for setting up Secure SSL connection to Home Assistant with DuckDNS, Let's Encrypt, NGINX"
 showFullContent = false
+readingTime = true
 +++
 
 we've setup [`Home Assitant`](home-assistant-setup.md) previously. Without static IP, it's hard to access Home Assistant instance out of the home without `hassio cloud`.But it's a subscription service. One of the reason one might choose Home Assistant is to avoid subscription services from a lot of providers.

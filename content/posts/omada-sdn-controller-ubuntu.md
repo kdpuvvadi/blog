@@ -8,6 +8,7 @@ tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networ
 keywords = ["Networking", "Omada Controller", "Firewall"]
 description = "Let get on with Omada Controller on Ubuntu 20.04 running on virtualized Intel NUC with Proxmox "
 showFullContent = false
+readingTime = true
 +++
 
 ## Little Back Story

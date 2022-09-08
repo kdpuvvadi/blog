@@ -8,6 +8,7 @@ tags = ["winget", "packagemanager", "cli" ]
 keywords = ["winget", "Microsoft", "Microsoft store"]
 description = "Remove Microsoft Store from Winget as a source"
 showFullContent = false
+readingTime = true
 +++
 
 Back when Microsoft launched [Winget](https://github.com/microsoft/winget-cli), a new package manager for windows 10, only source was it's own [winget-pkgs](https://github.com/microsoft/winget-pkgs). Recently Microsoft added support for Microsoft Store apps. It caused a lot problems and it's impossible to upgrade some apps even with exact argument.

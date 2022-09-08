@@ -8,6 +8,7 @@ tags = ["2fa","no password WordPress","Trusona","WordPress 2fa","WordPress login
 keywords = ["TECH"]
 description = "WordPress login without Password for added security"
 showFullContent = false
+readingTime = true
 +++
 
 Passwords can be tricky. They are hard to remember and easy to guess and easy to be stolen. And there is Human element and our stupid brains always wants use same or similar passwords for login on every other website, including social networks, Personal email and Works emails etc.

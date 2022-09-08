@@ -8,6 +8,7 @@ tags = ["docker", "Portainer","wsl", "wsl2"]
 keywords = ["Tech", "Dev"]
 description = "Use WSL2 with portainer to speedup your Dev time"
 showFullContent = false
+readingTime = true
 +++
 
 I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using *[Portainer](https://www.portainer.io/)*. As much as I love to use Terminal, i’m mostly lazy.

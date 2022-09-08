@@ -8,6 +8,7 @@ tags = ["omada", "ansible", "network" ]
 keywords = ["omada controller", "ansible", "playboo", "tp-link" ]
 description = "Install Omada controller on Debian and CentOS linux distribution with ansible playbook."
 showFullContent = false
+readingTime = true
 +++
 
 ## Introduction

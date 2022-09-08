@@ -8,6 +8,7 @@ tags = ["doctl", "digitalocean"]
 keywords = ["", ""]
 description = ""
 showFullContent = false
+readingTime = true
 +++
 
 

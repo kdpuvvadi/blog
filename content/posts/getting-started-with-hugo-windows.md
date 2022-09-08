@@ -8,6 +8,7 @@ tags = ["Hugo", "free website", "GitHub", "Netlify", "static website"]
 keywords = ["Tech", "Dev"]
 description = "Step by step guide to setup Hugo blog in windows and host with Netlify for Free"
 showFullContent = false
+readingTime = true
 +++
 
 This is a guide for windows. There are multiple ways to install `Hugo` in a Windows PC. I prefer [Chocolatey](https://chocolatey.org/). To install, Open *PowerShell* or *Command prompt*  with elevated privileges. Copy the following and paste in the terminal.

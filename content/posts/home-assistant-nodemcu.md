@@ -8,6 +8,7 @@ tags = ["NodeMCU","ESP8266", "ESPHome", "Home Assistant", "Home Automation"]
 keywords = ["Home Assistant", "HASS", "Automation"]
 description = "Step by Step guide for connecting NodeMCU to the Home Assistant and Monitoring Humidity & Temperature with DHT11 on Raspberry Pi"
 showFullContent = false
+readingTime = true
 +++
 
 In the Previous [post](/home-assistant-setup "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows

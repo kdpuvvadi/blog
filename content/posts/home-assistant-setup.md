@@ -8,6 +8,7 @@ tags = ["hass", "Home Assistant", "Raspberry Pi", "pi", "Home Automation" ]
 keywords = ["Automation", "Tech"]
 description = "A step by step guide to setup Home Assistant on Raspberry Pi for Home Automation"
 showFullContent = false
+readingTime = true
 +++
 
 I'm loving Home Assistant. If your home has a lot IOT devices or if you want to get start with Home Automation, Home Assistant is best start. For the beginners, it maybe little intimidating but it is well worth the effort. To get started you need following components.

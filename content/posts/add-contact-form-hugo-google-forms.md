@@ -8,6 +8,7 @@ tags = ["Hugo", "GoogleForms", "Contactform", "HTML", "CSS", "StaticSite" ]
 keywords = ["Dev"]
 description = "Add contact form to Hugo Static site using Google Forms"
 showFullContent = false
+readingTime = true
 +++
 
 Hugo is great for a static site. No need for complicated setups, no database or data to be hacked. static sites have ton of advantages but when it comes to dynamic content like contact form it is little bit complicated to setup. I'm gonna use Google Forms to setup Contact form on Hugo Static site with custom thank you page on submit.
