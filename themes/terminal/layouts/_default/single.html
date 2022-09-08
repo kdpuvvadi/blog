@@ -12,7 +12,8 @@
       </span>
     {{ end }}
     {{ with .Params.Author }}
-      <span class="post-author">:: {{ . }}</span>
+      <span class="post-author">::</span>
+      <a href="https://twitter.com/{{ $.Site.Params.twitter.creator }}" class="post-auther">{{ . }}</a>
     {{ end }}
     {{ if and (.Param "readingTime") (eq (.Param "readingTime") true) }}
       <span class="post-reading-time">:: {{ .ReadingTime }} min read ({{ .WordCount }} words)</span>

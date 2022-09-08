@@ -24,7 +24,8 @@
             {{ .Date.Format "2006-01-02" }}
           </span>
           {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
+            <span class="post-author">::</span>
+            <a href="https://twitter.com/{{ $.Site.Params.twitter.creator }}" class="post-auther">{{ . }}</a>
           {{ end }}
         </div>
 
