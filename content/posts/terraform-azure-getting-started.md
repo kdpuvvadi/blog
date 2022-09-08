@@ -4,9 +4,9 @@ date = "2022-03-18T14:15:58+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
-description = ""
+tags = ["terraform", "iac", "azure", "cloud"]
+keywords = ["Terraform", "Azure"]
+description = "Getting Started with Terraform for Microsoft Azure to deploy infrastructure with code."
 showFullContent = false
 readingTime = true
 +++
@@ -14,6 +14,8 @@ readingTime = true
 Infrastructure as Code is a god send for system admins and devops teams around the world. With [Terraform](https://www.terraform.io/) it's a walk in the park.
 
 ## Installing Terraform
+
+Follow the instructions based on the your operating system.
 
 ### Windows
 
