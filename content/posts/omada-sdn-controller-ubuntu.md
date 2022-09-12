@@ -104,6 +104,7 @@ mkdir omada
 tar -xvzf Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz -C omada
 cd omada
 ```
+
 Make install script `install.sh` excecutable.
 
 ```shell
