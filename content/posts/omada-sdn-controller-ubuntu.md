@@ -17,9 +17,9 @@ TP Link is pushing Omada SDN from small businesses to home offices. TP Link has 
 
 ## Hardware
 
-First we decided to go with OC200 Hardware Controller but pivoted to Software Solution. My friend already had 6th gen i7 NUC lying and gathering dust. TP Link recommended at least 2 cores, 4 threads for the self hosted controller. It perfect the job and more. So, decided to install Proxmox and hit a snag. After half a day of troubleshooting, was finally able to install and later provisioned couple of VMs with 1 core and 2 Gb memory for Docker testing & 2 core 6 Gb memory for Omada Controller. Decided to leave one core and 2 gigs memory for Proxmox's smooth operation.
+First we decided to go with OC200 Hardware Controller but pivoted to Software Solution. My friend already had 6th gen i7 NUC laying and gathering dust. TP Link recommended at least 2 cores, 4 threads for the self hosted controller. It perfect for the job and more. So, decided to install Proxmox and hit a snag. After half a day of troubleshooting, was finally able to install and later provisioned couple of VMs with 1 core and 2 Gb memory for Docker testing & 2 core 6 Gb memory for Omada Controller. Decided to leave one core and 2 gigs memory for Proxmox's smooth operation.
 
-## Here's are the Hardware chooses
+## Here's are the Hardware
 
     1. Server - Intel NUC NUC6i7KYK with i7 6770HQ 4 core 8 threads
     2. Firewall - TL-R605, 1 WAN, 3 WAN/LAN, 1 LAN (all gigabit)
@@ -57,7 +57,9 @@ And select OpenJDK-8 option.
 
 ## Install MongoDB
 
-We've to careful here. If you have fresh install of Ubuntu 20.04 and try to install from apt repository, it is fine but if you've added mongoDB's PPA, it might install v4.x but Omada only supports 3.0.15 to 3.6.18. 3.0 is almost at end of the support and 3.6 is at the edge. Hoping TP upgrades it in the future. If you've fresh Ubuntu 20.04 amd64 install run the following to install 3.6.9 otherwise remove the PPA and try again.
+We've to be careful here. If you have fresh install of Ubuntu 20.04 and try to install from apt repository, it is fine but if you've added mongoDB's PPA, it might install v4.x but Omada only supports 3.0.15 to 3.6.18. 3.0 is almost at end of the support and 3.6 is at the edge. Hoping TP upgrades it in the future. If you've fresh Ubuntu 20.04 amd64 install run the following to install 3.6.9 otherwise remove the PPA and try again.
+
+> Omada Controller now supports v4.x of Mongodb.
 
 ```shell
 sudo apt install mongodb -y
@@ -92,15 +94,20 @@ TP link provides 2 type installers. Debian package and tar.gz archive. Both are 
 Download the tar.gz. 5.3.1 is latest version as of writing this. Replace the URL with latest one.
 
 ```shell
-wget https://static.tp-link.com/upload/software/2022/202205/20220507/Omada_SDN_Controller_v5.3.1_Linux_x64.tar.gz
+wget https://static.tp-link.com/upload/software/2022/202208/20220822/Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz
 ```
 
 Extract the archive & Navigate to the directory
 
 ```shell
 mkdir omada
-tar -xvzf Omada_SDN_Controller_v5.3.1_Linux_x64.tar.gz -C omada
+tar -xvzf Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz -C omada
 cd omada
+```
+Make install script `install.sh` excecutable.
+
+```shell
+sudo chmod +x install.sh
 ```
 
 Install the controller with the following
@@ -120,7 +127,7 @@ sudo ./uninstall.sh
 Download the deb package from TP Link
 
 ```shell
-wget https://static.tp-link.com/upload/software/2022/202205/20220507/Omada_SDN_Controller_v5.3.1_Linux_x64.deb
+wget https://static.tp-link.com/upload/software/2022/202208/20220822/Omada_SDN_Controller_v5.5.6_Linux_x64.deb
 ```
 
 Install with the following
