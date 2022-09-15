@@ -3,7 +3,7 @@ title = "Install Omada Controller on Ubuntu 20.04"
 date = "2021-05-30T20:51:13+05:30"
 author = "KD Puvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "https://cdn.puvvadi.me/img/omada-controller-ubuntu-20.04.webp"
+cover = "/image/omada-controller-ubuntu-20.04.webp"
 tags = ["ubuntu 20.04", "mongodb", "TP Link", "SDN", "Omada Controller", "Networking", "firewall", "gateway", "vpn", "proxmox" ]
 keywords = ["Networking", "Omada Controller", "Firewall"]
 description = "Let get on with Omada Controller on Ubuntu 20.04 running on virtualized Intel NUC with Proxmox "
@@ -21,11 +21,11 @@ First we decided to go with OC200 Hardware Controller but pivoted to Software So
 
 ## Here's are the Hardware
 
-    1. Server - Intel NUC NUC6i7KYK with i7 6770HQ 4 core 8 threads
-    2. Firewall - TL-R605, 1 WAN, 3 WAN/LAN, 1 LAN (all gigabit)
-    3. Switch - TL-SG2210P V3.20, 8 port Gbe with POE+ 60W of Power budget & 2 SFP ports
-    4. Access Point indoor - 2 x EAP265 HD 
-    5. Access Point Outdoor - 1 x EAP225-Ourdoor
+1. Server - Intel NUC NUC6i7KYK with i7 6770HQ 4 core 8 threads
+2. Firewall - TL-R605, 1 WAN, 3 WAN/LAN, 1 LAN (all gigabit)
+3. Switch - TL-SG2210P V3.20, 8 port Gbe with POE+ 60W of Power budget & 2 SFP ports
+4. Access Point indoor - 2 x EAP265 HD
+5. Access Point Outdoor - 1 x EAP225-Outdoor
 
 ## Prerequisites
 
@@ -105,7 +105,7 @@ tar -xvzf Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz -C omada
 cd omada
 ```
 
-Make install script `install.sh` excecutable.
+Make install script `install.sh` executable.
 
 ```shell
 sudo chmod +x install.sh

@@ -61,7 +61,7 @@ on windows_amd64
 
 ## Azure Shell install
 
-To run on azure, terraform use default Azure login stored in `.azure` direcotry on user home. To login, Azure CLI needs to be installed. Download the CLI from [Microsoft](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli). Once download completed, installed the Azure CLI and Open the Powershell or Windows Terminal.
+To run on azure, terraform use default Azure login stored in `.azure` directory on user home. To login, Azure CLI needs to be installed. Download the CLI from [Microsoft](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli). Once download completed, installed the Azure CLI and Open the Powershell or Windows Terminal.
 
 To login, run
 
@@ -69,7 +69,7 @@ To login, run
 az login
 ```
 
-It should show something similor to this
+It should show something similar to this
 
 ```bash
  az login
@@ -113,7 +113,7 @@ az account show -o table
 
 ## Terraform
 
-Create a direcotry where you want to store the terraform configaration files. Create a file named `main.tf`. Thi i where we store all the configs.
+Create a directory where you want to store the terraform configuration files. Create a file named `main.tf`. Thi i where we store all the configs.
 
 First add azure plugin details in the `main.tf`
 
@@ -185,7 +185,7 @@ To Initialize the terraform and install the azure plugin, you should run
 terraform init
 ```
 
-output should be something similor
+output should be something similar
 
 ```bash
 $ terraform init
@@ -238,7 +238,7 @@ Success! The configuration is valid.
 
 ### Plan and Apply
 
-To check modification and what's actully change on live infrastructure, run
+To check modification and what's actually change on live infrastructure, run
 
 ```bash
 terraform plan
@@ -304,6 +304,6 @@ terraform destroy
 
 Enter `yes` to approve the changes.
 
-## Conslusion
+## Conclusion
 
 With Terraform, sky is the limit for managing infrastructure. Check the azure documentation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs). Feel free to comment here or drop an [email](/contact). Au Revoir.

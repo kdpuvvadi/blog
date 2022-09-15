@@ -13,7 +13,7 @@ readingTime = true
 
 Recently few people contacted for instructions on upgrading omada controller from v4.x to v5.x. This can be straight forward but there is a slight chance that you might loose all the data/config of the controller.
 
-Upgrade on hardware controller is stright, you go to the ` settings >> Controller Settings >> Maintenance >> Firmware ` and check for upgrade and controllers takes care of everything.
+Upgrade on hardware controller is straight, you go to the ` settings >> Controller Settings >> Maintenance >> Firmware ` and check for upgrade and controllers takes care of everything.
 
 But for selfhsoted controller, upgrade can be different based on the method you've installed the controller like either with ` .deb ` package on debian or ` tarball `.
 
@@ -101,7 +101,7 @@ Omada Controller detects that you have backup previous setting before, will you 
 Select `Y` and hit `Enter` to import the backup. You should see output similor to here below
 
 ``` bash
-Import previous setting seccess.
+Import previous setting success.
 Omada Controller will start up with system boot. You can also control it by [/usr/bin/tpeap].
 check omada
 Starting Omada Controller. Please wait..................
@@ -180,7 +180,7 @@ Select `Y` and hit `Enter` import the backup.
 you should see something similor to the following
 
 ```bash
-Import previous setting seccess.
+Import previous setting success.
 Omada Controller will start up with system boot. You can also control it by [/usr/bin/tpeap].
 Starting Omada Controller. Please wait.......................
 Started successfully.
@@ -195,6 +195,6 @@ Upgrading can be nerve wracking as you loose all the data and config of the cont
 
 If something went wrong and you lost the backup, you still've backup from controller setup. Install the controller again and just import the back from controller settings.
 
-I Hope this was helpfull. If you need more help hit me on [twitter](https://twitter.com/kdpuvvadi) or shoot an [Email](https://blog.puvvadi.me/contact).
+I Hope this was helpful. If you need more help hit me on [twitter](https://twitter.com/kdpuvvadi) or shoot an [Email](https://blog.puvvadi.me/contact).
 
 Au revoir.
