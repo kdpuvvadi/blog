@@ -21,7 +21,7 @@ So, decided to write a small and simple shell script to deploy droplets with int
 - It has to be simple
 - I've to work on my free time.
 - So, it has to quick. Hence doctl & cli
-- All the regions,sizes and distors that we use should be available.
+- All the regions,sizes and distros that we use should be available.
 
 ## Selection
 
@@ -84,7 +84,7 @@ then
         #latest version uri
         downURL="https://github.com/digitalocean/doctl/releases/download/v$latestver/doctl-$latestver-linux-$sysarch.tar.gz"
 
-        # Download the lastet release
+        # Download the latest release
         wget $downURL 
 
         # Extract archive

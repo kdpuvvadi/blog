@@ -3,7 +3,7 @@ title = "Getting Started With Hugo in Windows and Free Hosting with Netlify"
 date = "2020-11-12T15:13:07+05:30"
 author = "KD"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "https://cdn.puvvadi.me/img/free-website-hugo-netlify-github.webp"
+cover = "/image/free-website-hugo-netlify-github.webp"
 tags = ["Hugo", "free website", "GitHub", "Netlify", "static website"]
 keywords = ["Tech", "Dev"]
 description = "Step by step guide to setup Hugo blog in windows and host with Netlify for Free"
@@ -14,7 +14,7 @@ readingTime = true
 This is a guide for windows. There are multiple ways to install `Hugo` in a Windows PC. I prefer [Chocolatey](https://chocolatey.org/). To install, Open *PowerShell* or *Command prompt*  with elevated privileges. Copy the following and paste in the terminal.
 
 ````shell
-choco install hugo=
+choco install hugo
 ````
 
 To check whether the installation is successful,
@@ -97,7 +97,7 @@ draft: true
 To publish the post just remove or comment the draft tag.
 Hugo uses markdown to generate posts. All you've to do is start typing.
 
-![Hugo site with Ananke theme](https://cdn.puvvadi.me/img/hugo-ananke-new-site.webp)
+![Hugo site with Ananke theme](/image/hugo-ananke-new-site.webp)
 
 Hugo can be hosted with [Netlify](https://netlify.com) for free. To proceed with that create a repo on GitHub or BitBucket.
 
@@ -112,11 +112,11 @@ git push -u origin master
 
 Repo is ready. Now open [Netlify](https://netlify.com) and create an account. After completion of signup, connect your GitHub account to Netlify.
 
-![netlify new site](https://cdn.puvvadi.me/img/netlify-new-site.webp)
+![netlify new site](/image/netlify-new-site.webp)
 
 Now, connect GitHub and Select your Repo and keep the remaining default.
 
-![netlify build settings](https://cdn.puvvadi.me/img/deploy-netlify-settings.webp)
+![netlify build settings](/image/deploy-netlify-settings.webp)
 
 Click on `Deploy Site`. Now, Netlify grabs the repo's Master branch and builds the Site. Keep an Eye on build log. If the build fail, check what's went wrong. For me I've to change the build command to following.
 

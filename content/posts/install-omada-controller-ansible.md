@@ -3,9 +3,9 @@ title = "Install Omada Controller with Ansible playbook"
 date = "2021-09-07T10:09:18+05:30"
 author = "kdpuvvadi"
 authorTwitter = "kdpuvvadi" #do not include @
-cover = "https://cdn.puvvadi.me/img/ansible-omada-controller.webp"
+cover = "/image/ansible-omada-controller.webp"
 tags = ["omada", "ansible", "network" ]
-keywords = ["omada controller", "ansible", "playboo", "tp-link" ]
+keywords = ["omada controller", "ansible", "playbook", "tp-link" ]
 description = "Install Omada controller on Debian and CentOS linux distribution with ansible playbook."
 showFullContent = false
 readingTime = true
@@ -33,7 +33,7 @@ cd omada-ansible
 
 ## Supported Repos
 
-Tested the playbook on the follwoing repos
+Tested the playbook on the following repos
 
 * Debian 10, 11
 * CentOS 8, Rocky Linux 8
@@ -44,11 +44,11 @@ Tested the playbook on the follwoing repos
 * install pip `sudo apt install python3-pip -y`
 * install ansible with pip `python3 -m pip install ansible`
 
-## Varibles & Inventory
+## Variables & Inventory
 
 * Copy inventory sample file `cp inventory.ini.j2 inventory.ini`
 * Change the ip address with actual IP address of the host server.
-* Copy varible file with `cp vars.ini.j2 vars.ini`
+* Copy variable file with `cp vars.ini.j2 vars.ini`
 * install requirements `ansible-galaxy collection install -r requirements.yml`
 
 ## Run
@@ -75,7 +75,7 @@ ansible-playbook main.yml -K
 
 ## Post Installation
 
-* Omada controller will be avaiable on <https://HOST-IP:8088/> or <https://HOST-IP:8043/>.
+* Omada controller will be available on <https://HOST-IP:8088/> or <https://HOST-IP:8043/>.
 * Following ports should be open on host for the controller to work properly.
   * 8088
   * 8043

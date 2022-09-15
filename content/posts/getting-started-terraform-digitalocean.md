@@ -42,7 +42,7 @@ To Initialize the terraform and install the azure plugin, you should run
 terraform init
 ```
 
-Output should be similor to this
+Output should be similar to this
 
 ```bash
 $ terraform init
@@ -61,9 +61,9 @@ Terraform needs API Token to communicate with DigitalOcean and to deploy the inf
 
 > Please copy new personal access token now. It won't be shown again for security.
 
-## Authetication
+## Authentication
 
-Authetication can be done either with environment variables or terraform variables.
+Authentication can be done either with environment variables or terraform variables.
 
 ### Windows Powershell
 
