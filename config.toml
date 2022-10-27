@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 paginate = 5
 
-disqusShortname = "blog-puvvadi-me"
+# disqusShortname = "blog-puvvadi-me"
 googleAnalytics = "UA-164525361-1"
 
 [params]
