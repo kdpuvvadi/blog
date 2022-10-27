@@ -66,6 +66,9 @@ googleAnalytics = "UA-164525361-1"
       weight = 2
       name = "About"
       url = "https://kd.puvvadi.me/"
+      [menu.main.params]
+        newTab = true
+
     [[menu.main]]
       identifier = "contact"
         weight = 3
