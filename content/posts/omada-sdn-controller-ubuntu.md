@@ -91,17 +91,17 @@ TP link provides 2 type installers. Debian package and tar.gz archive. Both are 
 
 ## Install from tar.gz
 
-Download the tar.gz. 5.3.1 is latest version as of writing this. Replace the URL with latest one.
+Download the tar.gz. 5.6.3 is latest version as of writing this. Replace the URL with latest one.
 
 ```shell
-wget https://static.tp-link.com/upload/software/2022/202208/20220822/Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz
+wget https://static.tp-link.com/upload/software/2022/202210/20221024/Omada_SDN_Controller_v5.6.3_Linux_x64.tar.gz
 ```
 
 Extract the archive & Navigate to the directory
 
 ```shell
 mkdir omada
-tar -xvzf Omada_SDN_Controller_v5.5.6_Linux_x64.tar.gz -C omada
+tar -xvzf Omada_SDN_Controller_v5.6.3_Linux_x64.tar.gz -C omada
 cd omada
 ```
 
@@ -128,13 +128,13 @@ sudo ./uninstall.sh
 Download the deb package from TP Link
 
 ```shell
-wget https://static.tp-link.com/upload/software/2022/202208/20220822/Omada_SDN_Controller_v5.5.6_Linux_x64.deb
+wget https://static.tp-link.com/upload/software/2022/202210/20221024/Omada_SDN_Controller_v5.6.3_Linux_x64.deb
 ```
 
 Install with the following
 
 ```shell
-sudo dpkg -i Omada_SDN_Controller_v5.3.1_Linux_x64.deb
+sudo dpkg -i Omada_SDN_Controller_v5.6.3_Linux_x64.deb
 ```
 
 To uninstall
