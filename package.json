@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "postinstall": "hugo-installer --version 0.105.0 --extended"
+    "postinstall": "hugo-installer --version 0.110.0 --extended"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
