@@ -10,6 +10,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
+draft = true
 +++
 
 ## Introduction
@@ -130,6 +131,6 @@ To deploy your site to Vercel, follow these steps:
 
 In conclusion, deploying a Hugo site to a CDN provider like Cloudflare, Netlify, or Vercel is a simple and efficient way to host a static site and make it available to users around the world. By using Git and GitHub for version control and continuous deployment, you can easily manage and update your site, and the CDN will ensure that it is delivered to users quickly and efficiently.
 
-Using environment variables can also be useful for specifying the versions of tools like Hugo and Node.js that you want to use, and they can be easily accessed in your templates and content files to customize the behavior of your site.
+Using environment variables can also be useful for specifying the versions of tools like Hugo and Node.js that you want to use, and they can be easily accessed in your templates and content files to customize the behaviour of your site.
 
 Overall, using a CDN provider like Cloudflare, Netlify, or Vercel is a great way to host a Hugo site and keep it up-to-date with minimal effort.
