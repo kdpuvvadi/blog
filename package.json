@@ -9,6 +9,11 @@
     ">1%",
     "not dead"
   ],
+
+  "engines": {
+    "node": "16"
+  },
+
   "scripts": {
     "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
