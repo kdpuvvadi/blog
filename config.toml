@@ -34,6 +34,13 @@ googleAnalytics = "UA-164525361-1"
 
   toc = false
 
+  socialshare = true
+
+[params.social.share]
+  facebook = true
+  twitter = true
+  whatsapp = true
+
 [params.twitter]
   creator = "kdpuvvadi"
   site = "kdpuvvadi"
