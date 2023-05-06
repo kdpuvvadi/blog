@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+hideComments: true
 ---
 
 <!-- markdownlint-disable -->

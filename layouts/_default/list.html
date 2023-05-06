@@ -11,11 +11,13 @@
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         </h1>
         <div class="post-meta">
-          <time class="post-date">
-            {{ .Date.Format "2006-01-02" }}
-          </time>
+          {{ if .Date }}
+            <time class="post-date">
+              {{ .Date.Format "2006-01-02" }} ::
+            </time>
+          {{ end }}
           {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
+            <span class="post-author">{{ . }}</span>
           {{ end }}
         </div>
 
@@ -31,25 +33,24 @@
 
         {{ partial "cover.html" . }}
 
-      
         <div class="post-content">
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
             {{ .Description | markdownify }}
           {{ else }}
-            {{ .Summary | markdownify }}
+            {{ .Summary }}
           {{ end }}
         </div>
 
         {{ if not .Params.showFullContent }}
-        <div>
-          <a class="read-more button"
-            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-        </div>
+          <div>
+            <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+          </div>
         {{ end }}
       </article>
     {{ end }}
+
     {{ partial "pagination.html" . }}
   </div>
 {{ end }}
