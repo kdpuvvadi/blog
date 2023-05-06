@@ -20,45 +20,41 @@ Follow the instructions based on the your operating system.
 
 ### Windows
 
-```pwsh
+{{< code language="pwsh" title="Install terraform in windows">}}
 winget install --id Hashicorp.Terraform
-```
+{{< /code >}}
 
 ### Debian
 
-```bash
+{{< code language="bash" title="Install terraform in debian">}}
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
-```
+{{< /code >}}
 
 ### RHEL
 
-```bash
+{{< code language="bash" title="Install terraform in RHEL">}}
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 sudo yum -y install terraform
-```
+{{< /code >}}
 
 ### MacOS
 
-```bash
+{{< code language="bash" title="Install terraform in MacOS">}}
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
-```
+{{< /code >}}
 
-open terminal and test it with
-
-```bash
-terraform version
-```
+open terminal and test it with `terraform version`
 
 you should see something like this.
 
-```bash
+{{< code language="bash">}}
 Terraform v1.3.9
 on linux_amd64
-```
+{{< /code >}}
 
 ## Providers
 
@@ -66,7 +62,7 @@ Providers are interfaces that interact with their API and maintain the architect
 
 Here we are using Vercel and Cloudflare providers. We can keep all our terraform configuration in single file or keep them separate.
 
-```hcl
+{{< code language="hcl" title="Terraform Providers" >}}
 terraform {
   required_version = ">= 1.3.0"
   required_providers {
@@ -80,7 +76,7 @@ terraform {
     }
   }
 }
-```
+{{< /code >}}
 
 To communicate with the Vercel and Cloudflare, you can either create a variable and pass on the Auth tokens or You can use environment variable.
 
@@ -88,7 +84,7 @@ To communicate with the Vercel and Cloudflare, you can either create a variable 
 
 With variable
 
-```hcl
+{{< code language="hcl" >}}
 provider "vercel" {
   api_token = var.vercel_api_token
 }
@@ -97,19 +93,19 @@ variable "vercel_api_token" {
   type      = string
   sensitive = true
 }
-```
+{{< /code >}}
 
 To use Environment variable
 
-```shell
+{{< code language="shell" >}}
 export VERCEL_API_TOKEN='token'
-```
+{{< /code >}}
 
 ### Cloudflare
 
 with variable
 
-```hcl
+{{< code language="hcl" >}}
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
@@ -118,13 +114,13 @@ variable "cloudflare_api_token" {
   type      = string
   sensitive = true
 }
-```
+{{< /code >}}
 
 ## Vercel Project
 
 First create a project on vercel with `vercel_project`,
 
-```hcl
+{{< code language="hcl" >}}
 resource "vercel_project" "test_project" {
   name      = "test_blog"
   framework = "hugo"
@@ -134,7 +130,7 @@ resource "vercel_project" "test_project" {
     repo = "kdpuvvadi/vercel_hugo_blog"
   }
 }
-```
+{{< /code >}}
 
 Here I'm using [Hugo](https://gohugo.io/) for testing. Any framework can be used from `NextJs` to just a html page. Also, git repo should be provided. GitHub, Gitlab or Bitbucket can be used.
 
@@ -142,20 +138,20 @@ Here I'm using [Hugo](https://gohugo.io/) for testing. Any framework can be used
 
 Environment variables can also be set here such as which version of NodeJS to be used, which version of Hugo to be used and etc.
 
-```hcl
+{{< code language="hcl" >}}
 resource "vercel_project_environment_variable" "test_env" {
   project_id = vercel_project.test_project.id
   key        = "HUGO_VERSION"
   value      = "0.110.0"
   target     = ["production"]
 }
-```
+{{< /code >}}
 
 ## Deploy the site
 
 Deploy the project with `vercel_deployment`
 
-```hcl
+{{< code language="hcl" >}}
 resource "vercel_deployment" "test_deploy" {
   project_id = vercel_project.test_project.id
   ref        = "main"
@@ -167,30 +163,30 @@ resource "vercel_deployment" "test_deploy" {
     root_directory   = "/"
   }
 }
-```
+{{< /code >}}
 
 ## Add Domain to the project
 
 Add custom domain to the project with `vercel_project_domain`
 
-```hcl
+{{< code language="hcl" >}}
 resource "vercel_project_domain" "test_domain" {
   project_id = vercel_project.test_project.id
   domain     = "example.com"
 }
-```
+{{< /code >}}
 
 ## Cloudflare zone
 
 To add a CNAME record or A record to the Cloudflare, we need zone ID. To get the zone ID, get the record data with `cloudflare_zones` and filter the data
 
-```hcl
+{{< code language="hcl">}}
 data "cloudflare_zones" "get_zone_data" {
   filter {
     name = "example.com"
   }
 }
-```
+{{< /code >}}
 
 Zone is available at `data.cloudflare_zones.get_zone_data.zones[0].id`
 
@@ -198,7 +194,7 @@ Zone is available at `data.cloudflare_zones.get_zone_data.zones[0].id`
 
 Add DNS record on Cloudflare to point to the vercel site with `cloudflare_record`. Vercel deployment URL is available from deployment config at `vercel_deployment.test_deploy.domains[0]`.
 
-```hcl
+{{< code language="hcl">}}
 resource "cloudflare_record" "zone_blog_record" {
   zone_id = data.cloudflare_zones.get_zone_data.zones[0].id
   name    = "@"
@@ -207,7 +203,7 @@ resource "cloudflare_record" "zone_blog_record" {
   proxied = true
   ttl     = 1
 }
-```
+{{< /code >}}
 
 ## Deployment
 
@@ -215,9 +211,9 @@ resource "cloudflare_record" "zone_blog_record" {
 
 To Initialize the terraform and install the providers, run
 
-```shell
+{{< code language="shell">}}
 terraform init
-```
+{{< /code >}}
 
 Terraform will install the providers and required module.
 
@@ -225,54 +221,54 @@ Terraform will install the providers and required module.
 
 Before running the configuration, you should validate it to check everything is sound and good.
 
-```shell
+{{< code language="shell">}}
 terraform validate
-```
+{{< /code >}}
 
 Output should looks like this
 
-```shell
+{{< code language="shell">}}
 $ terraform validate
 Success! The configuration is valid.
 Plan and Apply
-```
+{{< /code >}}
 
 ### Planning
 
 Before deploying plan can be created with plan argument and can be saved.
 
-```shell
+{{< code language="shell">}}
 terraform plan
-```
+{{< /code >}}
 
 Output should be something like
 
-```shell
+{{< code language="shell">}}
 $ terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
 .
 .
 .
-```
+{{< /code >}}
 
 ### Apply
 
 To make changes run
 
-```shell
+{{< code language="shell">}}
 terraform apply
-```
+{{< /code >}}
 
 And terraform will prompt for confirmation and only accepts `yes` to apply changes.
 
-```shell
+{{< code language="shell">}}
 Do you want to perform these actions?
 Terraform will perform the actions described above.
 Only 'yes' will be accepted to approve.
 
-Enter a value: 
-```
+Enter a value:
+{{< /code >}}
 
 Enter yes to continue.
 

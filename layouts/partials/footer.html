@@ -7,17 +7,17 @@
       <div class="copyright">
         <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
     {{ end }}
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+    <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
   </div>
 </footer>
 
-<script src="{{ "assets/main.js" | absURL }}"></script>
-<script src="{{ "assets/prism.js" | absURL }}"></script>
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
 
-{{ if $.Site.Params.showLanguageSelector }}
-  <script src="{{ "assets/languageSelector.js" | absURL }}"></script>
-{{ end }}
+{{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}
