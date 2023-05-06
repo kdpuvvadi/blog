@@ -28,7 +28,8 @@
     }
   },
   "dependencies": {
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.10",
+    "hugo-installer": "^4.0.1"
   },
   "devDependencies": {
     "browserslist": "^4.16.5",
