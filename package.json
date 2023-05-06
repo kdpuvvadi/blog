@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo 'Test'"
+    "test": "echo 'Test'",
+    "postinstall": "hugo-installer --version 0.111.3 --extended"
   },
   "browserslist": [
     "last 2 versions",
@@ -14,7 +15,8 @@
   ],
   "comments": {
     "dependencies": {
-      "yarn": "project"
+      "yarn": "project",
+      "hugo-installer": "^4.0.1"
     },
     "devDependencies": {
       "browserslist": "project",
