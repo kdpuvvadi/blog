@@ -34,7 +34,7 @@ googleAnalytics = "UA-164525361-1"
 
   toc = false
 
-  socialshare = true
+  socialshare = false
 
 [params.social.share]
   facebook = true
