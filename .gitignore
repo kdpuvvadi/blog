@@ -96,3 +96,15 @@ typings/
 bin
 
 # End of https://www.gitignore.io/api/node
+
+# terraform
+**/.terraform/*
+.terraform.lock.hcl
+crash.log
+var.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfstate
+terraform.tfstate.backup
