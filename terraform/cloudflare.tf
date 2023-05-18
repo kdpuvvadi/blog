@@ -32,14 +32,14 @@ resource "cloudflare_pages_project" "blog_pages_project" {
     preview {
       environment_variables = {
         HUGO_VERSION = "0.111.3"
-        NODE_VERSION = "16.18.1"
+        NODE_VERSION = "16.20.0"
       }
       fail_open = true
     }
     production {
       environment_variables = {
         HUGO_VERSION = "0.111.3"
-        NODE_VERSION = "16.18.1"
+        NODE_VERSION = "16.20.0"
       }
       fail_open = true
     }
