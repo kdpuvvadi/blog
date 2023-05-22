@@ -19,8 +19,7 @@
     }
   },
   "dependencies": {
-    "yarn": "^1.22.10",
-    "hugo-installer": "^4.0.1"
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "browserslist": "^4.16.5",
@@ -34,8 +33,7 @@
   "main": "index.js",
   "name": "blog",
   "scripts": {
-    "test": "echo 'Test'",
-    "postinstall": "hugo-installer --version 0.111.3 --extended"
+    "test": "echo 'Test'"
   },
   "version": "2.1.0"
 }

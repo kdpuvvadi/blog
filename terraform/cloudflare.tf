@@ -21,7 +21,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   }
 
   build_config {
-    build_command       = "./bin/hugo/hugo --gc --minify"
+    build_command       = "hugo --gc --minify"
     destination_dir     = "public"
     root_dir            = ""
     web_analytics_tag   = "6d04d8997a0846debf452bda420ccde9"
