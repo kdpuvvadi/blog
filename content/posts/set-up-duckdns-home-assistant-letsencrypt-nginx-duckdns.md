@@ -27,7 +27,7 @@ Visit [`DuckDNS`](https://www.duckdns.org/) and sing up with with Google, Twitte
 
 Open Home Assistant instance on your browser of choice(192.168.1.123:8123). Go to *Supervisor > Add-on Store* and Select `DuckDNS` Add-on and Click install. Open configuration Tab on top paste the following
 
-````yaml
+```yaml
 lets_encrypt:
   accept_terms: true
   certfile: fullchain.pem
@@ -37,7 +37,7 @@ domains:
   - subdomain.duckdns.org
 aliases: []
 seconds: 300
-````
+```
 
 `Note`:- Replace token and subdomain with subdomain from DuckDNS and token noted down in last [step](#duckdns-signup).
 
@@ -49,7 +49,7 @@ Go to Info tab and start the service. Don't forget to enable `Start onboot` and 
 
 To access Home Assistant from outside of home, Nginx proxy is need to route the traffic from the outside. To install the Nginx Add-on go to *Supervisor > Add-on Store* Select **NGINX Home Assistant SSL proxy**. Now, go to Configuration and replace with following
 
-````yaml
+```yaml
 domain: subdomain.duckdns.org
 certfile: fullchain.pem
 keyfile: privkey.pem
@@ -59,7 +59,7 @@ customize:
   active: false
   default: nginx_proxy_default*.conf
   servers: nginx_proxy/*.conf
-````
+```
 
 `Note`:- Replace token and subdomain with subdomain from DuckDNS.
 

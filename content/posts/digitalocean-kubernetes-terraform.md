@@ -17,7 +17,7 @@ To install terraform, follow installation instructions [here](/posts/terraform-a
 
 ## Digital Ocean provider
 
-```tf
+```hcl
 terraform {
   required_providers {
     digitalocean = {
@@ -63,7 +63,7 @@ echo 'export DIGITALOCEAN_ACCESS_TOKEN='token'' >> ~/.profile
 Using Terraform variables
 Create `var.tf` and add following
 
-```tf
+```hcl
 variable "do_token" {
     type = string
     description = "Digital Ocean API Token"
@@ -73,7 +73,7 @@ variable "do_token" {
 
 And add following to `provider.tf`
 
-```tf
+```hcl
 provider "digitalocean" {
   token = var.do_token
 }
@@ -104,15 +104,15 @@ Cluster module can be found in `k8s.tf`
 
 Get latest `k8s` version supported by Digital Ocean with `digitalocean_kubernetes_versions` data source.
 
-```tf
+```hcl
 data "digitalocean_kubernetes_versions" "get_version" {
 }
 ```
 
 To use version prefix, add `version_prefix = "1.24."`
 
-```tf
-```tf
+```hcl
+```hcl
 data "digitalocean_kubernetes_versions" "get_version" {
     version_prefix = "1.24."
 }
@@ -122,7 +122,7 @@ data "digitalocean_kubernetes_versions" "get_version" {
 
 deploy cluster with version from version above
 
-```tf
+```hcl
 resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
   name    = var.do_cluster_name
   region  = var.do_region
@@ -140,7 +140,7 @@ resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
 
 ### Aditional pool
 
-```tf
+```hcl
 resource "digitalocean_kubernetes_node_pool" "k8s_cluster_pool_ad" {
   cluster_id = digitalocean_kubernetes_cluster.k8s_cluster.id
 

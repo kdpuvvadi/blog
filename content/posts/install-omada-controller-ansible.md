@@ -21,15 +21,15 @@ So, it is efficient to use automation to deploy the controller.
 
 Playbook can be found at [repo](https://github.com/kdpuvvadi/omada-ansible), clone the repo with the following
 
-````shell
+```shell
 git clone https://github.com/kdpuvvadi/omada-ansible.git omada-ansible
-````
+```
 
 and `cd` into the directory
 
-````shell
+```shell
 cd omada-ansible
-````
+```
 
 ## Supported Repos
 
@@ -57,21 +57,21 @@ Tested the playbook on the following repos
 
 To test the connection with host run the following and it should return success message.
 
-````shell
+```shell
 ansible all -m ping
-````
+```
 
 ### run the playbook
 
-````shell
+```shell
 ansible-playbook main.yml
-````
+```
 
 > If you need password for the sudo append `-K` and enter the password when prompted
 
-````shell
+```shell
 ansible-playbook main.yml -K
-````
+```
 
 ## Post Installation
 

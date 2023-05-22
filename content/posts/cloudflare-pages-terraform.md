@@ -20,41 +20,41 @@ Follow the instructions based on the your operating system.
 
 ### Windows
 
-{{< code language="pwsh" title="Install terraform in windows">}}
+```pwsh
 winget install --id Hashicorp.Terraform
-{{< /code >}}
+```
 
 ### Debian
 
-{{< code language="bash" title="Install terraform in debian">}}
+```bash
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
-{{< /code >}}
+```
 
 ### RHEL
 
-{{< code language="bash" title="Install terraform in RHEL">}}
+```bash
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 sudo yum -y install terraform
-{{< /code >}}
+```
 
 ### MacOS
 
-{{< code language="bash" title="Install terraform in MacOS">}}
+```bash
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
-{{< /code >}}
+```
 
 open terminal and test it with `terraform version`
 
 you should see something like this.
 
-{{< code language="bash">}}
+```bash
 Terraform v1.4.6
 on linux_amd64
-{{< /code >}}
+```
 
 ## Providers
 
@@ -62,7 +62,7 @@ Providers are interfaces that interact with their API and maintain the architect
 
 Here we are using Vercel and Cloudflare providers. We can keep all our terraform configuration in single file or keep them separate.
 
-```json
+```hcl
 terraform {
   required_version = ">= 1.3.0"
   required_providers {
@@ -78,7 +78,7 @@ To communicate with the Cloudflare, you can either create a variable and pass on
 
 Authenticate with variables
 
-```json
+```hcl
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
@@ -93,7 +93,7 @@ variable "cloudflare_api_token" {
 
 Cloudflare provider requires account id to be added to every config. We can use `cloudflare_accounts` data sources.
 
-```json
+```hcl
 data "cloudflare_accounts" "cloudflare_account_data" {
   name = "KD Puvvadi"
 }
@@ -103,7 +103,7 @@ data "cloudflare_accounts" "cloudflare_account_data" {
 
 First create a project on vercel with `cloudflare_pages_project`,
 
-```json
+```hcl
 esource "cloudflare_pages_project" "blog_pages_project" {
   account_id        = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
   name              = "blog"
@@ -155,7 +155,7 @@ Here I'm using [Hugo](https://gohugo.io/) for testing. Any framework can be used
 
 Add custom domain to the project with `cloudflare_pages_domain`
 
-```json
+```hcl
 resource "cloudflare_pages_domain" "cloudflare_blog_domain" {
   account_id   = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
   project_name = cloudflare_pages_project.blog_pages_project.name
@@ -169,7 +169,7 @@ Limitation of the `cloudflare_pages_domain` is it does not add `CNAME` record to
 
 To add a record to the Cloudflare, Zone ID is required. Zone ID can be obtained `cloudflare_zones` data source.
 
-```json
+```hcl
 data "cloudflare_zones" "zone_puvvadi_me" {
   filter {
     name = "puvvadi.me"
@@ -181,7 +181,7 @@ Zone ID is available at `data.cloudflare_zones.get_zone_data.zones[0].id`.
 
 Add DNS record on Cloudflare to point to the site with `cloudflare_record`. Deployment URL is available from deployment config at `cloudflare_pages_project.blog_pages_project.subdomain`.
 
-```json
+```hcl
 resource "cloudflare_record" "cloudflare_blog_record" {
   zone_id         = data.cloudflare_zones.zone_puvvadi_me.zones[0].id
   name            = "blog"
@@ -197,7 +197,7 @@ resource "cloudflare_record" "cloudflare_blog_record" {
 
 To Initialize the terraform and install the providers, run
 
-```json
+```hcl
 terraform init
 ```
 
@@ -207,13 +207,13 @@ Terraform will install the providers and required module.
 
 Before running the configuration, you should validate it to check everything is sound and good.
 
-```json
+```hcl
 terraform validate
 ```
 
 Output should looks like this
 
-```json
+```hcl
 $ terraform validate
 Success! The configuration is valid.
 Plan and Apply
@@ -223,13 +223,13 @@ Plan and Apply
 
 Before deploying plan can be created with plan argument and can be saved.
 
-```json
+```hcl
 terraform plan
 ```
 
 Output should be something like
 
-```json
+```hcl
 $ terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
@@ -242,13 +242,13 @@ Terraform used the selected providers to generate the following execution plan. 
 
 To make changes run
 
-```json
+```hcl
 terraform apply
 ```
 
 And terraform will prompt for confirmation and only accepts `yes` to apply changes.
 
-```json
+```hcl
 Do you want to perform these actions?
 Terraform will perform the actions described above.
 Only 'yes' will be accepted to approve.

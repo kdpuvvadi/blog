@@ -21,9 +21,9 @@ First open [Google form](https://www.google.com/forms/about/) and create a form 
 
 Now create new page with following
 
-{{< code language="shell" >}}
+```shell
 hugo new contact.md
-{{< /code >}}
+```
 
 To fill the google form from our site you need *form id* and *field ids*. Now open the form in incognito mode to get the field ids and make a note of them.
 
@@ -32,10 +32,10 @@ To fill the google form from our site you need *form id* and *field ids*. Now op
 if you don't have `Raw HTML` layout for your site, HTML content may not render properly. If you've *rawhtml* layout, you can skip this step.
 To add *rawhtml* layout create rawhtml.html file in your theme directory *layouts > shortcodes > rawhtml.html*. Add fallowing code to the file, save and exit.
 
-{{< code language="html" >}}
+```html
 <!-- raw html -->
 {{.Inner}}
-{{< /code >}}
+```
 
 Add rawhtml tag in *contact.md*
 
@@ -43,7 +43,7 @@ Add rawhtml tag in *contact.md*
 
 Now add following to your *contact.md* file and replace the form ID and field IDs from previous.
 
-{{< code language="html" >}}
+```html
 
 <form action="https://docs.google.com/forms/d/e/<formID/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
   <label>Name*</label>
@@ -61,13 +61,13 @@ Now add following to your *contact.md* file and replace the form ID and field ID
    <button type="submit">Send</button>
 </form>
 
-{{< /code >}}
+```
 
 * Replace FormID with actual ID from Google form *
 
 Create *form.css* file inside *static > CSS* directory and add following to it.
 
-{{< code language="css" >}}
+```css
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 form { max-width:420px; margin:50px auto; }
@@ -114,23 +114,23 @@ font-weight:700;
 }
 [type="submit"]:hover { background:#CC4949; }
 
-{{< /code >}}
+```
 
 Now add following line to link the CSS to the form.
 
-{{< code language="css" >}}
+```css
 <link rel="stylesheet" href="/css/form.css">
-{{< /code >}}
+```
 
 Now try filling and submitting the form. You may've observed that after submission, page is redirecting to default Google form response page. To fix it first create a new page with following
 
-{{< code language="js" >}}js
+```js
 hugo new thankyou.md
-{{< /code >}}
+```
 
 Add following to contact page html just before *form* tag.
 
-{{< code language="js" >}}js
+```js
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
 onload="if(submitted) {window.location='/thankyou';}"></iframe>
@@ -138,7 +138,7 @@ onload="if(submitted) {window.location='/thankyou';}"></iframe>
 <form action="https://docs.google.com/forms/d/e/<formID>/formResponse"
 method="post" target="hidden_iframe" onsubmit="submitted=true;">
 </form>
-{{< /code >}}
+```
 
 *Replace FormID with actual ID from Google form*.
 

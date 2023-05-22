@@ -80,7 +80,7 @@ It'll open the default browser of you system and prompts for microsoft account l
 
 Once the login completed, it'll output the subscription details
 
-```bash
+```hcl
 [
   {
     "cloudName": "AzureCloud",
@@ -117,7 +117,7 @@ Create a directory where you want to store the terraform configuration files. Cr
 
 First add azure plugin details in the `main.tf`
 
-```json
+```hcl
 terraform {
   required_providers {
     azurerm = {
@@ -135,7 +135,7 @@ provider "azurerm" {
 
 To create a resource group to add any resources on azure,
 
-```json
+```hcl
 resource "azurerm_resource_group" "south1" {
   name     = "region-southindia"
   location = "southindia"
@@ -152,7 +152,7 @@ Tags can be used to with `"key" = "Value"` as many as you want.
 
 You should see some thing like this in `main.tf`
 
-```json
+```hcl
 terraform {
   required_providers {
     azurerm = {

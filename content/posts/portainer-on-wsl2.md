@@ -17,24 +17,24 @@ I’m assuming you’ve already WSL2 installed and docker is up and running.
 
 First create a volume with following.
 
-````shell
+```shell
 docker volume create portainer_data
-````
+```
 
 ![Portainer Volume](/image/portainer-volume.webp)
 
 Now, install Portainer
 
-````shell
-docker run -d 
-    -p 8000:8000 
-    -p 9000:9000 
-    --name=portainer 
-    --restart=always 
-    -v /var/run/docker.sock:/var/run/docker.sock 
-    -v portainer_data:/data 
+```shell
+docker run -d
+    -p 8000:8000
+    -p 9000:9000
+    --name=portainer
+    --restart=always
+    -v /var/run/docker.sock:/var/run/docker.sock
+    -v portainer_data:/data
     portainer/portainer-ce
-````
+```
 
 ![Portainer Running](/image/portainer-running.webp)
 

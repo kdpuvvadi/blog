@@ -15,13 +15,13 @@ Back when Microsoft launched [Winget](https://github.com/microsoft/winget-cli), 
 
 Let's see. You have python 3.9.x installed on you pc and want to upgrade to python 3.10.x. You would try following usually to upgrade the package.
 
-```powershell
+```pwsh
 winget upgrade python3
 ```
 
 You expect the app to upgrade but you get the following.
 
-```powershell
+```pwsh
 Multiple installed packages found matching input criteria. Please refine the input.
 Name                   Id
 -------------------------------------------------------------
@@ -31,20 +31,20 @@ Python 3.10.0 (64-bit) {21b42743-c8f9-49d7-b8b6-b5855317c7ed}
 
 You could use exact argument `-e` to upgrade.
 
-```powershell
+```pwsh
 winget upgrade -e Python.Python.3
 ```
 
 But you get the same result. To avoid this you could specify which source to use.
 
-```powershell
-winget upgrade python3 --source winget 
+```pwsh
+winget upgrade python3 --source winget
 ```
 
 To avoid this, you could just remove the **msstore** store from the store list completely.
 
-```powershell
+```pwsh
 winget source remove msstore
 ```
 
-Please make sure to run it with elevated command prompt or PowerShell.
+> Please make sure to run it with elevated `command prompt` or `Powershell`.

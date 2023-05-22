@@ -38,7 +38,7 @@ Create a workspace in Terraform Cloud and you can select Default project or crea
 
 To initialize the terraform cloud, Add a cloud block to the directory's Terraform configuration, to specify which organization and workspace(s) to use.
 
-```json
+```hcl
 terraform {
   cloud {
     organization = "my-org"

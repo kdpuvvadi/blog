@@ -67,7 +67,7 @@ Select `Y` and hit `Enter` to start the backup.
 
 You should see similor output as below
 
-``` bash
+```bash
 Backup controller settings to /opt/tplink/EAPController/../omada_db_backup success.
 Processing triggers for systemd (245.4-4ubuntu3.15) ...
 ```
@@ -86,7 +86,7 @@ Now Download the latest version from TP-Link website. As of this writing `v5.0.3
 
 Install the Controller with `sudo dpkg -i Omada_SDN_Controller_v5.0.30_linux_x64.deb`
 
-``` bash
+```bash
 sudo dpkg -i Omada_SDN_Controller_v5.0.30_linux_x64.deb
 Selecting previously unselected package omadac.
 (Reading database ... 95541 files and directories currently installed.)
@@ -100,7 +100,7 @@ Omada Controller detects that you have backup previous setting before, will you 
 
 Select `Y` and hit `Enter` to import the backup. You should see output similor to here below
 
-``` bash
+```bash
 Import previous setting success.
 Omada Controller will start up with system boot. You can also control it by [/usr/bin/tpeap].
 check omada
@@ -119,7 +119,7 @@ First, Stop the controller with `sudo tpeap stop`
 
 You should see about like below.
 
-``` bash
+```bash
 sudo tpeap stop
 Stopping Omada Controller
 Stop successfully.
@@ -133,15 +133,15 @@ untar with archive with following. Change the version based on your install.
 
 Open the directory and ruin following to uninstall the controller.
 
-``` bash
+```bash
 sudo ./uninstall.sh
-Omada Controller will be uninstalled from [/opt/tplink/EAPController] (y/n): 
+Omada Controller will be uninstalled from [/opt/tplink/EAPController] (y/n):
 ```
 
 Select `Y` and hit `Enter` uninstall the controller.
 
 ```bash
-Do you want to backup database [/opt/tplink/EAPController/data/db] (y/n): 
+Do you want to backup database [/opt/tplink/EAPController/data/db] (y/n):
 ```
 
 Select `Y` and hit `Enter` to backup the controller.
@@ -195,6 +195,4 @@ Upgrading can be nerve wracking as you loose all the data and config of the cont
 
 If something went wrong and you lost the backup, you still've backup from controller setup. Install the controller again and just import the back from controller settings.
 
-I Hope this was helpful. If you need more help hit me on [twitter](https://twitter.com/kdpuvvadi) or shoot an [Email](https://blog.puvvadi.me/contact).
-
-Au revoir.
+I Hope this was helpful. If you need more help hit me on [twitter](https://twitter.com/kdpuvvadi) or shoot an [Email](https://blog.puvvadi.me/contact).`Au revoir`.

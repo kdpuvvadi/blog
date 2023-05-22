@@ -44,7 +44,7 @@ terraform init
 
 Output should be similar to this
 
-```bash
+```shell
 $ terraform init
 
 Initializing the backend...
@@ -97,7 +97,7 @@ echo 'export DIGITALOCEAN_ACCESS_TOKEN='token'' >> ~/.profile
 
 Create `var.tf` and add following
 
-```language=hcl
+```hcl
 variable "do_token" {
     type = string
     description = "Digital Ocean API Token"
@@ -107,7 +107,7 @@ variable "do_token" {
 
 And add following to `main.tf`
 
-```language=hcl
+```hcl
 provider "digitalocean" {
   token = var.do_token
 }
@@ -176,7 +176,6 @@ To pass user data run commands such as adding users, adding groups or install an
 ```yaml
 #cloud-config
 
-
 users:
   - default
   - name: terraform
@@ -244,7 +243,7 @@ terraform plan -var="do_token=token"
 ```hcl
 terraform plan
 
-Terraform used the selected providers to generate the following execution plan. 
+Terraform used the selected providers to generate the following execution plan.
 Resource actions are indicated with the
 
 following symbols:
