@@ -9,9 +9,3 @@ data "cloudflare_zones" "zone_puvvadi_me" {
     name = "puvvadi.me"
   }
 }
-
-data "cloudflare_zones" "zone_puvvadi_net" {
-  filter {
-    name = "puvvadi.net"
-  }
-}

@@ -7,10 +7,6 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "4.6.0"
     }
-    vercel = {
-      source  = "vercel/vercel"
-      version = "0.13.1"
-    }
   }
   cloud {
     organization = "KDPuvvadi"
