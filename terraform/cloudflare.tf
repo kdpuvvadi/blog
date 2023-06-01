@@ -66,7 +66,7 @@ resource "cloudflare_record" "cloudflare_blog_record" {
 resource "cloudflare_record" "vercel_blog_record" {
   zone_id         = data.cloudflare_zones.zone_puvvadi_net.zones[0].id
   name            = "blog"
-  value           = vercel_deployment.blog_deploy.domains[1]
+  value           = cloudflare_pages_project.blog_pages_project.subdomain
   type            = "CNAME"
   proxied         = true
   ttl             = 1
