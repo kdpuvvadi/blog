@@ -110,4 +110,4 @@ terraform.tfstate
 terraform.tfstate.backup
 
 # auto
-resources/
+# resources/
