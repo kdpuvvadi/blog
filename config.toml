@@ -26,6 +26,7 @@ googleAnalytics = "251568676"
   enableGitInfo = true
   showLastUpdated = true
   updatedDatePrefix = "Updated"
+  googleAnalyticsTag = "G-WD20NT8LEY"
 
   toc = false
 
