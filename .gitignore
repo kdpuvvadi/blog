@@ -108,3 +108,6 @@ override.tf.json
 *_override.tf.json
 terraform.tfstate
 terraform.tfstate.backup
+
+# auto
+resources/
