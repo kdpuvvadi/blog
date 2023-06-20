@@ -31,8 +31,8 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   deployment_configs {
     preview {
       environment_variables = {
-        HUGO_VERSION = "0.111.3"
-        NODE_VERSION = "16.20.0"
+        HUGO_VERSION = "0.114.0"
+        NODE_VERSION = "18.16.0"
       }
       fail_open = true
     }
