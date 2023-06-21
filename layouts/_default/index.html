@@ -23,11 +23,14 @@
         <div class="post-meta">
           {{ if .Date }}
             <time class="post-date">
-              {{ .Date.Format "2006-01-02" }} ::
+              {{ .Date.Format "02-01-2006" }} ::
             </time>
           {{ end }}
-          {{ with .Params.Author }}
-            <span class="post-author">{{ . }}</span>
+          {{ with .Params.authorTwitter }}
+          <a class="post-auther" href="https://twitter.com/{{.}}" target="_blank">{{ . }}</a>
+          {{ end }}
+          {{ if and (.Param "readingTime") (eq (.Param "readingTime") true) }}
+            <span class="post-reading-time">:: {{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
           {{ end }}
         </div>
 
