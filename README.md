@@ -14,7 +14,30 @@ check the output at `http://localhost:1313`
 
 ## Deployment
 
-### Build configurations
+Deploying with [terraform](https://terraform.io/) using [terraform cloud](app.terraform.io) on Cloudflare Pages. `Github actions` runs the `terraform apply` when changes to the terraform directory pushed. Config can be found under `terraform` directory.
+
+providers in terraform
+
+```hcl
+terraform {
+  required_version = ">= 1.3.0"
+  required_providers {
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "4.8.0"
+    }
+  }
+  cloud {
+    organization = "KDPuvvadi"
+
+    workspaces {
+      name = "blog"
+    }
+  }
+}
+```
+
+Build configurations to manually deploy
 
 ```ini
 Build command: hugo --gc --minify
@@ -23,14 +46,21 @@ Root directory: /
 Build comments on pull requests: Enabled
 ```
 
-### Environment variables
+Environment variables
 
- `HUGO_VERSION` : `0.88.1`
+```env
+HUGO_VERSION = "0.113.0"
+NODE_VERSION = "18.16.0"
+```
 
-> Running this is `0.88.1`, you can change it to latest Hugo Build.
+> Running this is `0.113.0`, you can change it to latest Hugo Build (Make sure to test it locally before deploying).
 
 ## Posts
 
+- [Getting Started With Azure Iot Hub](https://blog.puvvadi.me/posts/getting-started-with-azure-iot-hub/)
+- [Getting Started with Terraform Cloud](https://blog.puvvadi.me/posts/getting-started-terraform-cloud/)
+- [Deploy and Manage your site on cloudflare with Terraform](https://blog.puvvadi.me/posts/cloudflare-pages-terraform/)
+- [Deploy and Manage your site on Vercel with Terraform](https://blog.puvvadi.me/posts/manage-static-site-vercel-terraform/)
 - [Use GitHub as commenting system for Hugo](https://blog.puvvadi.me/posts/github-comments-hugo-giscus/)
 - [Deploy Kubernetes cluster on DigitalOcean with terraform](https://blog.puvvadi.me/posts/digitalocean-kubernetes-terraform/)
 - [Getting Started with Terraform & Digitalocean](https://blog.puvvadi.me/posts/getting-started-terraform-digitalocean/)
@@ -51,4 +81,5 @@ Build comments on pull requests: Enabled
 ## License
 
 Licensed under [MIT](/LICENSE)
+
 Uses [terminal](https://github.com/panr/hugo-theme-terminal) by [panr](https://github.com/panr)
