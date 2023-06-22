@@ -21,7 +21,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   }
 
   build_config {
-    build_command       = "hugo --gc --minify && echo 'baseURL' $BASE_URL"
+    build_command       = "hugo --gc --minify --baseURL $BASE_URL"
     destination_dir     = "public"
     root_dir            = ""
     web_analytics_tag   = "6d04d8997a0846debf452bda420ccde9"
@@ -33,6 +33,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       environment_variables = {
         HUGO_VERSION = "0.114.0"
         NODE_VERSION = "18.16.0"
+        BASE_URL     = "/"
       }
       fail_open = true
     }
