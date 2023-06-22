@@ -40,7 +40,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       environment_variables = {
         HUGO_VERSION = "0.113.0"
         NODE_VERSION = "16.20.0"
-        BASE_URL = "https://blog.puvvadi.me"
+        BASE_URL     = "https://blog.puvvadi.me"
       }
       fail_open = true
     }
