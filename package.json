@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo 'Test'",
-    "start" : "hugo server --disableFastRender"
+    "start": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify --baseURL $BASE_URL"
   },
   "browserslist": [
     "last 2 versions",
