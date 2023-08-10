@@ -57,7 +57,7 @@ ota:
 
 Now, Click on Menu and compile. After the compilation completed click on Download to save the binary. To flash the binary to the NodeMCU, Download [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). Open NodeMCU Flasher. Select COM port and binary file to flash in Config tab.
 
-![flash]/static(/image/nodemcu_flasher_flash.webp)
+![flash](/static/image/nodemcu_flasher_flash.webp)
 
 Click on *Flash*
 
