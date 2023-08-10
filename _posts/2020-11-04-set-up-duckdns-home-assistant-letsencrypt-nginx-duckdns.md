@@ -3,7 +3,7 @@ title: "Access Home Assistant from anywhere securely with DuckDNS, Let's Encrypt
 date: "2020-11-04T22:09:57+05:30"
 author: kdpuvvadi
 image: /static/image/hass-duckdns-nginx-lets-encrypt.webp
-tags: ["HASS", "DuckDNS", "Nginx", "Home Assistant" ]
+tags: ["hass", "DuckDNS", "Nginx", "Home Assistant" ]
 keywords: [automation, home-assistant]
 ---
 
