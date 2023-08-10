@@ -2,7 +2,7 @@
 title: "Getting Started with Terraform for Microsoft Azure"
 author: kdpuvvadi
 tags: [terraform, iac, azure, cloud]
-categories: [terraform, Azure]
+categories: [terraform, azure]
 ---
 
 Infrastructure as Code is a god send for system admins and devops teams around the world. With [Terraform](https://www.terraform.io/) it's a walk in the park.
