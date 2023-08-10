@@ -1,16 +1,15 @@
 ---
 layout: post
 title: "Upgrade the Omada Controller"
-date: "2022-03-15T00:09:38+05:30"
-tags: Omada-Controller SDN Upgrade
-categories: omada sdn upgrade
+tags: [Omada-Controller, SDN Upgrade]
+categories: [omada, sdn, upgrade]
 ---
 
 Recently few people contacted for instructions on upgrading omada controller from v4.x to v5.x. This can be straight forward but there is a slight chance that you might loose all the data/config of the controller.
 
 Upgrade on hardware controller is straight, you go to the ` settings >> Controller Settings >> Maintenance >> Firmware ` and check for upgrade and controllers takes care of everything.
 
-But for selfhsoted controller, upgrade can be different based on the method you've installed the controller like either with `.deb ` package on debian or `tarball `.
+But for selfhsoted controller, upgrade can be different based on the method you've installed the controller like either with ` .deb ` package on debian or ` tarball `.
 
 ## Back from Controller
 
@@ -25,7 +24,7 @@ Stop the controller with ` sudo tpeap stop `
 You should see about like below.
 
 ```bash
-sudo tpeap stop
+$ sudo tpeap stop
 Stopping Omada Controller
 Stop successfully.
 ```
@@ -33,7 +32,7 @@ Stop successfully.
 Uninstall the controller with `sudo apt remove omadac`
 
 ```bash
-sudo apt remove omadac
+$ sudo apt remove omadac
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -82,7 +81,7 @@ Now Download the latest version from TP-Link website. As of this writing `v5.0.3
 Install the Controller with `sudo dpkg -i Omada_SDN_Controller_v5.0.30_linux_x64.deb`
 
 ```bash
-sudo dpkg -i Omada_SDN_Controller_v5.0.30_linux_x64.deb
+$ sudo dpkg -i Omada_SDN_Controller_v5.0.30_linux_x64.deb
 Selecting previously unselected package omadac.
 (Reading database ... 95541 files and directories currently installed.)
 Preparing to unpack Omada_SDN_Controller_v5.0.30_linux_x64.deb ...
@@ -115,7 +114,7 @@ First, Stop the controller with `sudo tpeap stop`
 You should see about like below.
 
 ```bash
-sudo tpeap stop
+$ sudo tpeap stop
 Stopping Omada Controller
 Stop successfully.
 ```
@@ -129,7 +128,7 @@ untar with archive with following. Change the version based on your install.
 Open the directory and ruin following to uninstall the controller.
 
 ```bash
-sudo ./uninstall.sh
+$ sudo ./uninstall.sh
 Omada Controller will be uninstalled from [/opt/tplink/EAPController] (y/n):
 ```
 
@@ -156,7 +155,7 @@ untar with archive with following. Change the version based on your install.
 change directory to the untar and Install the latest version with the following.
 
 ```bash
-sudo ./install.sh
+$ sudo ./install.sh
 Omada Controller will be installed in [/opt/tplink/EAPController] (y/n):
 ```
 
