@@ -22,7 +22,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
 
   build_config {
     build_command       = "yarn build"
-    destination_dir     = "public"
+    destination_dir     = "_site"
     root_dir            = ""
     web_analytics_tag   = "6d04d8997a0846debf452bda420ccde9"
     web_analytics_token = "cda715889e4b41d89cfdac386f19f8ae"
@@ -31,16 +31,14 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   deployment_configs {
     preview {
       environment_variables = {
-        HUGO_VERSION = "0.114.0"
         NODE_VERSION = "18.16.0"
-        BASE_URL     = "/"
+        BASE_URL     = "https://preview.blog.puvvadi.me"
       }
       fail_open = true
     }
     production {
       environment_variables = {
-        HUGO_VERSION = "0.113.0"
-        NODE_VERSION = "16.20.0"
+        NODE_VERSION = "18.16.0"
         BASE_URL     = "https://blog.puvvadi.me"
       }
       fail_open = true
