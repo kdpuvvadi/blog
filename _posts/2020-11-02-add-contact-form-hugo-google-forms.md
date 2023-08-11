@@ -60,6 +60,7 @@ Now add following to your *contact.md* file and replace the form ID and field ID
 ```
 
 > Replace `FormID` with actual ID from Google form 
+{: .prompt-tip }
 
 Create `form.css` file inside `static` > `CSS` directory and add following to it.
 
@@ -141,6 +142,7 @@ metho:"post" targe:"hidden_iframe" onsubmi:"submitte:true;">
 *Replace FormID with actual ID from Google form*.
 
 > Now it should looks something like this bellow
+{: .prompt-tip }
 
 ![Contact Form](/static/image/contact-form.webp)
 

@@ -262,6 +262,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
 > Here `+` means create.
+{: .prompt-tip }
 
 To make changes run
 

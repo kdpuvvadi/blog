@@ -20,7 +20,7 @@ hugo version
 it should output something like this,
 
 ```shell
-> hugo version
+$ hugo version
 Hugo Static Site Generator v0.78.1/extended windows/amd64 BuildDate: unknown
 ```
 

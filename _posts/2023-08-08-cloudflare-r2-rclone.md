@@ -47,6 +47,7 @@ endpoint: https://<cloudflare_account_id>.r2.cloudflarestorage.com/
 ```
 
 > For available regions checkout [R2 Docs](https://developers.cloudflare.com/r2/buckets/data-location/)
+{: .prompt-info }
 
 To list the bucket, run
 

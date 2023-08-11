@@ -53,7 +53,8 @@ To set the token as environment variable Persistently
 echo 'export DIGITALOCEAN_ACCESS_TOKEN='token'' >> ~/.profile
 ```
 
-> Replace token with the actual token.
+> Replace token with the actual `token`.
+{: .prompt-tip }
 
 Using Terraform variables
 Create `var.tf` and add following
@@ -166,6 +167,7 @@ terraform deploy
 ```
 
 > Append `-var "do_token=token"` to use different token.
+{: .prompt-tip }
 
 ## Destroy
 
@@ -176,6 +178,7 @@ terraform destroy
 ```
 
 > Append `-var "do_token=token"` to use different token.
+{: .prompt-tip }
 
 ## Conclusion
 

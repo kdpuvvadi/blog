@@ -64,7 +64,7 @@ ansible-playbook main.yml
 ```
 
 > If you need password for the sudo append `-K` and enter the password when prompted
-
+{: .prompt-info }
 ```shell
 ansible-playbook main.yml -K
 ```

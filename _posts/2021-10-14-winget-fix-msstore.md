@@ -43,3 +43,4 @@ winget source remove msstore
 ```
 
 > Please make sure to run it with elevated `command prompt` or `Powershell`.
+{: .prompt-tip }

@@ -23,6 +23,7 @@ On Azure's [portal](https://portal.azure.com/), select [Resource Group](https://
 To create IoT Hub, Go to portal home page or go to all services and select `IoT Hub`.  Click on `+ Create` to create the IoT hub. Select the resource group which was created earlier and select the remaining details based on the requirement and click on `Review + Create`.
 
 > `Tier` and `Daily Message Limit` can be upgraded in the future. Start with low when testing. `IoT hub name` should be unique, Not only to your account but to the entire Azure Network.
+{: .prompt-info }
 
 ### Create IoT Device
 
@@ -51,6 +52,7 @@ Here it would be as following
 `Si-Iot-Hub--001.azure-devices.net/edge-device-001/edge-device-001-temp-sensor-001/?api-version=2021-04-12`
 
 > Select the latest `api-version` available. Selecting wrong version might cause unintentional behaviour.
+{: .prompt-warning }
 
 ### SAS Token
 

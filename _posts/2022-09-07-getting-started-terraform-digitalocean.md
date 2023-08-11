@@ -9,6 +9,7 @@ keywords: [terraform, digitalocean]
 ## Installing Terraform
 
 > Follow Installation Instructions [here](/posts/terraform-azure-getting-started#installing-terraform").
+{: .prompt-tip }
 
 ## Terraform
 
@@ -55,6 +56,7 @@ Initializing provider plugins...
 Terraform needs API Token to communicate with DigitalOcean and to deploy the infrastructure. Generate the API token by going to `DigitalOcean` >> `API` >> `Tokens/Keys`.
 
 > Please copy new personal access token now. It won't be shown again for security.
+{: .prompt-info }
 
 ## Authentication
 
@@ -87,6 +89,7 @@ echo 'export DIGITALOCEAN_ACCESS_TOKEN='token'' >> ~/.profile
 ```
 
 > Replace `token` with the actual token.
+{: .prompt-tip }
 
 ### Using Terraform variables
 
@@ -145,6 +148,7 @@ resource "digitalocean_droplet" "terraform_droplet" {
 ```
 
 > if the given key is already added to you account, terraform throws the error. in that case, remove ssh block and just add MD5 fingerprint of the public key to the droplet block.
+{: .prompt-tip }
 
 To get the `MD5 fingerprint of the key run
 

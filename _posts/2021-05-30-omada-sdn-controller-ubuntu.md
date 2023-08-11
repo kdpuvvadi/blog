@@ -56,6 +56,7 @@ And select OpenJDK-8 option.
 We've to be careful here. If you have fresh install of Ubuntu 20.04 and try to install from apt repository, it is fine but if you've added mongoDB's PPA, it might install v4.x but Omada only supports 3.0.15 to 3.6.18. 3.0 is almost at end of the support and 3.6 is at the edge. Hoping TP upgrades it in the future. If you've fresh Ubuntu 20.04 amd64 install run the following to install 3.6.9 otherwise remove the PPA and try again.
 
 > Omada Controller now supports v4.x of Mongodb.
+{: .prompt-tip }
 
 ```shell
 sudo apt install mongodb -y
