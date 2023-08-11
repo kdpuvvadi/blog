@@ -15,8 +15,8 @@ resource "vercel_project" "blog_project" {
 
 resource "vercel_project_environment_variable" "blog_env" {
   project_id = vercel_project.blog_project.id
-  key        = "HUGO_VERSION"
-  value      = "0.110.0"
+  key        = "BASE_URL"
+  value      = "https://preview.blog.puvvadi.me"
   target     = ["production"]
 }
 
