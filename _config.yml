@@ -1,0 +1,147 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+baseurl: ""
+lang: en
+timezone: Asia/Kolkata
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
+
+title: KD's Blog
+
+tagline: Engineer, DevOps, Geek, Ansible, Terraform 
+
+description: >- 
+  Personal tech blog with Devops, Serverless and more. Ansible, terraform, omada, 
+url: ""
+github:
+  kdpuvvadi
+twitter:
+  kdpuvvadi
+
+social:
+  name: KD Puvvadi
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/kdpuvvadi
+    - https://github.com/kdpuvvadi
+    - https://infosec.exchange/@kdpuvvadi
+
+google_site_verification: # fill in to your verification string
+
+google_analytics:
+  id: 
+theme_mode: dark
+img_cdn:
+avatar: https://www.gravatar.com/avatar/e79e2a5aad4a74b13e59710ca91cd9ca?s=512
+toc: true
+
+comments:
+  active: giscus
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo: kdpuvvadi/blog
+    repo_id: 'MDEwOlJlcG9zaXRvcnkzMDkyOTI1NzI='
+    category: General
+    category_id: 'DIC_kwDOEm9uHM4CSN_-'
+    mapping: 'og:title'
+    input_position:
+    lang: en
+    reactions_enabled: 1
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled: # boolean, keep empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env: # [development|production]
+
+pwa:
+  enabled: true
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - tools
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - rollup.config.js
+  - node_modules
+  - package*.json
+  - terraform
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

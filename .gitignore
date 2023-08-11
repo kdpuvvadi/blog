@@ -111,3 +111,26 @@ terraform.tfstate.backup
 
 # auto
 resources/
+
+# Bundler cache
+.bundle
+vendor
+
+# Jekyll cache
+.jekyll-cache
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode
+
+# Misc
+assets/js/dist
+.jekyll-metadata
