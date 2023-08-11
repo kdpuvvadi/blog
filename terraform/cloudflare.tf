@@ -32,14 +32,12 @@ resource "cloudflare_pages_project" "blog_pages_project" {
     preview {
       environment_variables = {
         NODE_VERSION = "18.16.0"
-        BASE_URL     = "https://preview.blog.puvvadi.me"
       }
       fail_open = true
     }
     production {
       environment_variables = {
         NODE_VERSION = "18.16.0"
-        BASE_URL     = "https://blog.puvvadi.me"
       }
       fail_open = true
     }

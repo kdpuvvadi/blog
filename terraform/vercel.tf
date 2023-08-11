@@ -13,13 +13,6 @@ resource "vercel_project" "blog_project" {
   }
 }
 
-resource "vercel_project_environment_variable" "blog_env" {
-  project_id = vercel_project.blog_project.id
-  key        = "BASE_URL"
-  value      = "https://preview.blog.puvvadi.me"
-  target     = ["production"]
-}
-
 resource "vercel_deployment" "blog_deploy" {
   project_id = vercel_project.blog_project.id
   ref        = "preview"
