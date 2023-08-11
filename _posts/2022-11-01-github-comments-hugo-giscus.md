@@ -44,7 +44,9 @@ Replace the placeholders with actual details of your repo to continue. You can f
 - `Page ↔️ Discussions Mapping`: Select based on your preference. It'll be title of Discussions topic of you blog post. I've selected `Discussion title contains page og:title` and added meta tag to `layouts >> head.html`
 
 ```html
+{% raw %}
 <meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+{% endraw %}
 ```
 
 - `Discussion Category`: General or create a custom category and select preferred one.
