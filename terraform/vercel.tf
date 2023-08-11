@@ -25,3 +25,8 @@ resource "vercel_deployment" "blog_deploy" {
   ref        = "preview"
   production = "true"
 }
+
+resource "vercel_project_domain" "blog_preview_domain" {
+  project_id = vercel_project.blog_project.id
+  domain     = "preview.blog.puvvadi.me"
+}
