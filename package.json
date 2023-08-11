@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo 'Test'",
+    "install": "bundle install",
     "start": "bundle exec jekyll s --incremental",
     "build": "bundle exec jekyll build $BASE_URL",
     "clean": "bundle exec jekyll clean" 
