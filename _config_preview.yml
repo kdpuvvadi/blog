@@ -17,9 +17,10 @@ description: >-
   Personal tech blog with Devops, Serverless and more. Ansible, terraform, omada, 
 url: "https://blog.puvvadi.me"
 github:
-  kdpuvvadi
+  username: kdpuvvadi
+  repository_url: https://github.com/kdpuvvadi/blog
 twitter:
-  kdpuvvadi
+  username: kdpuvvadi
 
 social:
   name: KD Puvvadi
