@@ -2,7 +2,7 @@
 title: "Deploy and Manage your site on Vercel with Terraform"
 date: "2023-02-26T14:05:30+05:30"
 author: kdpuvvadi
-image: /static/image/vercel-cloudflare-terraform.webp
+image: /assets/img/vercel-cloudflare-terraform.webp
 tags: [terraform, cloudflare, vercel]
 keywords: [terraform, cloudflare", vercel]
 ---

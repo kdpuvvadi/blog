@@ -2,7 +2,7 @@
 title: "Install Omada Controller with Ansible playbook"
 date: "2021-09-07T10:09:18+05:30"
 author: kdpuvvadi
-image: /static/image/ansible-omada-controller.webp
+image: /assets/img/ansible-omada-controller.webp
 tags: [omada, ansible, network]
 categories: [omada, ansible, tp-link]
 ---

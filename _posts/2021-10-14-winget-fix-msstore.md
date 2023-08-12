@@ -1,7 +1,7 @@
 ---
 title: "Fix Winget Microsoft Store entries"
 authors: [kdpuvvadi]
-image: /static/image/winget-msstore.webp
+image: /assets/img/winget-msstore.webp
 tags: [winget, packagemanager, cli]
 categories: [winget, Microsoft]
 ---

@@ -3,7 +3,7 @@ title: "Setup No Password Login for WordPress"
 layout: post
 tags: [wordpress, trusona, 2fa]
 categories: [wordpress, 2fa]
-image: /static/image/trusona-login-wordpress.webp
+image: /assets/img/trusona-login-wordpress.webp
 ---
 
 Passwords can be tricky. They are hard to remember and easy to guess and easy to be stolen. And there is Human element and our stupid brains always wants use same or similar passwords for login on every other website, including social networks, Personal email and Works emails etc.
@@ -18,25 +18,25 @@ To start, your WordPress site should be already set up and you only need to inst
 
 Go to `Dashboard` > `Plugins` > `Add New` and Search for `Trusona`
 
-![Trusona](/static/image/trusona.webp)
+![Trusona](/assets/img/trusona.webp)
 
 Click on Install and after installation, Activate. I’ve already installed the plugin and activated. WordPress side of things are done for now.
 
 To actually use it, install the app on your mobile device **Android** or **iOS**. After installing the app, Open the application and touch on hamburger menu and click on Email. Add an email used for WordPress user and Click enter and Confirm the Prompt.
 
-![email trusona](/static/image/trusona-email.webp)
+![email trusona](/assets/img/trusona-email.webp)
 
 You will receive a confirmation email. Confirm the email and you’ll be asked to use Fingerprint on Android or FaceID/TouchID on iOS to make sure you are authenticating.
 
 Pretty much setup is completed. To test the login, logout of WordPress and you will see change in the login screen.
 
-![wordpress trusona login](/static/image/trusona-login-wordpress.webp)
+![wordpress trusona login](/assets/img/trusona-login-wordpress.webp)
 
 Click on Login with Trusona, You’ll be navigated to Trusona website and will prompted with QR Code. Open the Trusona Application, Scan the code and Confirm with Fingerprint.FaceID/TouchID. You’ll be logged into your WordPress.
 
 To Actually disable the Password login, Go to *Dashboard > Settings > Trusona* and Make sure you’ve checked Trusona ONLY Mode.
 
-![trusona options](/static/image/trusona-options.webp)
+![trusona options](/assets/img/trusona-options.webp)
 
 **Trusona Only Mode**: Disable the password and Only use Trusona for Added security
 

@@ -2,7 +2,7 @@
 title: "Connecting Nodemcu to Home Assistant"
 date: "2020-11-03T22:12:51+05:30"
 author: kdpuvvadi
-image: /static/image/esp8266-hassio.webp
+image: /assets/img/esp8266-hassio.webp
 tags: [NodeMCU, ESP8266, ESPHome]
 categories: [hass, automation]
 ---
@@ -23,7 +23,7 @@ Now, go to `ESPHome` on the Left side menu. Click on the + to add a Node.
 
 If everything went very well, you should see Living Room Node on ESPHome. Click on Edit to check the config. It should look something like bellow.
 
-![esphome setup](/static/image/esphome_node_setup.webm)
+![esphome setup](/assets/img/esphome_node_setup.webm)
 
 ```yaml
 esphome:
@@ -57,11 +57,11 @@ ota:
 
 Now, Click on Menu and compile. After the compilation completed click on Download to save the binary. To flash the binary to the NodeMCU, Download [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). Open NodeMCU Flasher. Select COM port and binary file to flash in Config tab.
 
-![flash](/static/image/nodemcu_flasher_flash.webp)
+![flash](/assets/img/nodemcu_flasher_flash.webp)
 
 Click on *Flash*
 
-![flash done](/static/image/nodemcu_flash_done.webp)
+![flash done](/assets/img/nodemcu_flash_done.webp)
 
 After completion of Flashing, disconnect the NodeMCU from the PC and Connect it to the Power source. Before connecting the Power source, connect DHT11 sensor to NodeMCU using following config
 
@@ -122,7 +122,7 @@ sensor:
 Click on Save. Upload to upload the binary via OTA Update. After validation, compilation and Uploading, ESP8266 will reboot itself and transmitting data to Home Assistant securely over APIs.
 Click on Log to see the data being sent from ESP8266 to the Home Assistant.
 
-![Temperature and Humidity log](/static/image/esp8266_temp_humid_log.webp)
+![Temperature and Humidity log](/assets/img/esp8266_temp_humid_log.webp)
 
 ### Adding Data to Lovelace
 
@@ -132,7 +132,7 @@ Now, go to `Configuration > Entities > select  Temperature (sensor.Temperature E
 
 If everything went well, Temperature and Humidity should be available in Lovelace.
 
-![Temperature and Humidity out](/static/image/esphome_temp_humid_out.webp)
+![Temperature and Humidity out](/assets/img/esphome_temp_humid_out.webp)
 
 ### Conclusion
 

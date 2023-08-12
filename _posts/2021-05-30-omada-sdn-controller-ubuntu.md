@@ -2,7 +2,7 @@
 title: "Install Omada Controller on Ubuntu 20.04"
 date: "2021-05-30T20:51:13+05:30"
 author: kdpuvvadi
-image: /static/image/omada-controller-ubuntu-20.04.webp
+image: /assets/img/omada-controller-ubuntu-20.04.webp
 tags: [ubuntu, mongodb, tp-link, sdn, omada, networ, firewall, gateway, vpn, proxmox]
 categories: [networking, omada, firewall]
 ---

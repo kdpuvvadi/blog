@@ -2,7 +2,7 @@
 title: "Portainer on Wsl2"
 date: "2020-11-02T19:37:15+05:30"
 author: kdpuvvadi
-image: /static/image/wsl2-portainer.webp
+image: /assets/img/wsl2-portainer.webp
 tags: [docker, portainer, wsl, wsl2]
 categories: [docker, portainer, wsl]
 ---
@@ -17,7 +17,7 @@ First create a volume with following.
 docker volume create portainer_data
 ```
 
-![Portainer Volume](/static/image/portainer-volume.webp)
+![Portainer Volume](/assets/img/portainer-volume.webp)
 
 Now, install Portainer
 
@@ -32,24 +32,24 @@ docker run -d
     portainer/portainer-ce
 ```
 
-![Portainer Running](/static/image/portainer-running.webp)
+![Portainer Running](/assets/img/portainer-running.webp)
 
 Here, Port *9000* is used for serving UI and API. Port 8000 is for running SSH tunnel between portainer instance and the agent.
 
 Now, set a admin password
 
-![Portainer User](/static/image/portainer-user.webp)
+![Portainer User](/assets/img/portainer-user.webp)
 
 Now, Select Docker as Environment and click Connect
 
-![Portainer Env](/static/image/portainer-env.webp)
+![Portainer Env](/assets/img/portainer-env.webp)
 
 Here it is,
 
-![Portainer Dashboard](/static/image/portainer-dashboard.webp)
+![Portainer Dashboard](/assets/img/portainer-dashboard.webp)
 
 To pull images from *Docker hub* go to images on left menu, type in the name of the container and tag *e.g node:current-alpine3.10*. click on Pull the Image.
 
-![Docker Images](/static/image/docker-images-hub.webp)
+![Docker Images](/assets/img/docker-images-hub.webp)
 
 you can import of your own container and spin off the containers.

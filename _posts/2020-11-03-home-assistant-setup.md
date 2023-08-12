@@ -2,7 +2,7 @@
 title: "Home Assistant Setup on Raspberry Pi"
 date: "2020-11-03T20:09:59+05:30"
 author: "KD"
-image: /static/image/hass-pi.webp
+image: /assets/img/hass-pi.webp
 tags: [hass, pi]
 categories: [automation, pi, hass]
 ---
@@ -24,15 +24,15 @@ First Download Pi Home Assistant Image [Here](https://www.home-assistant.io/hass
 
 Now, install and open the **balenaEtcher**, Select Extracted image, select the SDCard you've connected to the PC and click on **Flash**. If asked for elevated permissions, click ***YES***
 
-![balenaEtcher](/static/image/balenoEtcher_Flashing.webp)
+![balenaEtcher](/assets/img/balenoEtcher_Flashing.webp)
 
 ## Flashing
 
-![flashing](/static/image/balanaetcher_flashing.webp)
+![flashing](/assets/img/balanaetcher_flashing.webp)
 
 ### Flashing Done
 
-![flashing done](/static/image/balenaEtcher_done.webp)
+![flashing done](/assets/img/balenaEtcher_done.webp)
 
 Once it's completed flashing the image, Eject the SDCard and insert it to Raspberry Pi 3. Now, we need a way to connect our pi to network.
 
@@ -129,15 +129,15 @@ dns=1.1.1.1;8.8.8.8;
 
 Open your browser of choice and enter the IP address of the Pi. If everything went well and device connected to the network, you should see the following screen.
 
-![hass preparing](/static/image/hass_preparing.webp)
+![hass preparing](/assets/img/hass_preparing.webp)
 
 The process may take some time, Take a coffee brake. Once the process is completed, you should see account creation screen.
 
-![hass account setup](/static/image/hass_account.webp)
+![hass account setup](/assets/img/hass_account.webp)
 
 Name your Home Assistant setup, setup Home location and Select the units of choice in the following screen.
 
-![hass map and units](/static/image/hass_map_units_name.webp)
+![hass map and units](/assets/img/hass_map_units_name.webp)
 
 If everything went good so far, you should Home Assistant Dashboard *aka* ***Lovelace***. Setup of the Home Assistant on Pi is completed.
 

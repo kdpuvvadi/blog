@@ -2,7 +2,7 @@
 title: "Access Home Assistant from anywhere securely with DuckDNS, Let's Encrypt and NGINX"
 date: "2020-11-04T22:09:57+05:30"
 author: kdpuvvadi
-image: /static/image/hass-duckdns-nginx-lets-encrypt.webp
+image: /assets/img/hass-duckdns-nginx-lets-encrypt.webp
 tags: ["hass", "DuckDNS", "Nginx", "Home Assistant" ]
 keywords: [automation, home-assistant]
 ---
@@ -19,7 +19,7 @@ Visit [`DuckDNS`](https://www.duckdns.org/) and sing up with with Google, Twitte
 
 ## DuckDNS Add-on
 
-![hass addon store](/static/image/hass_addon_store.webp)
+![hass addon store](/assets/img/hass_addon_store.webp)
 
 Open Home Assistant instance on your browser of choice(192.168.1.123:8123). Go to *Supervisor > Add-on Store* and Select `DuckDNS` Add-on and Click install. Open configuration Tab on top paste the following
 
@@ -41,7 +41,7 @@ Go to Info tab and start the service. Don't forget to enable `Start onboot` and 
 
 ## NGINX
 
-![hass addon store search](/static/image/hass_addon_store.webp)
+![hass addon store search](/assets/img/hass_addon_store.webp)
 
 To access Home Assistant from outside of home, Nginx proxy is need to route the traffic from the outside. To install the Nginx Add-on go to *Supervisor > Add-on Store* Select **NGINX Home Assistant SSL proxy**. Now, go to Configuration and replace with following
 

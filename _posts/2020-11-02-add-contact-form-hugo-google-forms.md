@@ -2,7 +2,7 @@
 title: "Add Contact form to Hugo with Google forms"
 date: "2020-11-02T21:25:36+05:30"
 author: kdpuvvadi
-image: /static/image/google-forms.webp
+image: /assets/img/google-forms.webp
 tags: [hugo, GoogleForms, Contactform, HTML, CSS, StaticSite]
 categories: [hugo, forms]
 ---
@@ -11,7 +11,7 @@ Hugo is great for a static site. No need for complicated setups, no database or 
 
 First open [Google form](https://www.google.com/forms/about/) and create a form with *Name, Email, Subject and Message*.
 
-![Google Form Fields](/static/image/contact-form-google-form-fields.webp)
+![Google Form Fields](/assets/img/contact-form-google-form-fields.webp)
 
 Now create new page with following
 
@@ -21,7 +21,7 @@ hugo new contact.md
 
 To fill the google form from our site you need *form id* and *field ids*. Now open the form in incognito mode to get the field ids and make a note of them.
 
-![Form Field IDs](/static/image/google-form-fields.webp)
+![Form Field IDs](/assets/img/google-form-fields.webp)
 
 if you don't have `Raw HTML` layout for your site, HTML content may not render properly. If you've *rawhtml* layout, you can skip this step.
 To add *rawhtml* layout create rawhtml.html file in your theme directory *layouts > shortcodes > rawhtml.html*. Add fallowing code to the file, save and exit.
@@ -35,7 +35,7 @@ To add *rawhtml* layout create rawhtml.html file in your theme directory *layout
 
 Add rawhtml tag in *contact.md*
 
-![raw html](/static/image/rawhtml.webp)
+![raw html](/assets/img/rawhtml.webp)
 
 Now add following to your *contact.md* file and replace the form ID and field IDs from previous.
 
@@ -144,15 +144,15 @@ metho:"post" targe:"hidden_iframe" onsubmi:"submitte:true;">
 > Now it should looks something like this bellow
 {: .prompt-tip }
 
-![Contact Form](/static/image/contact-form.webp)
+![Contact Form](/assets/img/contact-form.webp)
 
 After submitting the form, it should redirect to */thankyou/* page.
 
-![Contact Submit Response](/static/image/contact-res.webp)
+![Contact Submit Response](/assets/img/contact-res.webp)
 
 Here we go, your Static Hugo site have a dynamic contact form. If you want to receive emails every time someone fills out the form, go to responses on Google Form and Check *get email notifications for new responses*.
 
-![Form Response email](/static/image/google-form-res-email.webp)
+![Form Response email](/assets/img/google-form-res-email.webp)
 
 You can also export all the response to *csv* format or directly Google spreadsheets.
 
