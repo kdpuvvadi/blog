@@ -32,12 +32,14 @@ resource "cloudflare_pages_project" "blog_pages_project" {
     preview {
       environment_variables = {
         NODE_VERSION = "18.16.0"
+        CONFIG_FILE  = "_config_preview.yml"
       }
       fail_open = true
     }
     production {
       environment_variables = {
         NODE_VERSION = "18.16.0"
+        CONFIG_FILE  = "_config.yml"
       }
       fail_open = true
     }
