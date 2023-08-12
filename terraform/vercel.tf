@@ -23,3 +23,10 @@ resource "vercel_project_domain" "blog_preview_domain" {
   project_id = vercel_project.blog_project.id
   domain     = "preview.blog.puvvadi.me"
 }
+
+resource "vercel_project_environment_variable" "blog_preview_env" {
+  project_id = vercel_project.blog_project.id
+  key        = "CONFIG_FILE"
+  value      = "_config_preview.yml"
+  target     = ["production", "preview", "development"]
+}
