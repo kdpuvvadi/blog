@@ -65,17 +65,19 @@ Replace `active` your choice of word and also remove `!`. It should look somethi
 > Do not edit any more than you need to. If anything goes wrong, replace the file with backup.
 {: .prompt-info }
 
-## Disable High Availability
+## High Availability
 
 If you plan on running single node proxmox instance, disabling High Availability(HA) disables unnecessary services. 
 
-To disable ha, 
+### disable ha
 
 ```shell
 systemctl disable -q --now pve-ha-lrm
 systemctl disable -q --now pve-ha-crm
 systemctl disable -q --now corosync
 ```
+
+### enable ha
 
 In the future if ha is required, simply run following to enable it.
 
