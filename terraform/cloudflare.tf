@@ -21,11 +21,11 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   }
 
   build_config {
-    build_command       = "yarn build"
+    build_command       = "jekyll build --config $CONFIG_FILE"
     destination_dir     = "_site"
     root_dir            = ""
-    web_analytics_tag   = "6d04d8997a0846debf452bda420ccde9"
-    web_analytics_token = "cda715889e4b41d89cfdac386f19f8ae"
+    web_analytics_tag   = "359f78cfd77a4d92be4986bff4c02cc4"
+    web_analytics_token = "3cb459fe825f4dfc987979a2e512dd34"
   }
 
   deployment_configs {
