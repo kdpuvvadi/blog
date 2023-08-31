@@ -138,6 +138,9 @@ exclude:
   - package*.json
   - terraform
 
+include:
+  - _redirects
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
