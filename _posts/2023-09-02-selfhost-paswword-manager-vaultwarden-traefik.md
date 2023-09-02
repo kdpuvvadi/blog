@@ -2,6 +2,10 @@
 layout: post
 title: Selfhost paswword manager with Vaultwarden and Traefik
 date: 2023-09-02 11:44 +0530
+image: /assets/img/vaultwarden-selfhosted.webp
+tags: [vaultwarden, docker, proxy]
+categories: [password-manager, self-hosted, traefik]
+authors: [kdpuvvadi]
 ---
 
 Vaultwarden is light weight feature rich drop in replacement for Bitwarden server. It's essencially debloated version of the Bitwarden.
