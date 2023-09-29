@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selfhost paswword manager with Vaultwarden and Traefik
+title: Self host password manager with Vaultwarden and Traefik
 date: 2023-09-02 11:44 +0530
 image: /assets/img/vaultwarden-selfhosted.webp
 tags: [vaultwarden, docker, proxy]
@@ -8,9 +8,9 @@ categories: [password-manager, self-hosted, traefik]
 authors: [kdpuvvadi]
 ---
 
-Vaultwarden is light weight feature rich drop in replacement for Bitwarden server. It's essencially debloated version of the Bitwarden.
+Vaultwarden is light weight feature rich drop in replacement for Bitwarden server. It's essentially debloated version of the Bitwarden.
 
-To use Vaultwarden, SSL is required. Otherwise, singing in to the server is impossible. That's where traefik comes in. Here i'm assuming you have a domain, cloudflare account & domain added to your account, and docker is already set up and ready to go.
+To use Vaultwarden, SSL is required. Otherwise, singing in to the server is impossible. That's where traefik comes in. Here I'm assuming you have a domain, cloudflare account & domain added to your account, and docker is already set up and ready to go.
 
 ## Cloudflare
 
@@ -42,7 +42,7 @@ Directory structure should be like this
 
 ### Docker network
 
-Create a netowrk with following 
+Create a network with following 
 
 ```shell
 docker network create -d bridge proxy
@@ -156,7 +156,7 @@ To spin up the traefik docker container, run
 docker-compose up -d
 ```
 
-Once docker container created, traefik will generate ssl certs for `internel.example.net` & wildcard cert for `*.internel.example.net`. traefik dashboard will be avaialble at `traefik.internal.example.net`.
+Once docker container created, traefik will generate ssl certs for `internel.example.net` & wildcard cert for `*.internel.example.net`. traefik dashboard will be available at `traefik.internal.example.net`.
 
 ## Vaultwarden
 
@@ -169,7 +169,7 @@ I'm using named volumes here for the sake. You can use any directory on the host
 docker volume create vaultwarden
 ```
 
-Reason for creating volume outside the compose file, in case, container destroyed with `rm`, data would be still avaiable from the volume.
+Reason for creating volume outside the compose file, in case, container destroyed with `rm`, data would be still available from the volume.
 
 ### Docker-compose
 
@@ -247,4 +247,4 @@ docker-compose up -d
 ```
 ## Conclusion
 
-For more details and documentation, visit Official [github](https://github.com/dani-garcia/vaultwarden) repo. Any quiries, feel free to drop a comment. `Au Revoir`.
+For more details and documentation, visit Official [github](https://github.com/dani-garcia/vaultwarden) repo. Any queries, feel free to drop a comment. `Au Revoir`.
