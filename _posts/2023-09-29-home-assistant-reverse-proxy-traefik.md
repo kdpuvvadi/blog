@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Home Assistant Reverse Proxy with Traefik
+title: Home Assistant Reverse Proxy with traefik
 date: 2023-09-29 12:09 +0530
-image: 
+image: /assets/img/hass-traefik.webp
 tags: [traefik, homeassistant, proxy]
 categories: [homeassistant, proxy, traefik]
 authors: [kdpuvvadi]
 ---
 
-This post assumes `Traefik` is up and running on the docker and `Home Assistant` is running on another host on a VM. 
+This post assumes `traefik` is up and running on the docker and `Home Assistant` is running on another host on a VM.
 
-## Traefik 
+## traefik
 
 ### file config
 
-Traefik `providers` config should looks like this in `traefik.yml`
+traefik `providers` config should looks like this in `traefik.yml`
 
 ```yml
 providers:
@@ -27,7 +27,7 @@ providers:
 ```
 {: file="traefik/traefik.yml" }
 
-### docker-compose volumes 
+### docker-compose volumes
 
 ```yml
 volumes:
@@ -99,7 +99,6 @@ http:
         - default-headers
 ```
 {: file="traefik/data/config/hass.yml" }
-
 
 Make necessary changes such as `url`, `ip` of the `Home Assistant` and `ipWhiteList` according to your network. Headers are curtesy of [Techno Time](https://technotim.live/). 
 
