@@ -5,11 +5,11 @@ terraform {
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "4.13.0"
+      version = "4.16.0"
     }
     vercel = {
       source  = "vercel/vercel"
-      version = "0.15.0"
+      version = "0.15.1"
     }
   }
   cloud {
