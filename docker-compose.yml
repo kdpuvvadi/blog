@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  build:
+    build: .
+    image: kdpuvvadi/blog:latest
+    container_name: blog
+    ports:
+      - "4000:4000"
+  docker:
+    extends: build
+    image: kdpuvvadi/blog:v0.1
+  ghcr:
+    extends: build
+    image: ghcr.io/kdpuvvadi/blog:v0.1
