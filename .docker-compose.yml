@@ -4,6 +4,31 @@ services:
   build:
     build: .
     image: kdpuvvadi/blog:latest
-    container_name: blog-local
+    container_name: blog
     ports:
       - "5000:4000"
+    environment:
+      TZ: 'Asia/Kolkata'
+      ServerIP: 10.20.20.110
+    dns:
+      - 10.20.20.110
+      - 1.1.1.1
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blog.entrypoints=http"
+      - "traefik.http.routers.blog.rule=Host(`blog.local.puvvadi.net`)"
+      - "traefik.http.routers.blog.middlewares=pihole-https-redirect"
+      - "traefik.http.middlewares.blog-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.blog-secure.entrypoints=https"
+      - "traefik.http.routers.blog-secure.rule=Host(`blog.local.puvvadi.net`)"
+      - "traefik.http.routers.blog-secure.tls=true"
+      - "traefik.http.routers.blog-secure.service=blog"
+      - "traefik.http.services.blog.loadbalancer.server.port=4000"
+      - "traefik.http.services.blog.loadbalancer.server.scheme=http"
+      - "traefik.docker.network=proxy"
+    networks:
+      - proxy
+networks:
+  proxy:
+    external: true
