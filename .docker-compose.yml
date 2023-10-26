@@ -3,6 +3,7 @@ version: "3"
 services:
   build:
     build: .
+    pull_policy: build
     image: kdpuvvadi/blog:latest
     container_name: blog
     ports:
