@@ -4,6 +4,6 @@ services:
   build:
     build: .
     image: kdpuvvadi/blog:latest
-    container_name: blog
+    container_name: blog-local
     ports:
       - "4000:4000"
