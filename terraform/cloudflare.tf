@@ -61,13 +61,3 @@ resource "cloudflare_record" "cloudflare_blog_record" {
   ttl             = 1
   allow_overwrite = true
 }
-
-resource "cloudflare_record" "vercel_blog_record" {
-  zone_id         = data.cloudflare_zones.zone_puvvadi_me.zones[0].id
-  name            = "preview.blog"
-  value           = vercel_deployment.blog_deploy.domains[0]
-  type            = "CNAME"
-  proxied         = false
-  ttl             = 1
-  allow_overwrite = true
-}
