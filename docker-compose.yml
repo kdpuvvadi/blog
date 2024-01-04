@@ -9,7 +9,7 @@ services:
       - "4000:4000"
   docker:
     extends: build
-    image: kdpuvvadi/blog:v0.1
+    image: kdpuvvadi/blog:4.0.0
   ghcr:
     extends: build
-    image: ghcr.io/kdpuvvadi/blog:v0.1
+    image: ghcr.io/kdpuvvadi/blog:4.0.0

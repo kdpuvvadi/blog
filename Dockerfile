@@ -1,6 +1,6 @@
 FROM ruby:alpine
 LABEL com.puvvadi.image.authors="kd@puvvadi.me"
-LABEL version="1.0"
+LABEL version="4.0"
 
 ENV TZ Asia/Kolkata
 
