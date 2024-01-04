@@ -1,4 +1,4 @@
-FROM ruby:alpine
+FROM ruby:alpine3.19
 LABEL com.puvvadi.image.authors="kd@puvvadi.me"
 LABEL version="4.0"
 
