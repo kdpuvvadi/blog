@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   release:
   push:
+    branches:
+      - main
+      - 'releases/**'
 
 jobs:
   build:
