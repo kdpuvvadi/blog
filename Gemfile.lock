@@ -60,7 +60,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-chirpy (6.5.2)
+    jekyll-theme-chirpy (6.5.3)
       jekyll (~> 4.3)
       jekyll-archives (~> 2.2)
       jekyll-include-cache (~> 0.2)
@@ -119,7 +119,7 @@ DEPENDENCIES
   html-proofer (~> 4.4)
   http_parser.rb (~> 0.6.0)
   jekyll-compose
-  jekyll-theme-chirpy (~> 6.5.2)
+  jekyll-theme-chirpy (~> 6.5.3)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)
