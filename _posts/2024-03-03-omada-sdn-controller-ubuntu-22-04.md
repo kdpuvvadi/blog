@@ -20,7 +20,7 @@ sudo apt upgrade -y
 For Debian systems, Omada need Java 8 or later, MongoDB 4, JSVC, curl.
 
 
-Omada Controller is return in Java & we are using opensource Java 17 binary Openjdk-17-jre-headless
+Omada Controller is return in Java & we are using opensource Java 17 binary `Openjdk-17-jre-headless`
 
 ```shell
 sudo apt install Openjdk-17-jre-headless jsvc curl -y
@@ -28,16 +28,16 @@ sudo apt install Openjdk-17-jre-headless jsvc curl -y
 
 ## Install MongoDB
 
-Mongo dB version 4 or earlier are not available on Ubuntu 22.04 or Debian 12. Reason being libssl 1.1 is deprecated in later versions of Debian and ubuntu. 
+Mongo dB version 4 or earlier are not available on Ubuntu 22.04 or Debian 12. Reason being `libssl 1.1` is deprecated in later versions of Debian and ubuntu. 
 
-First install libssl 1.1
+First install `libssl 1.1`
 
 ```shell
 curl -sSL http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1-1ubuntu2.1~18.04.23_amd64.deb -o libssl1.1.deb
 sudo dpkg -i libssl1.1.deb
 ```
 
-As of this writing, v4.4 is supported in Omada. Let's install gpg key for mongodb-org 4.4
+As of this writing, v4.4 is supported in Omada. Let's install `gpg` key for` mongodb-org` `4.4`
 
 ```shell
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo gpg --dearmour -o /usr/share/keyrings/mongo-org-4.4.gpg
