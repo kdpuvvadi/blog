@@ -20,15 +20,15 @@ Adding providers block
 ```hcl
 terraform {
   required_providers {
-    digitalocean: {
-      source: "digitalocean/digitalocean"
-      version: "2.22.2"
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+      version = "2.36.0"
     }
   }
 }
 ```
 
-As of this writing, digitalocean's terraform provider is of version `2.22.2`.
+As of this writing, digitalocean's terraform provider is of version `2.36.0`.
 
 ## Initialize
 
@@ -46,9 +46,9 @@ $ terraform init
 Initializing the backend...
 
 Initializing provider plugins...
-- Finding digitalocean/digitalocean versions matching "2.22.2"...
-- Installing digitalocean/digitalocean v2.22.2...
-- Installed digitalocean/digitalocean v2.22.2 (signed by a HashiCorp partner, key ID F82037E524B9C0E8)
+- Finding digitalocean/digitalocean versions matching "2.36.0"...
+- Installing digitalocean/digitalocean v2.36.0...
+- Installed digitalocean/digitalocean v2.36.0 (signed by a HashiCorp partner, key ID F82037E524B9C0E8)
 ```
 
 ## Generating DigitalOcean API Token
@@ -62,7 +62,7 @@ Terraform needs API Token to communicate with DigitalOcean and to deploy the inf
 
 Authentication can be done either with environment variables or terraform variables.
 
-### Windows Powershell
+### Windows PowerShell
 
 Open `Powershell` and run the following to add new environment variable.
 
@@ -97,9 +97,9 @@ Create `var.tf` and add following
 
 ```hcl
 variable "do_token" {
-    type: string
-    description: "Digital Ocean API Token"
-    sensitive: true
+  type         =  string
+  description  =  "Digital Ocean API Token"
+  sensitive    =  true
 }
 ```
 
@@ -107,7 +107,7 @@ And add following to `main.tf`
 
 ```hcl
 provider "digitalocean" {
-  token: var.do_token
+  token =  var.do_token
 }
 ```
 
@@ -117,21 +117,21 @@ To create a droplet, create a new file `droplet.tf` and add following
 
 ```hcl
 resource "digitalocean_droplet" "terraform_droplet" {
-  image : "ubuntu-22-04-x64"
-  name  : "terraform"
-  region: "sfo3"
-  size  : "s-1vcpu-1gb"
+  image  = "ubuntu-22-04-x64"
+  name   = "web-1"
+  region = "nyc2"
+  size   = "s-1vcpu-1gb"
 }
 ```
 
-Here i'm using `Ubuntu 22.04 LTS` image and using basic `size` with 1vCPU and 1GB of RAM on deploying it in the `SFO3`(San Francisco region 3). You can choose whatever you like.
+Here I'm using `Ubuntu 22.04 LTS` image and using basic `size` with 1vCPU and 1GB of RAM on deploying it in the `nyc2`. You can choose whatever you like.
 
 To add ssh key to the account add following to either separate `ssh.tf` or `droplet.tf`
 
 ```hcl
 resource "digitalocean_ssh_key" "ssh_default" {
-  name      : "terraform ssh"
-  public_key: file("~/.ssh/id_rsa.pub")
+  name      = "terraform ssh"
+  public_key= file("~/.ssh/id_rsa.pub")
 }
 ```
 
@@ -139,11 +139,11 @@ and attach newly added ssh key to the droplet. updated `droplet.tf` should look 
 
 ```hcl
 resource "digitalocean_droplet" "terraform_droplet" {
-  image : "ubuntu-22-04-x64"
-  name  : "terraform"
-  region: "blr1"
-  size  : "s-1vcpu-1gb"
-  ssh_keys: [digitalocean_ssh_key.ssh_default.fingerprint]
+  image   = "ubuntu-22-04-x64"
+  name    = "terraform"
+  region  = "blr1"
+  size    = "s-1vcpu-1gb"
+  ssh_keys= [digitalocean_ssh_key.ssh_default.fingerprint]
 }
 ```
 
@@ -160,11 +160,11 @@ Updated `droplet.tf` should look like this
 
 ```hcl
 resource "digitalocean_droplet" "terraform_droplet" {
-  image : "ubuntu-22-04-x64"
-  name  : "terraform"
-  region: "blr1"
-  size  : "s-1vcpu-1gb"
-  ssh_keys: ["a0:b1:c2:3d:4e:5f:g6:h7:i8:9j:0k:1l:2m:n3:o4:p5"]
+  image   = "ubuntu-22-04-x64"
+  name    = "terraform"
+  region  = "blr1"
+  size    = "s-1vcpu-1gb"
+  ssh_keys= ["a0:b1:c2:3d:4e:5f:g6:h7:i8:9j:0k:1l:2m:n3:o4:p5"]
 }
 ```
 
@@ -196,12 +196,12 @@ Updated `droplet.tf` should look something like this
 
 ```hcl
 resource "digitalocean_droplet" "terraform_droplet" {
-  image : "ubuntu-22-04-x64"
-  name  : "terraform"
-  region: "blr1"
-  size  : "s-1vcpu-1gb"
-  user_data: file("init.yml")
-  ssh_keys: [digitalocean_ssh_key.ssh_default.fingerprint]
+  image = "ubuntu-22-04-x64"
+  name  = "terraform"
+  region= "blr1"
+  size  = "s-1vcpu-1gb"
+  user_data= file("init.yml")
+  ssh_keys=` [digitalocean_ssh_key.ssh_default.fingerprint]
 }
 ```
 
@@ -213,8 +213,8 @@ Create `outputs.tf` and add following
 
 ```hcl
 output "ip_address" {
-  value: digitalocean_droplet.terraform_droplet.ipv4_address
-  description: "The public IP address of your droplet."
+  value= digitalocean_droplet.terraform_droplet.ipv4_address
+  description= "The public IP address of your droplet."
 }
 ```
 

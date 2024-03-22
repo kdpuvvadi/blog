@@ -6,7 +6,7 @@ tags: [terraform, hashicorp, terraform-cloud]
 keywords: [terraform, hashicorp", terraform-cloud]
 ---
 
-Terraformis very good at keep the state of the Infrastructure up to date. By default state is stored in `terraform.tfstate` and stored on local machine. But big downside is keeping the state up to date between the all the members of the teams of Engineers & who has the latest state. It can lead to data loss and revenue loss. If the state can be stored in a central location and synced across the engineers with
+Terraform is very good at keeping the state of the Infrastructure up to date. By default state is stored in `terraform.tfstate` and stored on local machine. But big downside is keeping the state up to date between the all the members of the teams of Engineers & who has the latest state. It can lead to data loss and revenue loss. If the state can be stored in a central location and synced across the engineers with
 latest current state.
 
 There are multiple ways to do that. such as
@@ -16,7 +16,7 @@ There are multiple ways to do that. such as
 
 [Terraform Cloud](https://app.terraform.io/) is free start and has flexible pricing. Signup [here](https://app.terraform.io/public/signup/account) for free.
 
-[Terraformn backend](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) is similor to Terraform Cloud but state can saved on multiple cloud providers such as `aws`, `gcp`, `azre` and etc.
+[Terraform backend](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) is similar to Terraform Cloud but state can saved on multiple cloud providers such as `aws`, `gcp`, `azre` and etc.
 
 Opensource selfhosted alternative to Terraform Cloud are [otf](https://github.com/leg100/otf), [digger](https://github.com/diggerhq/digger), [terrakube](https://github.com/AzBuilder/terrakube).
 
@@ -35,10 +35,10 @@ To initialize the terraform cloud, Add a cloud block to the directory's Terrafor
 ```hcl
 terraform {
   cloud {
-    organization: "my-org"
+    organization= "my-org"
 
     workspaces {
-      name: "demo-workspace"
+      name= "demo-workspace"
     }
   }
 }
@@ -73,6 +73,6 @@ On the first run, if the state is stored locally, terraform will prompt to migra
 
 ## Conclusion
 
-Terraform Cloud is easy to manage and will be on the lighter side on the chanrges too. Makes sence for smaller teams. But your organisation wants to selfhost the terraform cloud, Terraform Enterprise is a selfthosted Terraform Cloud with SSO and other features. But needs hefty check and on role engineers to managing and administration.
+Terraform Cloud is easy to manage and will be on the lighter side on the changes too. Makes sense for smaller teams. But your organisation wants to selfhost the terraform cloud, Terraform Enterprise is a self hosted Terraform Cloud with SSO and other features. But needs hefty check and on role engineers to managing and administration.
 
-As menstioned above, there are plenty of opensource alternatives. My personal favorite is [otf](https://github.com/leg100/otf). But does not come with any support, you manager might not like that. Any how, keep building `Au Revoir`.
+As mentioned above, there are plenty of opensource alternatives. My personal favourite is [otf](https://github.com/leg100/otf). But does not come with any support, you manager might not like that. Any how, keep building `Au Revoir`.

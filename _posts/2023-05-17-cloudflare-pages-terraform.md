@@ -5,7 +5,7 @@ tags: [terraform, cloudflare, pages, hugo]
 categories: [terraform, cloudflare, pages]
 ---
 
-previously i've published guide on deploying your site on [vercel](https://vercel.com/) with terraform. Now let's deploy it on [cloudflare](https://cloudflare.com/) with terraform. I'm running this blog with [Hugo](https://gohugo.io/) static site generator and manage my DNS with [Cloudflare](https://www.cloudflare.com/). Managing it on GUI may not be that challenging but it's annoying and what the state of the site is always unknown. So, like any other DevOps engineer do, I'm managing my blog with terraform. With the [terraform](https://www.terraform.io/) state will always be same across all the devices and it'll be easy to manage. I'm also using terraform cloud for this but let's talk about that on another day.
+previously I've published guide on deploying your site on [vercel](https://vercel.com/) with terraform. Now let's deploy it on [cloudflare](https://cloudflare.com/) with terraform. I'm running this blog with [Hugo](https://gohugo.io/) static site generator and manage my DNS with [Cloudflare](https://www.cloudflare.com/). Managing it on GUI may not be that challenging but it's annoying and what the state of the site is always unknown. So, like any other DevOps engineer do, I'm managing my blog with terraform. With the [terraform](https://www.terraform.io/) state will always be same across all the devices and it'll be easy to manage. I'm also using terraform cloud for this but let's talk about that on another day.
 
 ## Installing Terraform
 
@@ -57,11 +57,11 @@ Here we are using Vercel and Cloudflare providers. We can keep all our terraform
 
 ```hcl
 terraform {
-  required_version: ">= 1.3.0"
+  required_version= ">= 1.3.0"
   required_providers {
-    cloudflare: {
-      source : "cloudflare/cloudflare"
-      version: "4.6.0"
+    cloudflare= {
+      source  = "cloudflare/cloudflare"
+      version = "4.6.0"
     }
   }
 }
@@ -73,12 +73,12 @@ Authenticate with variables
 
 ```hcl
 provider "cloudflare" {
-  api_token: var.cloudflare_api_token
+  api_token= var.cloudflare_api_token
 }
 
 variable "cloudflare_api_token" {
-  type     : string
-  sensitive: true
+  type     = string
+  sensitive= true
 }
 ```
 
@@ -88,7 +88,7 @@ Cloudflare provider requires account id to be added to every config. We can use 
 
 ```hcl
 data "cloudflare_accounts" "cloudflare_account_data" {
-  name: "KD Puvvadi"
+  name= "KD Puvvadi"
 }
 ```
 
@@ -98,45 +98,45 @@ First create a project on vercel with `cloudflare_pages_project`,
 
 ```hcl
 esource "cloudflare_pages_project" "blog_pages_project" {
-  account_id       : data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
-  name             : "blog"
-  production_branch: "main"
+  account_id       = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
+  name             = "blog"
+  production_branch= "main"
 
   source {
-    type: "github"
+    type= "github"
     config {
-      owner                        : "kdpuvvadi"
-      repo_name                    : "blog"
-      production_branch            : "main"
-      pr_comments_enabled          : true
-      deployments_enabled          : true
-      production_deployment_enabled: true
-      preview_deployment_setting   : "all"
-      preview_branch_includes      : ["*"]
-      preview_branch_excludes      : ["main", "prod"]
+      owner                        = "kdpuvvadi"
+      repo_name                    = "blog"
+      production_branch            = "main"
+      pr_comments_enabled          = true
+      deployments_enabled          = true
+      production_deployment_enabled= true
+      preview_deployment_setting   = "all"
+      preview_branch_includes      = ["*"]
+      preview_branch_excludes      = ["main", "prod"]
     }
   }
 
   build_config {
-    build_command      : "hugo --gc --minify"
-    destination_dir    : "public"
-    root_dir           : ""
+    build_command      = "hugo --gc --minify"
+    destination_dir    = "public"
+    root_dir           = ""
   }
 
   deployment_configs {
     preview {
-      environment_variables: {
-        HUGO_VERSION: "0.111.0"
-        NODE_VERSION: "16.20.0"
+      environment_variables= {
+        HUGO_VERSION= "0.111.0"
+        NODE_VERSION= "16.20.0"
       }
-      fail_open: true
+      fail_open= true
     }
     production {
-      environment_variables: {
-        HUGO_VERSION: "0.111.0"
-        NODE_VERSION: "16.20.0"
+      environment_variables= {
+        HUGO_VERSION= "0.111.0"
+        NODE_VERSION= "16.20.0"
       }
-      fail_open: true
+      fail_open= true
     }
   }
 }
@@ -150,9 +150,9 @@ Add custom domain to the project with `cloudflare_pages_domain`
 
 ```hcl
 resource "cloudflare_pages_domain" "cloudflare_blog_domain" {
-  account_id  : data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
-  project_name: cloudflare_pages_project.blog_pages_project.name
-  domain      : "blog.puvvadi.me"
+  account_id  = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
+  project_name= cloudflare_pages_project.blog_pages_project.name
+  domain      = "blog.puvvadi.me"
 }
 ```
 
@@ -165,7 +165,7 @@ To add a record to the Cloudflare, Zone ID is required. Zone ID can be obtained 
 ```hcl
 data "cloudflare_zones" "zone_puvvadi_me" {
   filter {
-    name: "puvvadi.me"
+    name= "puvvadi.me"
   }
 }
 ```
@@ -176,13 +176,13 @@ Add DNS record on Cloudflare to point to the site with `cloudflare_record`. Depl
 
 ```hcl
 resource "cloudflare_record" "cloudflare_blog_record" {
-  zone_id        : data.cloudflare_zones.zone_puvvadi_me.zones[0].id
-  name           : "blog"
-  value          : cloudflare_pages_project.blog_pages_project.subdomain
-  type           : "CNAME"
-  proxied        : true
-  ttl            : 1
-  allow_overwrite: true
+  zone_id        = data.cloudflare_zones.zone_puvvadi_me.zones[0].id
+  name           = "blog"
+  value          = cloudflare_pages_project.blog_pages_project.subdomain
+  type           = "CNAME"
+  proxied        = true
+  ttl            = 1
+  allow_overwrite= true
 }
 ```
 

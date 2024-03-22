@@ -23,13 +23,13 @@ terraform {
 }
 ```
 
-## Authetication
+## Authentication
 
-Authetication can be done either with environment variables or terraform variables.
+Authentication can be done either with environment variables or terraform variables.
 
-### Windows Powershell
+### Windows PowerShell
 
-Open Powershell and run the following to add new environment variable.
+Open PowerShell and run the following to add new environment variable.
 
 ```shell
 $ENV:DIGITALOCEAN_ACCESS_TOKEN: 'token'
@@ -61,9 +61,9 @@ Create `var.tf` and add following
 
 ```hcl
 variable "do_token" {
-    type: string
-    description: "Digital Ocean API Token"
-    sensitive: true
+    type= string
+    description= "Digital Ocean API Token"
+    sensitive= true
 }
 ```
 
@@ -71,7 +71,7 @@ And add following to `provider.tf`
 
 ```hcl
 provider "digitalocean" {
-  token: var.do_token
+  token= var.do_token
 }
 ```
 
@@ -118,31 +118,31 @@ deploy cluster with version from version above
 
 ```hcl
 resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
-  name   : var.do_cluster_name
+  name   = var.do_cluster_name
   region : var.do_region
   version: data.digitalocean_kubernetes_versions.get_version.latest_version
 
   node_pool {
-    name      : var.do_pool_name
-    size      : var.do_node_size
-    auto_scale: var.do_nodepool_scale
-    min_nodes : var.do_nodepool_count
-    max_nodes : var.do_node_max
+    name      = var.do_pool_name
+    size      = var.do_node_size
+    auto_scale= var.do_nodepool_scale
+    min_nodes = var.do_nodepool_count
+    max_nodes = var.do_node_max
   }
 }
 ```
 
-### Aditional pool
+### Additional pool
 
 ```hcl
 resource "digitalocean_kubernetes_node_pool" "k8s_cluster_pool_ad" {
   cluster_id: digitalocean_kubernetes_cluster.k8s_cluster.id
 
-  name      : var.do_pool_ad_name
-  size      : var.do_node_ad_size
-  auto_scale: var.do_nodepool_scale
-  min_nodes : var.do_nodepool_ad_count
-  max_nodes : var.do_node_max
+  name      = var.do_pool_ad_name
+  size      = var.do_node_ad_size
+  auto_scale= var.do_nodepool_scale
+  min_nodes = var.do_nodepool_ad_count
+  max_nodes = var.do_node_max
 }
 ```
 
@@ -154,7 +154,7 @@ Before deploying make sure everything is as per spec by validating with
 terraform validate
 ```
 
-Plan the depliyment with
+Plan the deployment with
 
 ```bash
 terraform plan
@@ -182,4 +182,4 @@ terraform destroy
 
 ## Conclusion
 
-Everything used here is in publicly available repo on GitHub [here](httshell://github.com/kdpuvvadi/digitalocean-k8s-terraform).Check the official documentation [here](httshell://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs). Feel free to comment here. [Au Revoir](## Conclusion).
+Everything used here is in publicly available repo on GitHub [here](https://github.com/kdpuvvadi/digitalocean-k8s-terraform).Check the official documentation [here](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs). Feel free to comment here. [Au Revoir](## Conclusion).
