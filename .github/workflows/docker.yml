@@ -31,6 +31,13 @@ jobs:
           shortSha=$(git rev-parse --short ${{ github.sha }})
           echo "::set-output name=short_sha::$shortSha"
 
+      - name: Tailscale login
+        uses: tailscale/github-action@v2
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
       - name: Log into github
         uses: docker/login-action@v3.0.0
         with:
@@ -38,6 +45,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Log into gitea
+        uses: docker/login-action@v3.0.0
+        with:
+          registry: git.local.puvvadi.net
+          username: ${{ secrets.GITEA_USER }}
+          password: ${{ secrets.GITEA_TOKEN }}
 
       - name: Log into registry docker hub
         uses: docker/login-action@v3.0.0
@@ -57,3 +70,5 @@ jobs:
             ghcr.io/${{ github.repository	}}:${{ steps.vars.outputs.short_sha }}
             ${{ github.repository	}}:latest
             ghcr.io/${{ github.repository	}}:latest
+            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository	}}:${{ steps.vars.outputs.short_sha }}
+            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository	}}:latest
