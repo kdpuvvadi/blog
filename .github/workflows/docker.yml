@@ -74,5 +74,5 @@ jobs:
             ghcr.io/${{ github.repository	}}:${{ steps.vars.outputs.short_sha }}
             ${{ github.repository	}}:latest
             ghcr.io/${{ github.repository	}}:latest
-            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository	}}:${{ steps.vars.outputs.short_sha }}
-            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository	}}:latest
+            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository.name	}}:${{ steps.vars.outputs.short_sha }}
+            git.local.puvvadi.net/${{ secrets.GITEA_USER }}/${{ github.repository.name	}}:latest
