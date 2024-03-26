@@ -34,7 +34,7 @@ jobs:
         with:
           config-inline: |
             [dns]
-              nameservers=["${{ secrets.TS_DNS }}"]
+              nameservers=["100.106.243.93","100.78.173.17"]
 
       - name: Get commit short sha
         id: vars
