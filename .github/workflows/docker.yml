@@ -30,9 +30,9 @@ jobs:
         uses: docker/setup-qemu-action@v3.0.0
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.0.0
+        uses: docker/setup-buildx-action@v3.2.0
         with:
-          config-inline: |
+          buildkitd-config-inline: |
             [dns]
               nameservers=["100.106.243.93","100.78.173.17"]
 
