@@ -34,7 +34,7 @@ jobs:
         with:
           buildkitd-config-inline: |
             [dns]
-              nameservers=["100.106.243.93","100.78.173.17"]
+              nameservers=["100.106.243.93"]
 
       - name: Get commit short sha
         id: vars
