@@ -25,6 +25,7 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
+          version: 1.62.0
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3.0.0
@@ -41,6 +42,7 @@ jobs:
         run: |
           shortSha=$(git rev-parse --short ${{ github.sha }})
           echo "::set-output name=short_sha::$shortSha"
+          dig git.local.puvvadi.net
 
       - name: Log into github
         uses: docker/login-action@v3.0.0
