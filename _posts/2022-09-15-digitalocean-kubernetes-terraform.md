@@ -8,7 +8,8 @@ categories: [k8s, digitalocean, terraform]
 
 ## Installing Terraform
 
-To install terraform, follow installation instructions [here](/posts/terraform-azure-getting-started#installing-terraform).
+> Follow Installation Instructions [here](/posts/terraform-azure-getting-started#installing-terraform).
+{: .prompt-tip }
 
 ## Digital Ocean provider
 
@@ -16,8 +17,8 @@ To install terraform, follow installation instructions [here](/posts/terraform-a
 terraform {
   required_providers {
     digitalocean: {
-      source : "digitalocean/digitalocean"
-      version: "2.22.3"
+      source = "digitalocean/digitalocean"
+      version= "2.22.3"
     }
   }
 }
@@ -61,9 +62,9 @@ Create `var.tf` and add following
 
 ```hcl
 variable "do_token" {
-    type= string
+    type       = string
     description= "Digital Ocean API Token"
-    sensitive= true
+    sensitive  = true
 }
 ```
 
@@ -90,7 +91,7 @@ Variables and their default values
 | do_node_ad_size      | Node CPu and Memory          | s-1vcpu-2gb      |
 | do_nodepool_ad_count | Node CPu and Memory          | 1                |
 | do_nodepool_scale    | Enable Autoscaling           | true             |
-| do_node_max          | Max no's nodes for autoscale | 3                |
+| do_node_max          | Max no's nodes for auto scale | 3                |
 
 ## Cluster
 
@@ -108,7 +109,7 @@ To use version prefix, add `version_prefix: "1.24"`
 
 ```hcl
 data "digitalocean_kubernetes_versions" "get_version" {
-    version_prefix: "1.24."
+    version_prefix= "1.24."
 }
 ```
 
@@ -119,8 +120,8 @@ deploy cluster with version from version above
 ```hcl
 resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
   name   = var.do_cluster_name
-  region : var.do_region
-  version: data.digitalocean_kubernetes_versions.get_version.latest_version
+  region = var.do_region
+  version= data.digitalocean_kubernetes_versions.get_version.latest_version
 
   node_pool {
     name      = var.do_pool_name
@@ -167,7 +168,7 @@ terraform deploy
 ```
 
 > Append `-var "do_token=token"` to use different token.
-{: .prompt-tip }
+{: .prompt-info }
 
 ## Destroy
 
@@ -178,7 +179,7 @@ terraform destroy
 ```
 
 > Append `-var "do_token=token"` to use different token.
-{: .prompt-tip }
+{: .prompt-info }
 
 ## Conclusion
 

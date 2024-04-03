@@ -8,7 +8,7 @@ keywords: [terraform, digitalocean]
 
 ## Installing Terraform
 
-> Follow Installation Instructions [here](/posts/terraform-azure-getting-started#installing-terraform").
+> Follow Installation Instructions [here](/posts/terraform-azure-getting-started#installing-terraform).
 {: .prompt-tip }
 
 ## Terraform
