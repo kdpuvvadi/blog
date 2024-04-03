@@ -78,3 +78,5 @@ jobs:
             ghcr.io/${{ github.repository	}}:latest
             git.local.puvvadi.net/kd/blog:${{ steps.vars.outputs.short_sha }}
             git.local.puvvadi.net/kd/blog:latest
+          cache-from: type=registry,ref=${{ github.repository	}}:latest
+          cache-to: type=inline
