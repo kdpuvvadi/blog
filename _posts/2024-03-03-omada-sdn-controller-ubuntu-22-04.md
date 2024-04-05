@@ -1,8 +1,9 @@
 ---
-title: "Install Omada Controller on Ubuntu 22.04"
+title: "Install Omada Controller on Ubuntu 22.04 & Debian 12"
 date: "2024-03-03T14:07:30+05:30"
+updated: "2024-04-05T13:55:00+05:30"
 author: kdpuvvadi
-tags: [ubuntu, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox]
+tags: [ubuntu, ubuntu-2204, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox, debian-12, debian]
 categories: [networking, omada, firewall]
 ---
 
@@ -20,7 +21,7 @@ sudo apt upgrade -y
 For Debian systems, Omada need Java 8 or later, MongoDB 4, JSVC, curl.
 
 
-Omada Controller is return in Java & we are using opensource Java 17 binary `Openjdk-17-jre-headless`
+Omada Controller is written in Java & we are using opensource Java 17 binary `Openjdk-17-jre-headless`
 
 ```shell
 sudo apt install Openjdk-17-jre-headless jsvc curl -y
