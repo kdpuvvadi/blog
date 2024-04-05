@@ -11,10 +11,10 @@ timezone: Asia/Kolkata
 
 title: KD's Blog
 
-tagline: Engineer, DevOps, Geek, Ansible, Terraform 
+tagline: Engineer, DevOps, Geek, Ansible, Terraform
 
-description: >- 
-  Personal tech blog with Devops, Serverless and more. Ansible, terraform, omada, 
+description: >-
+  Personal tech blog with Devops, Serverless and more. Ansible, terraform, omada,
 url: "https://blog.puvvadi.me"
 github:
   username: kdpuvvadi
@@ -33,7 +33,7 @@ social:
 google_site_verification: # fill in to your verification string
 
 google_analytics:
-  id: 
+  id:
 theme_mode: dark
 img_cdn:
 avatar: https://avatars.githubusercontent.com/u/7326255?v=4
@@ -137,6 +137,7 @@ exclude:
   - node_modules
   - package*.json
   - terraform
+  - .github
 
 include:
   - _redirects
@@ -149,3 +150,16 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      description:
+      image:
+      category:
+      tags:
+    posts:
+      description:
+      image:
+      category:
+      tags:
