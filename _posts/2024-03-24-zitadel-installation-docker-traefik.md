@@ -1,9 +1,10 @@
 ---
 title: "Installing Zitadel with Docker behind traefik"
 date: "2024-03-18T10:13:30+05:30"
+updated: "2024-04-05T14:27:3405:30"
 author: kdpuvvadi
 tags: [zitadel, openid, docker, vpn, identity]
-categories: [networking, docker, vpn, identity]
+categories: [zitadel, docker, vpn, identity, OIDC, oAuth]
 ---
 
 Wanted an Open-Source Self-Hosted Identity provider for my homelab. Tried and tired of lot of them but Zitadel solved lot of my problems. Documentation is bit spotty and as I'm writing this, stable version is having problems with traefik and I'm going with latest version(`v2.48.3`).
