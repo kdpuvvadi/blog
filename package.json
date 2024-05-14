@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "author": "KD Puvvadi <@kdpuvvadi> <rao@puvvadi.me>",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "install": "bundle install",
     "start": "bundle exec jekyll s --incremental",
     "build": "bundle exec jekyll build --config $CONFIG_FILE",
-    "clean": "bundle exec jekyll clean" 
+    "clean": "bundle exec jekyll clean"
   },
   "dependencies": {
     "yarn": "^1.22.10"

@@ -35,17 +35,12 @@ google_site_verification: # fill in to your verification string
 google_analytics:
   id:
 theme_mode: dark
-img_cdn:
+cdn:
 avatar: https://avatars.githubusercontent.com/u/7326255?v=4
 toc: true
 
 comments:
-  active: giscus
-  disqus:
-    shortname:
-  utterances:
-    repo:
-    issue_term:
+  provider: giscus
   giscus:
     repo: kdpuvvadi/blog
     repo_id: 'MDEwOlJlcG9zaXRvcnkzMDkyOTI1NzI='
