@@ -12,6 +12,6 @@
     "clean": "bundle exec jekyll clean"
   },
   "dependencies": {
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.22"
   }
 }
