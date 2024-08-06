@@ -3,6 +3,7 @@ title: "Installing Zitadel with Docker behind traefik"
 date: "2024-03-18T10:13:30+05:30"
 updated: "2024-04-05T14:27:3405:30"
 author: kdpuvvadi
+image: /assets/img/zitadel-traefik.jpeg
 tags: [zitadel, openid, docker, vpn, identity]
 categories: [zitadel, docker, vpn, identity, OIDC, oAuth]
 ---
