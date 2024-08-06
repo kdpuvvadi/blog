@@ -100,13 +100,13 @@ http:
 ```
 {: file="traefik/data/config/hass.yml" }
 
-Make necessary changes such as `url`, `ip` of the `Home Assistant` and `ipWhiteList` according to your network. Headers are curtesy of [Techno Time](https://technotim.live/). 
+Make necessary changes such as `url`, `ip` of the `Home Assistant` and `ipWhiteList` according to your network. Headers are curtesy of [Techno Tim](https://technotim.live/). 
 
 home assistant will be available are the given url e.g. `hass.example.net`. But hass throws `Bad Request` error. Reason being it only allows reverse proxying from whitelisted ip ranges.
 
 ### configuration
 
-Add following `http` config to `configuration.yaml`
+Add following `http` config to Home Assistant's `configuration.yaml`
 
 ```yaml
 http:
@@ -120,7 +120,7 @@ http:
 
 Please add required networks and docker network both to the `trusted_proxies` and restart the hass instance.
 
-After few minutes `Home Assistant` will be available at `https:?/hass.example.net`.
+After few minutes `Home Assistant` will be available at `https://hass.example.net`.
 
 ## Conclusion
 
