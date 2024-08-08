@@ -5,9 +5,10 @@ updated: "2024-04-05T13:55:00+05:30"
 author: kdpuvvadi
 tags: [ubuntu, ubuntu-2204, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox, debian-12, debian]
 categories: [networking, omada, firewall]
+image: assets/img/install-omaad-ubuntu-2204.jpeg
 ---
 
-Previously posted a guide for installing Omada Controller on Ubuntu 20.04. Received log of requests for guide on 22.04. It's not simply straight forward as Omada Still using old dependencies and might break some package if incorrectly installed. Reason I'm writing this here is official guides and documentation are outdated and refusing to fix them.
+Previously posted a guide for installing Omada Controller on Ubuntu 20.04. Received log of requests for guide on 22.04. It's not simply straightforward as Omada still uses old dependencies, which could break some packages if incorrectly installed. The reason I'm writing this here is because the official guides and documentation are outdated and are refusing to fix them.
 
 First update the apt repos and upgrade current packages. I'm Assuming here that Ubuntu 22.04 box is fresh install and nothing other than preinstalled with distro were installed.
 
