@@ -14,9 +14,14 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
+    ffi (1.16.3)
     ffi (1.16.3-x64-mingw-ucrt)
     forwardable-extended (2.6.0)
-    google-protobuf (4.26.1-x64-mingw-ucrt)
+    google-protobuf (4.27.5-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.27.5-x86_64-linux)
+      bigdecimal
       rake (>= 13)
     html-proofer (4.4.3)
       addressable (~> 2.3)
@@ -82,6 +87,8 @@ GEM
     mercenary (0.4.0)
     nokogiri (1.16.5-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.16.5-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.24.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -97,6 +104,8 @@ GEM
     rouge (4.2.1)
     safe_yaml (1.0.5)
     sass-embedded (1.77.1-x64-mingw-ucrt)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.77.1-x86_64-linux-gnu)
       google-protobuf (>= 3.25, < 5.0)
     strscan (3.1.0)
     terminal-table (3.0.2)
@@ -115,6 +124,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   base64
