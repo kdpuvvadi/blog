@@ -3,7 +3,7 @@ title: "Add Contact form to Hugo with Google forms"
 date: "2020-11-02T21:25:36+05:30"
 author: kdpuvvadi
 image: /assets/img/google-forms.webp
-tags: [hugo, googleforms, contactform, html, css]
+tags: [hugo, googleforms, contactform, html, css, forms]
 categories: [hugo, forms, contactform]
 ---
 
@@ -27,10 +27,12 @@ if you don't have `Raw HTML` layout for your site, HTML content may not render p
 
 To add `rawhtml` layout create `rawhtml.html` file in your theme directory `layouts > shortcodes > rawhtml.html`. Add fallowing code to the file, save and exit.
 
-```html
-<!-- raw html -->
-{{.Inner}}
+{% raw %}
 ```
+<!-- raw html -->
+{{ .Inner }}
+```
+{% endraw %}
 
 Add `rawhtml` tag in `contact.md`
 
