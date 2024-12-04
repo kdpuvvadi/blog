@@ -67,6 +67,9 @@ pwa:
 
 paginate: 10
 
+pageviews:
+  provider: goatcounter
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
