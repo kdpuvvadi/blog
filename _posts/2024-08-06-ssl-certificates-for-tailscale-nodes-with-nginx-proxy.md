@@ -8,11 +8,11 @@ category: [tls, tailscale, vpn]
 tags: [ssl, tls, tailscale, vpn, nginx, proxy]
 ---
 
-If any nodes behind `tailscale` VPN serving any application and don't want the hassle of setting up reverse proxy with domain and managing the certificates with your own domain, tailscale Provisions `Let's Encrypt` certificates and manages them. But we can uses them how ever we want and configure them how even we want.
+If any nodes behind `tailscale` VPN serving any application and don't want the hassle of setting up reverse proxy with domain and managing the certificates with your own domain, tailscale Provisions `Let's Encrypt` certificates and manages them. But we can use them however we want and configure them how ever we want.
 
 ## Enable settings
 
-First we need to enable two settings on tailscale dashboard. Visit the dashboard and go to dns
+First we need to enable two settings on tailscale dashboard. Visit the dashboard and go to DNS.
 
 - Enable `MagicDNS`
 - Enable `HTTPS Certificates`
@@ -54,14 +54,14 @@ To Provision the certificates, run
 tailscale cert machine.tailnet.ts.net
 ```
 
-Result would be 
+Result would be
 
 ```shell
 Wrote public cert to machine.tailnet.ts.net.crt
 Wrote private key to machine.tailnet.ts.net.key
 ```
 
-Now we've valid certificates from `Let's Encrypt`
+Now we've valid certificates from `Let's Encrypt`.
 
 ## nginx configuration
 
