@@ -26,9 +26,10 @@ social:
   name: KD Puvvadi
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/kdpuvvadi
     - https://github.com/kdpuvvadi
     - https://infosec.exchange/@kdpuvvadi
+    - https://bsky.app/profile/puvvadi.net
+    - https://twitter.com/kdpuvvadi
 
 google_site_verification: # fill in to your verification string
 
