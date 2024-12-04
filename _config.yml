@@ -32,8 +32,10 @@ social:
 
 google_site_verification: # fill in to your verification string
 
-google_analytics:
-  id:
+analytics:
+  goatcounter:
+    id: kdpuvvadi
+
 theme_mode: dark
 cdn:
 avatar: https://avatars.githubusercontent.com/u/7326255?v=4
