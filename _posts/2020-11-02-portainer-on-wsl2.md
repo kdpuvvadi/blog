@@ -7,9 +7,9 @@ tags: [docker, portainer, wsl, wsl2]
 categories: [docker, portainer, wsl]
 ---
 
-I’ve been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I’ve been using *[Portainer](https://www.portainer.io/)*. As much as I love to use Terminal, i’m mostly lazy.
+I've been using WSL2 for developing for both personal and Professional use cases. To manage and quick deploy the containers, I've been using *[Portainer](https://www.portainer.io/)*. As much as I love to use Terminal, i'm mostly lazy.
 
-I’m assuming you’ve already WSL2 installed and docker is up and running.
+I'm assuming you've already WSL2 installed and docker is up and running.
 
 First create a volume with following.
 
