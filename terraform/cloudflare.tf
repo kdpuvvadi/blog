@@ -54,10 +54,10 @@ resource "cloudflare_pages_domain" "cloudflare_blog_domain" {
   domain       = "blog.puvvadi.me"
 }
 
-resource "cloudflare_dns_record" "cloudflare_blog_record" {
+resource "cloudflare_record" "cloudflare_blog_record" {
   zone_id         = data.cloudflare_zones.zone_puvvadi_me.zones[0].id
   name            = "blog"
-  value           = cloudflare_pages_project.blog_pages_project.subdomain
+  content         = cloudflare_pages_project.blog_pages_project.subdomain
   type            = "CNAME"
   proxied         = true
   ttl             = 1
