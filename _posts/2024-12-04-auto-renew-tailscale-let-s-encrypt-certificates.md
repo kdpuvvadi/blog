@@ -7,4 +7,5 @@ image: /assets/img/tailscale-tls-certs-nginx.jpeg
 category: [tls, tailscale, vpn]
 tags: [ssl, tls, tailscale, vpn, nginx, proxy]
 author: kdpuvvadi
+draft: true
 ---
