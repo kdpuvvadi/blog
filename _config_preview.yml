@@ -56,6 +56,8 @@ assets:
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development|production]
 
+environment: development
+
 pwa:
   enabled: true
 

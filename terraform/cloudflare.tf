@@ -33,6 +33,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       environment_variables = {
         NODE_VERSION = "18.16.0"
         CONFIG_FILE  = "_config_preview.yml"
+        JEKYLL_ENV   = "development"
       }
       fail_open = true
     }
@@ -40,6 +41,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       environment_variables = {
         NODE_VERSION = "18.16.0"
         CONFIG_FILE  = "_config.yml"
+        JEKYLL_ENV   = "production"
       }
       fail_open = true
     }
