@@ -1,7 +1,7 @@
-FROM ruby:alpine3.19 as base
+FROM ruby:alpine3.19 AS base
 LABEL version="4.0"
 
-ENV TZ Asia/Kolkata
+ENV TZ=Asia/Kolkata
 
 RUN apk --no-cache upgrade --purge
 RUN apk --no-cache add build-base git
@@ -11,10 +11,12 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
+ENV JEKYLL_ENV=production
+
 COPY . .
-RUN bundle exec jekyll build --config  _config.yml --incremental
+RUN bundle exec jekyll build
 
 FROM nginx:stable-alpine
 COPY --from=base /usr/src/app/_site /usr/share/nginx/html
 
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
