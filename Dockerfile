@@ -1,4 +1,4 @@
-FROM ruby:3.2.5-alpine3.20
+FROM ruby:3.3.6-alpine3.20
 LABEL com.puvvadi.image.authors="kd@puvvadi.me"
 LABEL version="4.20"
 
@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 4000
 
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

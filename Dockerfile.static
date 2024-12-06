@@ -1,5 +1,4 @@
-FROM ruby:alpine3.19 AS base
-LABEL version="4.0"
+FROM ruby:3.3.6-alpine3.20 AS base
 
 ENV TZ=Asia/Kolkata
 
