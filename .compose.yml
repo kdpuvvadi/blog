@@ -1,18 +1,17 @@
 version: "3"
 
 services:
-  build:
-    build: .
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile.static
     pull_policy: build
-    image: kdpuvvadi/blog:latest
+    image: git.local.puvvadi.net/kd/blog:static
     container_name: blog
-    ports:
-      - "5000:4000"
     environment:
       TZ: 'Asia/Kolkata'
-      ServerIP: 10.20.20.110
     dns:
-      - 10.20.20.110
+      - 10.10.10.10
       - 1.1.1.1
     restart: unless-stopped
     labels:
