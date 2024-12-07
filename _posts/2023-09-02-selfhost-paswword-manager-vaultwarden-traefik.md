@@ -4,7 +4,7 @@ title: Self host password manager with Vaultwarden and Traefik
 date: 2023-09-02 11:44 +0530
 image: /assets/img/vaultwarden-selfhosted.webp
 tags: [vaultwarden, docker, proxy]
-categories: [password-manager, self-hosted, traefik]
+categories: [password-manager, self-hosted, traefik, docker]
 authors: [kdpuvvadi]
 ---
 
@@ -109,7 +109,7 @@ networks:
 ```
 {: file="docker-compose.yml" }
 
-> dns records should already pointed to you docker host. e.g. if docker host ip is `10.20.20.5` A record for `traeif.internal` should point to `10.20.20.5`.
+> DNS records should already pointed to you docker host. e.g. if docker host ip is `10.20.20.5` A record for `traeif.internal` should point to `10.20.20.5`.
 {: .prompt-info }
 
 ### traefik config
