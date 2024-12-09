@@ -140,6 +140,7 @@ exclude:
   - docker*
   - Docker*
   - yarn*
+  - purgecss.js
 
 include:
   - _redirects

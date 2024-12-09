@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo 'Test'",
     "install": "bundle install",
-    "start": "bundle exec jekyll serve --livereload --incremental",
+    "start": "bundle exec jekyll serve --config _config_preview.yml",
     "build": "bundle exec jekyll build --config $CONFIG_FILE",
     "clean": "bundle exec jekyll clean"
   },
