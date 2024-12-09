@@ -106,6 +106,12 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      permalink: /:basename/
+      layout: page
 
 sass:
   style: compressed
@@ -137,6 +143,7 @@ exclude:
 
 include:
   - _redirects
+  - _pages
 
 jekyll-archives:
   enabled: [categories, tags]
