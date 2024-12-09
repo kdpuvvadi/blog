@@ -3,12 +3,13 @@ title: "Use local DNS everywhere ft pihole & Tailscale"
 date: "2024-03-18T10:13:30+05:30"
 author: kdpuvvadi
 tags: [dns, pihole, tailscale, vpn, proxmox]
-categories: [networking, tailscale, vpn]
+categories: [tailscale, vpn, dns]
+image: /assets/img/tailscale-pihole-dns-adblock.jpeg
 ---
 
 I've been using Pi-hole for years now and Slowly migrating to [BIND 9](https://www.isc.org/bind/). Recently [migrated](/posts/omada-sdn-controller-ubuntu-22-04/) from [WireGuard](https://www.wireguard.com/) to tailscale for accessing my home network with VPN.
 
-Usually, by simply pointing my DNS records at my internal DNS Resolver. Most probably i'm doing this wrong but that's how I used to do it. With Tailscale's DNS service, it was streamlined.
+Usually, by simply pointing my DNS records at my internal DNS Resolver. Most probably I'm doing this wrong but that's how I used to do it. With Tailscale's DNS service, it was streamlined.
 
 ## tailscale and installation 
 
@@ -75,7 +76,7 @@ local.puvvadi.net.      0       IN      A       10.20.20.130
 
 ### Remote windows machine
 
-To test outside the network, i'm connecting `Windows 11` machine to `5G` and Test it.
+To test outside the network, I'm connecting `Windows 11` machine to `5G` and Test it.
 
 ### Tailnet Status
 
