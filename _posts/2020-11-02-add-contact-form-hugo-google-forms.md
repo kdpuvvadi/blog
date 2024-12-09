@@ -119,7 +119,7 @@ font-weight:700;
 Now add following line to link the CSS to the form.
 
 ```css
-<link re:"stylesheet" hre:"/css/form.css">
+<link rel="stylesheet" href="/css/form.css">
 ```
 
 ## Redirect
