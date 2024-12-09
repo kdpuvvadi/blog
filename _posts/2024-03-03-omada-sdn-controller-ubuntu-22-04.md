@@ -1,16 +1,20 @@
 ---
 title: "Install Omada Controller on Ubuntu 22.04 & Debian 12"
 date: "2024-03-03T14:07:30+05:30"
-updated: "2024-04-05T13:55:00+05:30"
+updated: "2024-12-09T10:14:00+05:30"
 author: kdpuvvadi
 tags: [ubuntu, ubuntu-2204, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox, debian-12, debian]
-categories: [networking, omada, firewall]
+categories: [networking, omada, firewall, debian, sdn]
 image: assets/img/install-omaad-ubuntu-2204.jpeg
 ---
 
-Update: Omada released new version `5.14.20` with support for `MongoDB v7`.
-
 Previously posted a guide for installing Omada Controller on Ubuntu 20.04. Received log of requests for guide on 22.04. It's not simply straightforward as Omada still uses old dependencies, which could break some packages if incorrectly installed. ~~The reason I'm writing this here is because the official guides and documentation are outdated and are refusing to fix them.~~
+
+> If are trying to upgrade the Controller please check the instruction at [upgrade-omada-controller](/posts/upgrade-omada-controller)
+{: .prompt-info }
+
+> Update: Omada released new version `5.14.20` with support for `MongoDB v7`.
+{: .prompt-info }
 
 First update the apt repos and upgrade current packages. I'm Assuming here that Ubuntu 22.04 box is fresh install and nothing other than preinstalled with distro were installed.
 
@@ -160,4 +164,4 @@ It might take 2 to 5 min depending upon your system configuration. Once the inst
 
 ## Conclusion
 
-Installation is simple and straight forward. lets setup the controller and add router, APs and configure the network next weeks. Any help need hit me on twitter or comment below. [Au revoir](#conclusion).
+Installation is simple and straight forward. Any help needed, feel free to comment below. [Au revoir](#conclusion).
