@@ -3,13 +3,16 @@ title: "Install Omada Controller on Ubuntu 20.04"
 date: "2021-05-30T20:51:13+05:30"
 author: kdpuvvadi
 image: /assets/img/omada-controller-ubuntu-20.04.webp
-tags: [ubuntu, mongodb, tp-link, sdn, omada, networ, firewall, gateway, vpn, proxmox]
+tags: [ubuntu, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox]
 categories: [networking, omada, firewall]
 ---
 
+> If you are looking for installation instructions for Ubuntu 22.04 or Debian 12, go to [Install Omada Controller on Ubuntu 22.04 & Debian 12](/posts/omada-sdn-controller-ubuntu-22-04/)
+{: .prompt-info }
+
 ## Little Back Story
 
-TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he though it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/). After reading ton manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN.
+TP Link is pushing Omada SDN from small businesses to home offices. TP Link has range of Hardware controller, Switches, Firewalls and Access Points from relatively inexpensive to high-end. Friend of mine asked for firewall suggestion. what I suggested was Unifi from Ubiquiti. It was out his budget and he toyed with pfSense. Even though he thought it's good learning experience, he wanted something like Unifi but cheaper, in his budget. In the same period of time I've stumbled upon Omada SDN from TP Link review from Tom Lawrence of [Lawrence Systems](https://www.youtube.com/user/TheTecknowledge/). After reading ton of manuals/FAQs from TP Link & had a good 30 min call with TP Link Engineer, decided to go with Omada SDN.
 
 ## Hardware
 
@@ -142,6 +145,6 @@ sudo apt remove omadac
 
 It might take 2 to 5 min depending upon your system configuration. Once the installation completed, visit <https://ip:8088>
 
-### Conclusion
+## Conclusion
 
-Installation is simple and straight forward. lets setup the controller and add router, APs and configure the network next weeks. Any help need hit me on twitter or comment below. [Au revoir](#conclusion).
+Installation is simple and straight forward. let's setup the controller and add router, APs and configure the network next weeks. Any help needed, hit me on the comments below. [Au revoir](#conclusion).
