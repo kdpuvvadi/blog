@@ -27,7 +27,7 @@ $ docker exec -it pi-hole pihole -g
 [✗] DNS resolution is not available
 ```
 
-Recently switched my VPN from WireGuard to tailscale. I should have installed tailscale on the Proxmox lxc container. I was lazy and installed on the docker host. Regarding DNS issues, There are numerous on tailscale's GitHub repo sunch as this issue [#3817](https://github.com/tailscale/tailscale/issues/3817) stating resolver at `/etc/resolv.conf` stuck at `100.100.100.100`(tailscale's DNS resolver). I've checked the contents of the `/etc/resolv.conf` on the host vm.
+Recently switched my VPN from WireGuard to tailscale. I should have installed tailscale on the Proxmox lxc container. I was lazy and installed on the docker host. Regarding DNS issues, There are numerous on tailscale's GitHub repo such as this issue [#3817](https://github.com/tailscale/tailscale/issues/3817) stating resolver at `/etc/resolv.conf` stuck at `100.100.100.100`(tailscale's DNS resolver). I've checked the contents of the `/etc/resolv.conf` on the host vm.
 
 ```conf
 nameserver 127.0.0.1
@@ -51,7 +51,7 @@ $ docker exec -it pi-hole pihole -g
 [✗] DNS resolution is not available
 ```
 
-Let's continue this tomorrow. Wifi still works for the wife. So, no urgency from that end. I can still add domains manually.
+Let's continue this tomorrow. Wi-Fi still works for the wife. So, no urgency from that end. I can still add domains manually.
 
 ## Day 2
 
@@ -59,7 +59,7 @@ Skipping day 2 (Weekend)
 
 ## Day 3
 
-To my surprice tailscale updated the `resolv.conf` to 
+To my surprise tailscale updated the `resolv.conf` to 
 
 ```conf
 nameserver 1.1.1.1
@@ -68,7 +68,7 @@ nameserver 100.100.100.100
 
 Decided to tailscale from docker host to proxmox lxc container. Uninstalled tailscale, rebooted the vm. But still not working.
 
-Went through pihole docker logs for good 2 hours. Pulling my hair at this. Why don't this work. Finally decided to repull the image and update container with new image 
+Went through pihole docker logs for good 2 hours. Pulling my hair at this. Why don't this work. Finally decided to re-pull the image and update container with new image 
 
 ```shell
 $ docker pull pihole/pihole:latest
@@ -110,7 +110,7 @@ Just crossed 12 O'Clock. Burning midnight oil now. Consuming `Thums Up` to stay 
 
 Time is now 1:45, barely up, Brains about shutdown. 
 
-Time is now 2:01, i think i found my culprit. For some reason, i was looking at docker compose file and i feel very very dumb now. 
+Time is now 2:01, I think I've found the culprit. For some reason, was looking at docker compose file and I feel very very dumb now. 
 
 ```yaml
 dns:
@@ -118,7 +118,7 @@ dns:
   - 1.1.1.1
 ```
 
-I was running pi-hole on my `Pi Zero W` before. Before retiring that old friend, migrated pi-hole from that to my docker host. Re-used the compose file. IP of that pi was `10.20.20.23`. At that time, that service was still running. Never had any issues after that. `watchtower` was managing the updates. But for some god forsacker reason, After watchtower updated the pi-hole container, problem occured.
+I was running pi-hole on my `Pi Zero W` before. Before retiring that old friend, migrated pi-hole from that to my docker host. Re-used the compose file. IP of that pi was `10.20.20.23`. At that time, that service was still running. Never had any issues after that. `watchtower` was managing the updates. But for some god forsaken reason, After watchtower updated the pi-hole container, problem occurred.
 
 Changed the ip to loopback address,
 
@@ -128,7 +128,7 @@ dns:
   - 1.1.1.1
 ```
 
-Now everythings fine i think. Pulling images went through. Updated the container. It went through. Let's try updating the gravity.
+Now everything's fine i think. Pulling images went through. Updated the container. It went through. Let's try updating the gravity.
 
 ```
 $ docker exec -it pi-hole pihole -g
@@ -196,4 +196,4 @@ It freaking worked.
 
 ## Conclusion
 
-Adios, my friends. Adios. I'm big dumb idot. 
+Adios, my friends. Adios. I'm big dumb idiot.
