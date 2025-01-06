@@ -26,6 +26,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
     root_dir            = ""
     web_analytics_tag   = "359f78cfd77a4d92be4986bff4c02cc4"
     web_analytics_token = "3cb459fe825f4dfc987979a2e512dd34"
+    build_caching       = true
   }
 
   deployment_configs {
