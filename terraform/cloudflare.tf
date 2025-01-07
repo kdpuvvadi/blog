@@ -32,15 +32,15 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   deployment_configs {
     preview {
       environment_variables = {
-        CONFIG_FILE  = "_config_preview.yml"
-        JEKYLL_ENV   = "development"
+        CONFIG_FILE = "_config_preview.yml"
+        JEKYLL_ENV  = "development"
       }
       fail_open = true
     }
     production {
       environment_variables = {
-        CONFIG_FILE  = "_config.yml"
-        JEKYLL_ENV   = "production"
+        CONFIG_FILE = "_config.yml"
+        JEKYLL_ENV  = "production"
       }
       fail_open = true
     }
