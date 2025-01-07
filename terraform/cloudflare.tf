@@ -32,7 +32,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   deployment_configs {
     preview {
       environment_variables = {
-        NODE_VERSION = "18.16.0"
+        NODE_VERSION = "22.12.0"
         CONFIG_FILE  = "_config_preview.yml"
         JEKYLL_ENV   = "development"
       }
@@ -40,7 +40,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
     }
     production {
       environment_variables = {
-        NODE_VERSION = "18.16.0"
+        NODE_VERSION = "20.18.1"
         CONFIG_FILE  = "_config.yml"
         JEKYLL_ENV   = "production"
       }
