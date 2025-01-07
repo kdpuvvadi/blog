@@ -7,9 +7,11 @@ Live [URL](https://blog.puvvadi.me)
 ## Testing
 
 ```shell
-yarn install # install dependencies
-yarn start # live test
-yarn build # build
+bundle install
+jekyll serve --config _config_preview.yml # live test
+jekyll serve --config _config_preview.yml --drafts # live test with drafts
+bundle exec jekyll build --config _config_preview.yml # preview build
+bundle exec jekyll build --config _config.yml # production build
 ```
 
 check the output at `http://localhost:4000`
@@ -26,7 +28,7 @@ terraform {
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "4.16.0"
+      version = "4.48.0"
     }
   }
   cloud {
