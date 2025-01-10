@@ -21,7 +21,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   }
 
   build_config {
-    build_command       = "jekyll build --config $CONFIG_FILE"
+    build_command       = "bundle install && bundle exec jekyll build --config $CONFIG_FILE"
     destination_dir     = "_site"
     root_dir            = ""
     web_analytics_tag   = "359f78cfd77a4d92be4986bff4c02cc4"
@@ -32,15 +32,19 @@ resource "cloudflare_pages_project" "blog_pages_project" {
   deployment_configs {
     preview {
       environment_variables = {
-        CONFIG_FILE = "_config_preview.yml"
-        JEKYLL_ENV  = "development"
+        CONFIG_FILE    = "_config_preview.yml"
+        JEKYLL_ENV     = "development"
+        BUNDLE_WITHOUT = ""
+        RUBY_VERSION   = "3.2.6"
       }
       fail_open = true
     }
     production {
       environment_variables = {
-        CONFIG_FILE = "_config.yml"
-        JEKYLL_ENV  = "production"
+        CONFIG_FILE    = "_config.yml"
+        JEKYLL_ENV     = "production"
+        BUNDLE_WITHOUT = ""
+        RUBY_VERSION   = "3.2.6"
       }
       fail_open = true
     }
