@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - 'releases/**'
+      - 'pre*'
 
 jobs:
   build:
@@ -57,10 +58,10 @@ jobs:
         with:
           context: .
           file: ./Dockerfile.static
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ github.repository	}}:static
+            ${{ github.repository }}:static
             ghcr.io/${{ github.repository	}}:static
             git.local.puvvadi.net/kd/blog:static
           cache-from: type=registry,ref=${{ github.repository	}}:static
