@@ -20,17 +20,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # - name: Set up QEMU
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y binfmt-support
+      #     curl -L -o /tmp/qemu.sh 'https://raw.githubusercontent.com/qemu/qemu/master/scripts/qemu-binfmt-conf.sh'
+      #     chmod +x /tmp/qemu.sh
+      #     sudo /tmp/qemu.sh --debian
+
       - name: Set up QEMU
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y binfmt-support
-          curl -L -o /tmp/qemu.sh 'https://raw.githubusercontent.com/qemu/qemu/master/scripts/qemu-binfmt-conf.sh'
-          chmod +x /tmp/qemu.sh
-          sudo /tmp/qemu.sh --debian
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64,amd64
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.2.0
+        uses: docker/setup-buildx-action@v3
         with:
+          driver: docker-container
+          driver-opts: |
+            image=moby/buildkit:master
           install: true
 
       - name: Log into github
@@ -53,8 +61,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push image to docker, github hub
-        uses: docker/build-push-action@v5.3.0
+      - name: Build and push image
+        uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile.static
@@ -62,7 +70,7 @@ jobs:
           push: true
           tags: |
             ${{ github.repository }}:static
-            ghcr.io/${{ github.repository	}}:static
+            ghcr.io/${{ github.repository }}:static
             git.local.puvvadi.net/kd/blog:static
-          cache-from: type=registry,ref=${{ github.repository	}}:static
-          cache-to: type=inline
+          cache-from: type=registry,ref=${{ github.repository }}:static
+          cache-to: type=registry,ref=${{ github.repository }}:static,mode=max

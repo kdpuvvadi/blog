@@ -1,9 +1,10 @@
-FROM ruby:3.3.6-alpine3.20 AS base
+# Use explicit platform for the build stage
+FROM --platform=$BUILDPLATFORM ruby:3.3.6-alpine3.20 AS base
 
 ENV TZ=Asia/Kolkata
 
-RUN apk --no-cache upgrade --purge
-RUN apk --no-cache add build-base git
+RUN apk --no-cache upgrade --purge && \
+    apk --no-cache add build-base git
 
 WORKDIR /usr/src/app
 
@@ -15,7 +16,8 @@ ENV JEKYLL_ENV=production
 COPY . .
 RUN bundle exec jekyll build
 
-FROM nginx:stable-alpine
+# Use a multi-architecture NGINX image
+FROM --platform=$BUILDPLATFORM nginx:stable-alpine
 COPY --from=base /usr/src/app/_site /usr/share/nginx/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
