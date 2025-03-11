@@ -35,7 +35,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
         CONFIG_FILE    = "_config_preview.yml"
         JEKYLL_ENV     = "development"
         BUNDLE_WITHOUT = ""
-        RUBY_VERSION   = "3.4.2"
+        RUBY_VERSION   = "3.2.6"
       }
       fail_open = true
     }
