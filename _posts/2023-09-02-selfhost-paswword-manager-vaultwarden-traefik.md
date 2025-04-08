@@ -1,11 +1,21 @@
 ---
 layout: post
-title: Self host password manager with Vaultwarden and Traefik
+title: Selfhosted password manager with Vaultwarden and Traefik
 date: 2023-09-02 11:44 +0530
 image: /assets/img/vaultwarden-selfhosted.webp
-tags: [vaultwarden, docker, proxy]
-categories: [password-manager, self-hosted, traefik, docker]
-authors: [kdpuvvadi]
+tags: 
+  - vaultwarden
+  - docker
+  -  proxy
+  - traefik
+categories: 
+  - password-manager
+  - self-hosted
+  - traefik
+  - docker
+authors:
+  - kdpuvvadi
+description: Selfhosted Vaultwarden behind traefik proxy with automated ssl tls certificate management and access the secure password manager over https  
 ---
 
 Vaultwarden is light weight feature rich drop in replacement for Bitwarden server. It's essentially debloated version of the Bitwarden.
@@ -23,21 +33,21 @@ Create required files
 ### directory structure
 
 ```shell
-touch docker-compose.yml
-touch config.yml
+touch compose.yaml
+touch config.yaml
 mkdir data && cd data
 touch acme.json
-touch traefik.yml
+touch traefik.yaml
 ```
 
 Directory structure should be like this
 
 ```shell
-|── docker-compose.yml
-├── config.yml
+|── compose.yaml
+├── config.yaml
 └── data
     ├── acme.json
-    └── traefik.yml
+    └── traefik.yaml
 ```
 
 ### Docker network
@@ -50,11 +60,9 @@ docker network create -d bridge proxy
 
 ### Docker compose
 
-First open `docker-compose.yml`  and add following
+First open `compose.yaml`  and add following
 
 ```yaml
-version: '3'
-
 services:
   traefik:
     image: traefik:latest
@@ -77,9 +85,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /home/user/traefik/data/traefik.yml:/traefik.yml:ro
+      - /home/user/traefik/data/traefik.yaml:/traefik.yaml:ro
       - /home/user/traefik/data/acme.json:/acme.json
-      - /home/user/traefik/config.yml:/config.yml:ro
+      - /home/user/traefik/config.yaml:/config.yaml:ro
     labels:
       - "traefik.enable=true"
       # http entrypoint
@@ -107,7 +115,7 @@ networks:
   proxy:
     external: true
 ```
-{: file="docker-compose.yml" }
+{: file="compose.yaml" .nolineno }
 
 > DNS records should already pointed to you docker host. e.g. if docker host ip is `10.20.20.5` A record for `traeif.internal` should point to `10.20.20.5`.
 {: .prompt-info }
@@ -148,12 +156,12 @@ certificatesResolvers:
           - "1.1.1.1:53"
           - "1.0.0.1:53"
 ```
-{: file="data/traefik.yml" }
+{: file="data/traefik.yaml" .nolineno}
 
 To spin up the traefik docker container, run
 
 ```shell
-docker-compose up -d
+docker compose up -d
 ```
 
 Once docker container created, traefik will generate ssl certs for `internel.example.net` & wildcard cert for `*.internel.example.net`. traefik dashboard will be available at `traefik.internal.example.net`.
@@ -171,14 +179,12 @@ docker volume create vaultwarden
 
 Reason for creating volume outside the compose file, in case, container destroyed with `rm`, data would be still available from the volume.
 
-### Docker-compose
+### Docker compose
 
-Create a new directory in your home `vaultwarden` and add new file `docker-compose.yml`. 
+Create a new directory in your home `vaultwarden` and add new file `compose.yaml`. 
 
 
-```yml
-version: '3'
-
+```yaml
 services:
   vaultwarden:
     image: vaultwarden/server:latest
@@ -188,8 +194,7 @@ services:
       - no-new-privileges:true
     networks:
       - proxy
-    ports:
-      - 8100:80
+    user: root
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - vaultwarden:/data
@@ -204,28 +209,15 @@ services:
       - SMTP_PASSWORD=YourReallyStrongPasswordHere
       - SMTP_AUTH_MECHANISM="Mechanism"
     labels:
-      - traefik.enable=true
-      - traefik.docker.network=proxy
-      - traefik.http.middlewares.redirect-https.redirectScheme.scheme=https
-      - traefik.http.middlewares.redirect-https.redirectScheme.permanent=true
-      - traefik.http.routers.vaultwarden-https.rule=Host(`vaultwarden.internal.example.net`)
-      - traefik.http.routers.vaultwarden-https.entrypoints=https
-      - traefik.http.routers.vaultwarden-https.tls=true
-      - traefik.http.routers.vaultwarden-https.service=vaultwarden
-      - traefik.http.routers.vaultwarden-http.rule=Host(`vaultwarden.internal.example.net`)
-      - traefik.http.routers.vaultwarden-http.entrypoints=http
-      - traefik.http.routers.vaultwarden-http.middlewares=redirect-https
-      - traefik.http.routers.vaultwarden-http.service=vaultwarden
-      - traefik.http.services.vaultwarden.loadbalancer.server.port=80
-      - traefik.http.routers.vaultwarden-websocket-https.rule=Host(`vaultwarden.internal.example.net`) && Path(`/notifications/hub`)
-      - traefik.http.routers.vaultwarden-websocket-https.entrypoints=https
-      - traefik.http.routers.vaultwarden-websocket-https.tls=true
-      - traefik.http.routers.vaultwarden-websocket-https.service=vaultwarden-websocket
-      - traefik.http.routers.vaultwarden-websocket-http.rule=Host(`vaultwarden.internal.example.net`) && Path(`/notifications/hub`)
-      - traefik.http.routers.vaultwarden-websocket-http.entrypoints=http
-      - traefik.http.routers.vaultwarden-websocket-http.middlewares=redirect-https
-      - traefik.http.routers.vaultwarden-websocket-http.service=vaultwarden-websocket
-      - traefik.http.services.vaultwarden-websocket.loadbalancer.server.port=3012
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.vaultwarden.entrypoints=https"
+      - "traefik.http.routers.vaultwarden.rule=Host(`https://vaultwarden.internal.example.net`)"
+      - "traefik.http.routers.vaultwarden-http.middlewares=redirect-https"
+      - "traefik.http.routers.vaultwarden.tls=true"
+      - "traefik.http.routers.vaultwarden.service=vaultwarden"
+      - "traefik.http.services.vaultwarden.loadbalancer.server.scheme=http"
+      - "traefik.http.services.vaultwarden.loadbalancer.server.port=80"
 
 networks:
   proxy:
@@ -235,16 +227,22 @@ volumes:
   vaultwarden:
     external: true
 ```
+{: file='compose.yaml' .nolineno }
 
 > dns records should already pointed to you docker host. e.g. if docker host ip is `10.20.20.5` A record for `vaultwarden.internal` should point to `10.20.20.5`.
 {: .prompt-info }
 
+> in the previouse version of the guide, websocket service for vaultwarden was running on different port and that is not required anymore. Hence, removed. Read more [here](https://github.com/dani-garcia/vaultwarden/issues/4024)
+{: .prompt-info }
 
 To spin up the vaultwarden docker container, run
 
 ```shell
-docker-compose up -d
+docker up -d
 ```
+
+Vaultwarden should now be available at the given `FQDN` and can be accessed from the network. 
+
 ## Conclusion
 
 For more details and documentation, visit Official [github](https://github.com/dani-garcia/vaultwarden) repo. Any queries, feel free to drop a comment. `Au Revoir`.
