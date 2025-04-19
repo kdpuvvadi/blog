@@ -84,6 +84,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  recipes:
+    output: true
+    permalink: /recipes/:title/
 
 defaults:
   - scope:
@@ -112,6 +115,14 @@ defaults:
     values:
       permalink: /:basename/
       layout: page
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+      toc: true
+      comments: false
+      permalink: /recipes/:title/
 
 sass:
   style: compressed
@@ -146,6 +157,9 @@ include:
   - _redirects
   - _pages
 
+plugins:
+  - jekyll-archives
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
@@ -154,6 +168,9 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+  collections:
+    - posts
+    - recipes
 
 jekyll_compose:
   default_front_matter:
