@@ -27,3 +27,4 @@ gem 'jekyll-compose', group: [:jekyll_plugins]
 gem 'bigdecimal'
 gem 'csv'
 gem 'base64'
+gem 'jekyll-archives'
