@@ -1,6 +1,6 @@
 ---
 icon: fas fa-envelope
-order: 5
+order: 6
 ---
 
 If you have any queries about a post, please comment in the respective article, You can also reach out on social platforms [here](/about/). Otherwise, use the form below.
