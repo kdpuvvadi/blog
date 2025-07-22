@@ -3,6 +3,9 @@ title: "Instant Onion Rava Dosa Recipe"
 date: 2025-04-19
 tags: [Dosa, south-indian]
 categories: [recipes]
+image: 
+  path: assets/img/ravva-dosa-receipe.png
+  alt: Onion ravva dosa recipe 
 ---
 
 Rava Dosa, South Indian Delicacy is an amazing breakfast and quick to Make. Batter can be mixed instantly. Only resting period it needs is to soften the semolina/Rava
