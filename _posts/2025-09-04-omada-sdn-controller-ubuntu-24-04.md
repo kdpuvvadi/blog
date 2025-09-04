@@ -1,11 +1,21 @@
 ---
 title: "Install Omada SDN Controller on Ubuntu 24.04"
+description: "Step-by-step guide to install TP-Link Omada SDN Controller on Ubuntu 24.04 LTS, with notes on MongoDB 7 issues and MongoDB 4.4 fallback."
 date: "2025-09-04T21:08:30+05:30"
 updated: "2025-09-04T21:08:30+05:30"
 author: kdpuvvadi
-tags: [ubuntu, ubuntu-2404, mongodb, tp-link, sdn, omada, network, firewall, gateway, vpn, proxmox]
-categories: [networking, omada, firewall, sdn]
-image: assets/img/install-omada-ubuntu-2404.png
+tags:
+  - ubuntu
+  - ubuntu-24.04
+  - ubuntu-2404
+  - tp-link
+  - omada
+  - sdn
+  - mongodb
+  - networking
+categories: [networking, omada, sdn]
+image: /assets/img/install-omada-ubuntu-2404.png
+canonical_url: "https://puvvadi.net/posts/omada-sdn-controller-ubuntu-24-04/"
 ---
 
 The TP-Link Omada SDN Controller lets you centrally manage access points, switches, and gateways with ease. This guide walks you through installing the latest Omada Controller on Ubuntu 24.04 LTS, covering all required dependencies, installation steps, and verification so you can get your network up and running quickly.
@@ -102,14 +112,13 @@ To uninstall the Omada controller, follow the prompts by running the following
 sudo apt remove omadac
 ```
 
+> `MongoDB Compatibility`: Ubuntu 24.04 ships with `MongoDB 7` by default, but Omada may not always work reliably with this version. If you encounter issues starting the controller, database errors, or unexplained crashes, the problem is likely due to MongoDB 7. A proven workaround is to install `MongoDB 4.4`, which Omada is known to support. You can follow the detailed instructions from [my earlier guide for Ubuntu 22.04](https://puvvadi.net/posts/omada-sdn-controller-ubuntu-22-04/) to set up MongoDB 4.4 on Ubuntu 24.04 as well.  
+{: .prompt-warning }
+
 ## Conclusion
 
-With Omada SDN Controller now running on Ubuntu 24.04, you have a reliable setup to centrally manage your TP-Link devices.  
+With Omada SDN Controller now running on Ubuntu 24.04, you have a reliable setup to centrally manage your TP-Link devices. From here, you can secure the controller with HTTPS, configure regular backups, and even automate deployments using Ansible or Docker. Keeping both Ubuntu and Omada updated will ensure long-term stability and security for your network.  
 
-One thing to keep in mind is MongoDB: while Ubuntu 24.04 ships with MongoDB 7 by default, some users report compatibility issues with Omada. If you run into problems, you can still install MongoDB 4.4 by following the instructions in [my earlier guide for Ubuntu 22.04](/posts/omada-sdn-controller-ubuntu-22-04/#install-mongodb).  
-
-From here, you can secure the controller with HTTPS, configure regular backups, and even automate deployments using Ansible or Docker. Keeping both Ubuntu and Omada updated will ensure long-term stability and security for your network. 
-
-If you run into issues or need further help, feel free to leave a comment on this post or get in touch, I’ll be happy to assist.
+If you run into issues or need further help, feel free to leave a comment on this post or get in touch, i’ll be happy to assist.  
 
 [Au revoir](#conclusion).
