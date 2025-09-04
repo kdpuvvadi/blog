@@ -1,3 +1,5 @@
 /tags/wordpress-password-disable /tags/wordpress/ 302
 /tags/wordpress-password-reset /tags/wordpress/ 302
 /tags/wordpress-without-password /tags/wordpress/ 302
+
+https://blog.puvvadi.me/*   https://puvvadi.net/:splat   301!
