@@ -5,5 +5,5 @@ output "cloudflare_blog_cname" {
 }
 
 output "cloudflare_blog_url" {
-  value = cloudflare_record.cloudflare_blog_record.hostname
+  value = cloudflare_record.cloudflare_blog_record_cname.hostname
 }
