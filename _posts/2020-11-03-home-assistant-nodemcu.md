@@ -7,7 +7,7 @@ tags: [NodeMCU, ESP8266, ESPHome]
 categories: [hass, automation]
 ---
 
-In the Previous [post](/home-assistant-setup "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows
+In the Previous [post](/posts/home-assistant-setup "Home Assistant setup on Raspberry Pi"), we had setup Home Assistant on Raspberry pi. For the first integration, we are going to use ESP8266 *aka* NodeMCU. Required items as follows
 
 ### Requirements
 

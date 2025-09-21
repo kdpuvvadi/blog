@@ -3,3 +3,5 @@
 /tags/wordpress-without-password /tags/wordpress/ 302
 
 https://blog.puvvadi.me/*   https://puvvadi.net/:splat   301!
+
+/home-assistant-setup /posts/home-assistant-setup 301
