@@ -38,3 +38,8 @@ Save and exit the editor, then restart Docker:
 ```shell
 sudo systemctl restart docker
 ```
+
+## Update 
+
+> traefik released new version `v3.6.x` with Docker API version auto negotiation. Just bump the version of treafik deployment to `v3.6.x`.
+{: .prompt-info }
