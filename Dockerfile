@@ -1,6 +1,6 @@
-FROM ruby:3.3.6-alpine3.20
+FROM ruby:3.4.8-alpine3.23
 LABEL com.puvvadi.image.authors="kd@puvvadi.me"
-LABEL version="4.20"
+LABEL version="4.30"
 
 ENV TZ=Asia/Kolkata
 
