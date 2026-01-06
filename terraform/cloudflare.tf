@@ -73,26 +73,6 @@ resource "cloudflare_pages_domain" "cloudflare_blog_domain_alias1" {
   domain       = cloudflare_record.cloudflare_blog_record_cname_alias1.hostname
 }
 
-resource "cloudflare_record" "cloudflare_blog_record_cname_alias1" {
-  zone_id         = data.cloudflare_zones.zone_blog_alias.zones[0].id
-  name            = "blog"
-  content         = cloudflare_pages_project.blog_pages_project.subdomain
-  type            = "CNAME"
-  proxied         = true
-  ttl             = 1
-  allow_overwrite = true
-}
-
-resource "cloudflare_record" "cloudflare_blog_record_cname_alias2" {
-  zone_id         = data.cloudflare_zones.zone_blog_alias.zones[0].id
-  name            = "@"
-  content         = cloudflare_pages_project.blog_pages_project.subdomain
-  type            = "CNAME"
-  proxied         = true
-  ttl             = 1
-  allow_overwrite = true
-}
-
 resource "cloudflare_pages_domain" "cloudflare_blog_domain_alias2" {
   account_id   = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
   project_name = cloudflare_pages_project.blog_pages_project.name
