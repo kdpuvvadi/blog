@@ -1,7 +1,7 @@
 # Cloudflare project deployment and DNS record for the project
 
 resource "cloudflare_pages_project" "blog_pages_project" {
-  account_id        = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
+  account_id        = "785a966c2bc174e625f1140eedfd6a89"
   name              = "blog"
   production_branch = "main"
 
@@ -52,13 +52,14 @@ resource "cloudflare_pages_project" "blog_pages_project" {
 }
 
 resource "cloudflare_pages_domain" "cloudflare_blog_domain" {
-  account_id   = data.cloudflare_accounts.cloudflare_account_data.accounts[0].id
+  account_id   = "785a966c2bc174e625f1140eedfd6a89"
   project_name = cloudflare_pages_project.blog_pages_project.name
   domain       = "puvvadi.net"
+  depends_on   = [cloudflare_record.cloudflare_blog_cname_record]
 }
 
-resource "cloudflare_record" "cloudflare_blog_record_cname" {
-  zone_id         = data.cloudflare_zones.zone_blog.zones[0].id
+resource "cloudflare_record" "cloudflare_blog_cname_record" {
+  zone_id         = "be6fbe11f57bd4fabbf5748235a6b1b8"
   name            = "@"
   content         = cloudflare_pages_project.blog_pages_project.subdomain
   type            = "CNAME"
