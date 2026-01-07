@@ -1,0 +1,11 @@
+<!-- .git -->
+.gitignore
+_site
+.github
+terraform
+.editorconfig
+.gitattributes
+.nojekyll
+compose.yml
+Dockerfile
+Dockerfile.static
