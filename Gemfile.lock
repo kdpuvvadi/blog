@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (2.0.1)
-    addressable (2.8.8)
+    addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     afm (1.0.0)
     async (2.35.1)
@@ -28,12 +28,16 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.17.3-x64-mingw-ucrt)
+    ffi (1.17.3-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
     fiber-storage (1.0.1)
     forwardable-extended (2.6.0)
     google-protobuf (4.33.2-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.33.2-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
@@ -105,6 +109,8 @@ GEM
     metrics (0.15.0)
     nokogiri (1.19.0-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.19.0-x86_64-linux-gnu)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     pdf-reader (2.15.1)
@@ -113,7 +119,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    public_suffix (7.0.2)
+    public_suffix (7.0.5)
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.3.1)
@@ -125,6 +131,8 @@ GEM
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.5)
     sass-embedded (1.97.2-x64-mingw-ucrt)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.97.2-x86_64-linux-gnu)
       google-protobuf (~> 4.31)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
@@ -144,6 +152,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   base64
@@ -160,7 +169,7 @@ DEPENDENCIES
 
 CHECKSUMS
   Ascii85 (2.0.1) sha256=15cb5d941808543cbb9e7e6aea3c8ec3877f154c3461e8b3673e97f7ecedbe5a
-  addressable (2.8.8) sha256=7c13b8f9536cf6364c03b9d417c19986019e28f7c00ac8132da4eb0fe393b057
+  addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
   afm (1.0.0) sha256=5bd4d6f6241e7014ef090985ec6f4c3e9745f6de0828ddd58bc1efdd138f4545
   async (2.35.1) sha256=5232b76ed07db1b071eab1dc9e61a7db617034f37c42a5f4b59b3c5068b14145
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
@@ -174,11 +183,13 @@ CHECKSUMS
   ethon (0.15.0) sha256=0809805a035bc10f54162ca99f15ded49e428e0488bcfe1c08c821e18261a74d
   eventmachine (1.2.7) sha256=994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
   ffi (1.17.3-x64-mingw-ucrt) sha256=5f1d7d067a9a1058ad183dba25b05557cd51c85fc1768c49338eabc1cf242d7c
+  ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f
   fiber-annotation (0.2.0) sha256=7abfadf1d119f508867d4103bf231c0354d019cc39a5738945dec2edadaf6c03
   fiber-local (1.1.0) sha256=c885f94f210fb9b05737de65d511136ea602e00c5105953748aa0f8793489f06
   fiber-storage (1.0.1) sha256=f48e5b6d8b0be96dac486332b55cee82240057065dc761c1ea692b2e719240e1
   forwardable-extended (2.6.0) sha256=1bec948c469bbddfadeb3bd90eb8c85f6e627a412a3e852acfd7eaedbac3ec97
   google-protobuf (4.33.2-x64-mingw-ucrt) sha256=16ed6f9c96da64c8d5c4ee763b58ab62c5e1431128891f4fe1d74370e4419e61
+  google-protobuf (4.33.2-x86_64-linux-gnu) sha256=73cba041477afcac92ff383fcbdec195ea28d96b994876d1deaa944d18f91786
   hashery (2.1.2) sha256=d239cc2310401903f6b79d458c2bbef5bf74c46f3f974ae9c1061fb74a404862
   html-proofer (5.2.0) sha256=9d137cc437628b4dfc1191a9f80c5329dfb0a66b895aef021bf10758d80ec69d
   http_parser.rb (0.8.1) sha256=9ae8df145b39aa5398b2f90090d651c67bd8e2ebfe4507c966579f641e11097a
@@ -202,9 +213,10 @@ CHECKSUMS
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
   metrics (0.15.0) sha256=61ded5bac95118e995b1bc9ed4a5f19bc9814928a312a85b200abbdac9039072
   nokogiri (1.19.0-x64-mingw-ucrt) sha256=05d7ed2d95731edc9bef2811522dc396df3e476ef0d9c76793a9fca81cab056b
+  nokogiri (1.19.0-x86_64-linux-gnu) sha256=f482b95c713d60031d48c44ce14562f8d2ce31e3a9e8dd0ccb131e9e5a68b58c
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
   pdf-reader (2.15.1) sha256=18c6a986a84a3117fa49f4279fc2de51f5d2399b71833df5d2bccd595c7068ce
-  public_suffix (7.0.2) sha256=9114090c8e4e7135c1fd0e7acfea33afaab38101884320c65aaa0ffb8e26a857
+  public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
   rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
@@ -215,6 +227,7 @@ CHECKSUMS
   ruby-rc4 (0.1.5) sha256=00cc40a39d20b53f5459e7ea006a92cf584e9bc275e2a6f7aa1515510e896c03
   safe_yaml (1.0.5) sha256=a6ac2d64b7eb027bdeeca1851fe7e7af0d668e133e8a88066a0c6f7087d9f848
   sass-embedded (1.97.2-x64-mingw-ucrt) sha256=4161a5634049896b024d4b99c1b1d8650100890003aa0de450df395f7a8b38be
+  sass-embedded (1.97.2-x86_64-linux-gnu) sha256=8f44c1572fc43cbb96cef68492f555797e4a56962ab59eb721d08f9e2162e79c
   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
   traces (0.18.2) sha256=80f1649cb4daace1d7174b81f3b3b7427af0b93047759ba349960cb8f315e214
   ttfunk (1.7.0) sha256=2370ba484b1891c70bdcafd3448cfd82a32dd794802d81d720a64c15d3ef2a96
