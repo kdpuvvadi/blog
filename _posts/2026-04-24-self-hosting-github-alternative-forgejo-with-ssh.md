@@ -4,8 +4,8 @@ title: Self-Hosting GitHub alternative Forgejo with SSH access
 date: 2026-04-24 12:39 +0530
 description: Learn how to self-host Forgejo on a Debian LXC with valid HTTPS. This guide covers using Caddy with the Cloudflare DNS-01 challenge to get SSL on private IPs without exposing your homelab to the internet and git operations with ssh with Openssh passthough.
 image:
-categories: [Homelab, DevOps]
-tags: [Forgejo, Debian, Caddy, SSL, Cloudflare, LXC, Self-Hosting, Git, GitHub, Gitea, ssh]
+categories: [homelab, devops]
+tags: [forgejo, debian, caddy, ssl, cloudflare, LXC, Self-Hosting, Git, GitHub, Gitea, ssh]
 ---
 
 In this guide, we’re going to walk through setting up `Forgejo`—the community-driven fork of Gitea—on a `Debian` LXC container. To keep it professional and accessible over a local network with valid HTTPS, we’ll use `Caddy` with a `Cloudflare` DNS challenge. 
