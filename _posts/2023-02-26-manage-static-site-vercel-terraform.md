@@ -4,7 +4,7 @@ date: "2023-02-26T14:05:30+05:30"
 author: kdpuvvadi
 image: /assets/img/vercel-cloudflare-terraform.webp
 tags: [terraform, cloudflare, vercel]
-keywords: [terraform, cloudflare", vercel]
+keywords: [terraform, cloudflare, vercel]
 ---
 
 I'm running this blog on [vercel](https://vercel.com/) with [Hugo](https://gohugo.io/) static site generator and manage my DNS with [Cloudflare](https://www.cloudflare.com/). Managing it on two separate dashboards may not be that challenging but it's annoying and what the state of the site is always unknown. So, like any other DevOps engineer do, I'm managing my blog with terraform. With the [terraform](https://www.terraform.io/) state will always be same across all the devices and it'll be easy to manage. I'm also using terraform cloud for this but let's talk about that on another day.
