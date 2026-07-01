@@ -31,6 +31,13 @@ analytics:
   goatcounter:
     id: kdpuvvadi
 
+actions:
+  # Display "Edit this post" action on each post page to encourage contributions.
+  edit_post:
+    enabled: true
+    url: "https://github.com/kdpuvvadi/blog/edit/main"
+    static_url: false
+
 theme_mode: dark
 cdn:
 avatar: https://avatars.githubusercontent.com/u/7326255?v=4
