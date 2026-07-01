@@ -40,8 +40,6 @@ copyright:
     Except where otherwise noted, the blog posts on this site are licensed
     under the MIT License by the author.
 
-meta: Edit this <a href="https://github.com/kdpuvvadi/blog/tree/main/_posts/">page</a> # footer
-
 not_found:
   statment: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
 
@@ -57,6 +55,7 @@ post:
   updated: Updated
   words: words
   pageview_measure: views
+  edit: Edit this post
   read_time:
     unit: min
     prompt: read
