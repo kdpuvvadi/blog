@@ -28,3 +28,6 @@ gem 'bigdecimal'
 gem 'csv'
 gem 'base64'
 gem 'jekyll-archives'
+
+# inbuild logger being deprecated in Ruby 4.0
+gem "logger"
