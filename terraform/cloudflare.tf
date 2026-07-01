@@ -30,7 +30,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       env_vars = {
         CONFIG_FILE  = { value = "_config_preview.yml", type = "plain_text" }
         JEKYLL_ENV   = { value = "development", type = "plain_text" }
-        RUBY_VERSION = { value = "3.4.4", type = "plain_text" }
+        RUBY_VERSION = { value = "3.4.8", type = "plain_text" }
       }
       fail_open                 = true
       build_image_major_version = 3
@@ -40,7 +40,7 @@ resource "cloudflare_pages_project" "blog_pages_project" {
       env_vars = {
         CONFIG_FILE  = { value = "_config.yml", type = "plain_text" }
         JEKYLL_ENV   = { value = "production", type = "plain_text" }
-        RUBY_VERSION = { value = "3.4.4", type = "plain_text" }
+        RUBY_VERSION = { value = "3.4.8", type = "plain_text" }
       }
       fail_open                 = true
       build_image_major_version = 3

@@ -31,6 +31,13 @@ analytics:
   goatcounter:
     id: kdpuvvadi
 
+actions:
+  # Display "Edit this post" action on each post page to encourage contributions.
+  edit_post:
+    enabled: true
+    url: "https://github.com/kdpuvvadi/blog/edit/main"
+    static_url: false
+
 theme_mode: dark
 cdn:
 avatar: https://avatars.githubusercontent.com/u/7326255?v=4
@@ -54,7 +61,7 @@ assets:
     enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: # [development|production]
+    env:  # [development|production]
 
 environment: production
 
@@ -152,6 +159,7 @@ exclude:
   - Docker*
   - yarn*
   - purgecss.js
+  - compose*
 
 include:
   - _redirects
